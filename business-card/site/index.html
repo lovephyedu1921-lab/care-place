@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>김무용 · 디지털 명함</title>
+<meta name="description" content="간호사(RN) · 요양보호사 시간강사 · 당근 AI 모임 방장">
+<meta name="theme-color" content="#1d5c55">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="김무용 · 디지털 명함">
+<meta property="og:description" content="간호사(RN) · 요양보호사 시간강사 · 당근 AI 모임 방장">
+<meta property="og:url" content="https://kimmuyong-card.vercel.app/">
+<meta property="og:image" content="https://kimmuyong-card.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg: #f3efe7;
+    --surface: #ffffff;
+    --ink: #172524;
+    --muted: #5b6866;
+    --line: #e7e1d6;
+    --brand: #1d5c55;
+    --brand-strong: #123d38;
+    --brand-soft: #e3efeb;
+    --gold: #c9a45c;
+    --radius: 26px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-feature-settings: "ss05";
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; }
+
+  .wrap {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: max(16px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  }
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(23, 37, 36, .06), 0 18px 40px -18px rgba(18, 61, 56, .35);
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    padding: 26px 24px 30px;
+    color: #fff;
+    background:
+      radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(160deg, var(--brand) 0%, var(--brand-strong) 100%);
+    isolation: isolate;
+  }
+  .hero::after {            /* soft concentric rings, decorative */
+    content: "";
+    position: absolute;
+    right: -120px; bottom: -150px;
+    width: 330px; height: 330px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='46' fill='white' fill-opacity='.05'/%3E%3Cg fill='none' stroke='white'%3E%3Ccircle cx='100' cy='100' r='46' stroke-opacity='.18'/%3E%3Ccircle cx='100' cy='100' r='70' stroke-opacity='.12'/%3E%3Ccircle cx='100' cy='100' r='94' stroke-opacity='.07'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    z-index: -1;
+  }
+  .hero-top {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 34px;
+  }
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    opacity: .7;
+  }
+  h1 {
+    margin: 0;
+    font-size: 44px; line-height: 1.05; font-weight: 800; letter-spacing: -.02em;
+  }
+  .en {
+    margin: 8px 0 0;
+    font-size: 15px; font-weight: 500; letter-spacing: .04em;
+    opacity: .78;
+  }
+
+  /* ---------- roles ---------- */
+  .roles { list-style: none; margin: 0; padding: 10px 20px 4px; }
+  .roles li {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .roles li:last-child { border-bottom: 0; }
+  .ico {
+    flex: none;
+    width: 40px; height: 40px; border-radius: 12px;
+    display: grid; place-items: center;
+    background: var(--brand-soft); color: var(--brand);
+  }
+  .ico svg { width: 20px; height: 20px; }
+  .roles strong { display: block; font-size: 16.5px; font-weight: 700; letter-spacing: -.01em; }
+  .roles small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); letter-spacing: .01em; }
+
+  /* ---------- actions ---------- */
+  .actions {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    padding: 8px 20px 0;
+  }
+  .act {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 14px 4px 12px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: #fbfaf7;
+    font-size: 13.5px; font-weight: 600;
+    transition: transform .12s ease, background .12s ease;
+  }
+  .act:active { transform: scale(.97); background: var(--brand-soft); }
+  .act svg { width: 22px; height: 22px; color: var(--brand); }
+
+  .save {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 14px 20px 0;
+    padding: 17px 16px;
+    border-radius: 16px;
+    background: var(--brand); color: #fff;
+    font-size: 16.5px; font-weight: 700;
+    box-shadow: 0 10px 22px -12px rgba(18, 61, 56, .8);
+    transition: transform .12s ease, background .12s ease;
+  }
+  .save:active { transform: scale(.985); background: var(--brand-strong); }
+  .save svg { width: 20px; height: 20px; }
+
+  /* ---------- info ---------- */
+  .info { margin: 18px 20px 0; padding: 0; }
+  .row {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 13px 2px;
+    border-top: 1px solid var(--line);
+  }
+  .row dt { font-size: 13px; color: var(--muted); flex: none; }
+  .row dd { margin: 0; font-size: 15px; font-weight: 600; text-align: right; overflow-wrap: anywhere; }
+
+  .foot {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    padding: 6px 20px 22px;
+  }
+  .ghost {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 13px 10px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: transparent;
+    font-size: 14px; font-weight: 600; color: var(--brand-strong);
+    cursor: pointer;
+  }
+  .ghost:active { background: var(--brand-soft); }
+  .ghost svg { width: 18px; height: 18px; }
+
+  .credit { margin: 18px 0 0; text-align: center; font-size: 12px; color: #8a9391; letter-spacing: .02em; }
+
+  /* ---------- QR dialog ---------- */
+  dialog {
+    width: min(340px, calc(100vw - 32px));
+    padding: 26px 24px 20px;
+    border: 0; border-radius: 24px;
+    background: var(--surface); color: var(--ink);
+    text-align: center;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,.45);
+  }
+  dialog::backdrop { background: rgba(18, 30, 29, .55); backdrop-filter: blur(3px); }
+  .qr-box {
+    margin: 0 auto;
+    width: 232px; padding: 14px;
+    border-radius: 18px; border: 1px solid var(--line);
+    background: #fff;
+  }
+  .qr-box svg { display: block; width: 100%; height: auto; }
+  dialog h2 { margin: 16px 0 4px; font-size: 20px; font-weight: 800; }
+  dialog p { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+  .close {
+    margin-top: 18px; width: 100%;
+    padding: 13px; border: 0; border-radius: 14px;
+    background: var(--brand-soft); color: var(--brand-strong);
+    font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+
+  .toast {
+    position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom));
+    transform: translate(-50%, 20px);
+    padding: 11px 18px; border-radius: 999px;
+    background: var(--ink); color: #fff;
+    font-size: 14px; font-weight: 600;
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main class="card">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="eyebrow">Business Card</span>
+      </div>
+      <h1>김무용</h1>
+      <p class="en">Kim Muyong</p>
+    </header>
+
+    <ul class="roles">
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span><div><strong>간호사</strong><small>RN · Registered Nurse</small></div></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></span><div><strong>요양보호사 시간강사</strong></div></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4"/></svg></span><div><strong>당근 AI 모임 방장</strong></div></li>
+    </ul>
+
+    <nav class="actions" aria-label="연락하기">
+      <a class="act" href="tel:01050071797">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        전화
+      </a>
+      <a class="act" href="sms:01050071797">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        문자
+      </a>
+      <a class="act" href="mailto:lovephyedu@naver.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        이메일
+      </a>
+    </nav>
+
+    <a class="save" href="kimmuyong.vcf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+      연락처 저장하기
+    </a>
+
+    <dl class="info">
+      <div class="row"><dt>휴대폰</dt><dd><a href="tel:01050071797">010-5007-1797</a></dd></div>
+      <div class="row"><dt>이메일</dt><dd><a href="mailto:lovephyedu@naver.com">lovephyedu@naver.com</a></dd></div>
+    </dl>
+
+    <div class="foot">
+      <button class="ghost" type="button" id="share">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+        명함 공유
+      </button>
+      <button class="ghost" type="button" id="show-qr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3M21 21v.01M12 7v3a2 2 0 0 1-2 2H7M3 12h.01M12 3h.01M12 16v.01M16 12h1M21 12v.01M12 21v-1"/></svg>
+        QR 보여주기
+      </button>
+    </div>
+  </main>
+  <p class="credit">김무용 · 디지털 명함</p>
+</div>
+
+<dialog id="qr-dialog" aria-labelledby="qr-title">
+  <div class="qr-box"><svg viewBox="0 0 37 37" class="segno"><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#123d38" d="M2 2.5h7m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h7m-33 1h1m5 0h1m2 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m4 0h4m2 0h1m3 0h1m4 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h2m1 0h1m3 0h1m1 0h4m1 0h2m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h1m1 0h2m4 0h1m6 0h1m-22 1h2m1 0h2m2 0h1m2 0h2m2 0h2m1 0h1m8 0h2m-31 1h2m5 0h1m1 0h1m1 0h1m1 0h5m1 0h1m2 0h2m1 0h1m1 0h3m-28 1h8m4 0h2m2 0h1m2 0h1m1 0h3m1 0h1m2 0h3m-32 1h4m2 0h2m2 0h2m4 0h1m2 0h1m1 0h1m2 0h1m1 0h2m1 0h3m-32 1h1m1 0h1m1 0h4m2 0h1m2 0h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m-32 1h3m1 0h2m1 0h1m1 0h3m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m6 0h2m-30 1h1m2 0h4m2 0h1m1 0h1m1 0h1m3 0h2m4 0h1m1 0h3m-30 1h1m3 0h2m3 0h1m1 0h1m1 0h2m3 0h3m3 0h1m2 0h1m1 0h2m-31 1h1m1 0h1m2 0h3m1 0h2m1 0h5m1 0h3m4 0h2m1 0h2m2 0h1m-30 1h1m6 0h1m2 0h1m1 0h5m1 0h2m1 0h1m1 0h4m2 0h1m-29 1h3m16 0h1m4 0h3m1 0h1m-33 1h2m2 0h2m2 0h1m3 0h3m2 0h1m1 0h2m2 0h3m3 0h3m-30 1h2m2 0h3m4 0h2m5 0h1m6 0h1m1 0h1m1 0h1m-32 1h2m5 0h1m1 0h3m5 0h1m2 0h1m1 0h2m3 0h2m-29 1h1m4 0h4m1 0h1m2 0h1m5 0h1m1 0h3m2 0h1m3 0h1m1 0h1m-33 1h1m3 0h1m2 0h1m1 0h1m2 0h1m10 0h2m2 0h1m2 0h3m-33 1h3m1 0h4m1 0h2m1 0h1m1 0h1m1 0h1m2 0h2m2 0h7m2 0h1m-25 1h1m1 0h1m3 0h2m2 0h1m2 0h2m1 0h1m3 0h1m1 0h2m-32 1h7m1 0h1m1 0h1m3 0h1m1 0h1m3 0h1m2 0h2m1 0h1m1 0h2m-30 1h1m5 0h1m4 0h4m1 0h1m2 0h1m4 0h1m3 0h4m-32 1h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m6 0h1m1 0h7m1 0h1m-32 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h2m1 0h1m4 0h4m1 0h1m2 0h1m1 0h1m-33 1h1m1 0h3m1 0h1m5 0h5m3 0h1m3 0h1m3 0h1m1 0h3m-33 1h1m5 0h1m2 0h1m1 0h2m2 0h2m1 0h1m1 0h1m2 0h1m2 0h1m2 0h4m-33 1h7m3 0h1m3 0h3m1 0h1m4 0h2m3 0h1"/></svg></div>
+  <h2 id="qr-title">김무용</h2>
+  <p>카메라로 QR을 찍으면<br>이 명함이 바로 열려요</p>
+  <button class="close" type="button" id="close-qr">닫기</button>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function () {
+    var SITE_URL = "https://kimmuyong-card.vercel.app/";
+    var toastEl = document.getElementById("toast");
+    var timer;
+    function toast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(timer);
+      timer = setTimeout(function () { toastEl.classList.remove("show"); }, 2000);
+    }
+
+    document.getElementById("share").addEventListener("click", function () {
+      var data = { title: "김무용 · 디지털 명함", text: "김무용 · 간호사(RN) · 요양보호사 시간강사 · 당근 AI 모임 방장", url: SITE_URL };
+      if (navigator.share) {
+        navigator.share(data).catch(function () {});
+        return;
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(SITE_URL).then(
+          function () { toast("명함 링크를 복사했어요"); },
+          function () { window.prompt("이 링크를 복사하세요", SITE_URL); }
+        );
+      } else {
+        window.prompt("이 링크를 복사하세요", SITE_URL);
+      }
+    });
+
+    var dialog = document.getElementById("qr-dialog");
+    document.getElementById("show-qr").addEventListener("click", function () {
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+    });
+    document.getElementById("close-qr").addEventListener("click", function () {
+      if (typeof dialog.close === "function") dialog.close();
+      else dialog.removeAttribute("open");
+    });
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog && typeof dialog.close === "function") dialog.close();
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>김무용 명함 인쇄용</title>
+<style>
+  /* B = bleed (mm). Trim size is 90 x 50 mm; the face is drawn at (90+2B) x (50+2B). */
+  :root { --b: 0mm; --w: calc(90mm + 2 * var(--b)); --h: calc(50mm + 2 * var(--b)); }
+  @page { size: calc(90mm + 2 * 0mm) calc(50mm + 2 * 0mm); margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    font-family: Pretendard, "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    word-break: keep-all;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .face {
+    position: relative;
+    width: var(--w); height: var(--h);
+    overflow: hidden;
+    break-after: page;
+  }
+  .face:last-child { break-after: auto; }
+  .safe { position: absolute; inset: calc(var(--b) + 5mm) calc(var(--b) + 5.5mm); }
+
+  /* ---------- front ---------- */
+  .front {
+    color: #fff;
+    background:
+      radial-gradient(120% 110% at 100% 0%, rgba(255,255,255,.13) 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(160deg, #1d5c55 0%, #123d38 100%);
+  }
+  .rings {
+    position: absolute;
+    right: calc(var(--b) - 30mm); bottom: calc(var(--b) - 38mm);
+    width: 86mm; height: 86mm;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='46' fill='white' fill-opacity='.05'/%3E%3Cg fill='none' stroke='white'%3E%3Ccircle cx='100' cy='100' r='46' stroke-opacity='.18'/%3E%3Ccircle cx='100' cy='100' r='70' stroke-opacity='.12'/%3E%3Ccircle cx='100' cy='100' r='94' stroke-opacity='.07'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .front .top { display: flex; justify-content: space-between; align-items: center; }
+  .front .eyebrow { font-size: 5.6pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; opacity: .7; }
+  .front .name { position: absolute; left: 0; top: 9.5mm; }
+  .front h1 { margin: 0; font-size: 21pt; line-height: 1; font-weight: 800; letter-spacing: -.02em; }
+  .front .en { margin: 1.8mm 0 0; font-size: 7pt; font-weight: 500; letter-spacing: .05em; opacity: .8; }
+  .front ul {
+    position: absolute; left: 0; bottom: 0;
+    margin: 0; padding: 0; list-style: none;
+    font-size: 7.4pt; font-weight: 600; line-height: 1.75; letter-spacing: -.005em;
+  }
+  .front li { display: flex; align-items: center; gap: 1.8mm; }
+  .front li::before { content: ""; width: 1.1mm; height: 1.1mm; border-radius: 50%; background: #c9a45c; flex: none; }
+
+  /* ---------- back ---------- */
+  .back { background: #fbf9f4; color: #172524; }
+  .back .bar { position: absolute; left: 0; top: 0; bottom: 0; width: calc(var(--b) + 2.2mm); background: #1d5c55; }
+  .back .safe { display: flex; align-items: center; gap: 6mm; left: calc(var(--b) + 7.5mm); }
+  .back .qr {
+    flex: none; width: 30mm; height: 30mm; padding: 1.6mm;
+    background: #fff; border-radius: 2.4mm; border: .2mm solid #e2dccf;
+  }
+  .back .qr svg { display: block; width: 100%; height: 100%; }
+  .back .txt { min-width: 0; }
+  .back .label { font-size: 5.6pt; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #1d5c55; }
+  .back .lead { margin: 1.4mm 0 3.6mm; font-size: 7.6pt; font-weight: 700; line-height: 1.45; letter-spacing: -.01em; }
+  .back dl { margin: 0; font-size: 7pt; line-height: 1.7; }
+  .back dl div { display: flex; gap: 2mm; }
+  .back dt { color: #6b7775; font-weight: 500; width: 9mm; flex: none; }
+  .back dd { margin: 0; font-weight: 600; white-space: nowrap; }
+  .back .url { margin-top: 2.6mm; font-size: 5.6pt; color: #6b7775; letter-spacing: .01em; }
+</style>
+</head>
+<body>
+  <section class="face front" id="front">
+    <div class="rings"></div>
+    <div class="safe">
+      <div class="top">
+        <span class="eyebrow">Business Card</span>
+      </div>
+      <div class="name">
+        <h1>김무용</h1>
+        <p class="en">Kim Muyong</p>
+      </div>
+      <ul>
+        <li>간호사 (RN)</li>
+        <li>요양보호사 시간강사</li>
+        <li>당근 AI 모임 방장</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="face back" id="back">
+    <div class="bar"></div>
+    <div class="safe">
+      <div class="qr"><svg viewBox="0 0 37 37" class="segno"><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#123d38" d="M2 2.5h7m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h7m-33 1h1m5 0h1m2 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m4 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m3 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m4 0h4m2 0h1m3 0h1m4 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h2m1 0h1m3 0h1m1 0h4m1 0h2m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h1m1 0h2m4 0h1m6 0h1m-22 1h2m1 0h2m2 0h1m2 0h2m2 0h2m1 0h1m8 0h2m-31 1h2m5 0h1m1 0h1m1 0h1m1 0h5m1 0h1m2 0h2m1 0h1m1 0h3m-28 1h8m4 0h2m2 0h1m2 0h1m1 0h3m1 0h1m2 0h3m-32 1h4m2 0h2m2 0h2m4 0h1m2 0h1m1 0h1m2 0h1m1 0h2m1 0h3m-32 1h1m1 0h1m1 0h4m2 0h1m2 0h7m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m-32 1h3m1 0h2m1 0h1m1 0h3m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m6 0h2m-30 1h1m2 0h4m2 0h1m1 0h1m1 0h1m3 0h2m4 0h1m1 0h3m-30 1h1m3 0h2m3 0h1m1 0h1m1 0h2m3 0h3m3 0h1m2 0h1m1 0h2m-31 1h1m1 0h1m2 0h3m1 0h2m1 0h5m1 0h3m4 0h2m1 0h2m2 0h1m-30 1h1m6 0h1m2 0h1m1 0h5m1 0h2m1 0h1m1 0h4m2 0h1m-29 1h3m16 0h1m4 0h3m1 0h1m-33 1h2m2 0h2m2 0h1m3 0h3m2 0h1m1 0h2m2 0h3m3 0h3m-30 1h2m2 0h3m4 0h2m5 0h1m6 0h1m1 0h1m1 0h1m-32 1h2m5 0h1m1 0h3m5 0h1m2 0h1m1 0h2m3 0h2m-29 1h1m4 0h4m1 0h1m2 0h1m5 0h1m1 0h3m2 0h1m3 0h1m1 0h1m-33 1h1m3 0h1m2 0h1m1 0h1m2 0h1m10 0h2m2 0h1m2 0h3m-33 1h3m1 0h4m1 0h2m1 0h1m1 0h1m1 0h1m2 0h2m2 0h7m2 0h1m-25 1h1m1 0h1m3 0h2m2 0h1m2 0h2m1 0h1m3 0h1m1 0h2m-32 1h7m1 0h1m1 0h1m3 0h1m1 0h1m3 0h1m2 0h2m1 0h1m1 0h2m-30 1h1m5 0h1m4 0h4m1 0h1m2 0h1m4 0h1m3 0h4m-32 1h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m6 0h1m1 0h7m1 0h1m-32 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h2m1 0h1m4 0h4m1 0h1m2 0h1m1 0h1m-33 1h1m1 0h3m1 0h1m5 0h5m3 0h1m3 0h1m3 0h1m1 0h3m-33 1h1m5 0h1m2 0h1m1 0h2m2 0h2m1 0h1m1 0h1m2 0h1m2 0h1m2 0h4m-33 1h7m3 0h1m3 0h3m1 0h1m4 0h2m3 0h1"/></svg></div>
+      <div class="txt">
+        <div class="label">Digital Card</div>
+        <p class="lead">QR을 찍으면<br>디지털 명함이 열려요</p>
+        <dl>
+          <div><dt>휴대폰</dt><dd>010-5007-1797</dd></div>
+          <div><dt>이메일</dt><dd>lovephyedu@naver.com</dd></div>
+        </dl>
+        <div class="url">kimmuyong-card.vercel.app</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

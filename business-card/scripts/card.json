@@ -1,0 +1,14 @@
+{
+  "siteUrl": "https://kimmuyong-card.vercel.app/",
+  "nameKo": "김무용",
+  "familyName": "김",
+  "givenName": "무용",
+  "nameEn": "Kim Muyong",
+  "roles": [
+    { "title": "간호사", "detail": "RN · Registered Nurse", "icon": "heart" },
+    { "title": "요양보호사 시간강사", "detail": "", "icon": "teach" },
+    { "title": "당근 AI 모임 방장", "detail": "", "icon": "spark" }
+  ],
+  "phone": "010-5007-1797",
+  "email": "lovephyedu@naver.com"
+}
