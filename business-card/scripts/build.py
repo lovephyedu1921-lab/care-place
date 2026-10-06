@@ -6,6 +6,7 @@ share-image HTML. Run render.cjs afterwards to produce PNG/PDF outputs.
     pip install segno
     python3 business-card/scripts/build.py
 """
+import base64
 import json
 import re
 from pathlib import Path
@@ -22,6 +23,7 @@ BUILD = ROOT / ".build"
 
 QR_DARK = "#123d38"
 VCF_FILE = "kimmuyong.vcf"
+PHOTO = SITE / "photo.jpg"  # made by prepare_photo.py; optional
 
 ICONS = {
     "heart": '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>',
@@ -70,9 +72,9 @@ def main() -> None:
     # QR code -> the card's web address
     qr = segno.make(site_url, error="q", micro=False)
     qr_svg = qr.svg_inline(dark=QR_DARK, light="#ffffff", border=2, omitsize=True)
-    qr.save(QR_DIR / "kimmuyong-card-qr.svg", dark=QR_DARK, light="#ffffff", border=4, scale=10)
-    qr.save(QR_DIR / "kimmuyong-card-qr.png", dark=QR_DARK, light="#ffffff", border=4, scale=48)
-    qr.save(QR_DIR / "kimmuyong-card-qr-black.png", dark="#000000", light="#ffffff", border=4, scale=48)
+    qr.save(QR_DIR / "kimmuyong-card-qr.svg", dark="#000000", light="#ffffff", border=4, scale=10)
+    qr.save(QR_DIR / "kimmuyong-card-qr.png", dark="#000000", light="#ffffff", border=4, scale=48)
+    qr.save(QR_DIR / "kimmuyong-card-qr-green.png", dark=QR_DARK, light="#ffffff", border=4, scale=48)
 
     roles_html = "\n".join(
         '      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -89,6 +91,15 @@ def main() -> None:
         f"{r['title']}(RN)" if r["icon"] == "heart" else r["title"] for r in c["roles"]
     )
 
+    if PHOTO.exists():
+        photo_uri = "data:image/jpeg;base64," + base64.b64encode(PHOTO.read_bytes()).decode()
+        alt = f'{c["nameKo"]} 사진'
+        avatar = f'      <img class="avatar" src="photo.jpg" alt="{alt}" width="108" height="108">'
+        print_avatar = f'      <img class="avatar" src="{photo_uri}" alt="{alt}">'
+        has_photo = " has-photo"
+    else:
+        avatar = print_avatar = has_photo = ""
+
     common = {
         "NAME_KO": c["nameKo"],
         "NAME_EN": c["nameEn"],
@@ -102,6 +113,10 @@ def main() -> None:
         "ROLES": roles_html,
         "ROLES_PRINT": roles_print,
         "VCF_FILE": VCF_FILE,
+        "AVATAR": avatar,
+        "PRINT_AVATAR": print_avatar,
+        "FRONT_CLASS": has_photo,
+        "BODY_CLASS": has_photo.strip(),
     }
 
     tpl = lambda name: (HERE / name).read_text(encoding="utf-8")
@@ -144,7 +159,7 @@ def main() -> None:
         f'{c["nameKo"][0]}</body>',
         encoding="utf-8",
     )
-    print(f"QR -> {site_url}  (version {qr.version}, error {qr.error})")
+    print(f"QR -> {site_url}  (version {qr.version}, error {qr.error}); photo: {'yes' if avatar else 'no'}")
 
 
 if __name__ == "__main__":

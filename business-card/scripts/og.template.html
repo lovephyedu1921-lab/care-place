@@ -20,6 +20,13 @@
     width: 1000px; height: 1000px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='46' fill='white' fill-opacity='.05'/%3E%3Cg fill='none' stroke='white'%3E%3Ccircle cx='100' cy='100' r='46' stroke-opacity='.18'/%3E%3Ccircle cx='100' cy='100' r='70' stroke-opacity='.12'/%3E%3Ccircle cx='100' cy='100' r='94' stroke-opacity='.07'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
   }
+  .has-photo .rings { right: -200px; bottom: auto; top: -185px; }
+  .avatar {
+    position: absolute; right: 120px; top: 155px;
+    width: 320px; height: 320px; border-radius: 50%; object-fit: cover;
+    border: 8px solid rgba(255,255,255,.92);
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,.5);
+  }
   .inner { position: absolute; inset: 80px 90px; }
   .eyebrow { font-size: 22px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; opacity: .72; }
   h1 { margin: 54px 0 0; font-size: 128px; line-height: 1; font-weight: 800; letter-spacing: -.02em; }
@@ -29,8 +36,9 @@
   li::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: #c9a45c; }
 </style>
 </head>
-<body>
+<body class="{{BODY_CLASS}}">
   <div class="rings"></div>
+{{PRINT_AVATAR}}
   <div class="inner">
     <div class="eyebrow">Digital Business Card</div>
     <h1>{{NAME_KO}}</h1>

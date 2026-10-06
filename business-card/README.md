@@ -3,7 +3,7 @@
 QR을 찍으면 열리는 모바일 명함 페이지와 인쇄용 명함 파일입니다.
 
 - 명함 주소: https://kimmuyong-card.vercel.app/
-- QR 코드: `qr/kimmuyong-card-qr.png` (진한 초록) · `qr/kimmuyong-card-qr-black.png` (검정) · `qr/kimmuyong-card-qr.svg`
+- QR 코드: `qr/kimmuyong-card-qr.png` (검정, 기본) · `qr/kimmuyong-card-qr-green.png` (진한 초록) · `qr/kimmuyong-card-qr.svg`
 - 인쇄용: `print/card-print-92x52mm.pdf` (앞·뒤 2쪽, 재단 여백 1mm 포함, 완성 크기 90×50mm)
 - 미리보기: `print/card-front.png`, `print/card-back.png` (300dpi)
 
@@ -19,6 +19,7 @@ QR을 찍으면 열리는 모바일 명함 페이지와 인쇄용 명함 파일�
 ## 정보 수정하기
 
 1. `scripts/card.json`에서 이름, 직함, 전화번호, 이메일을 고칩니다.
+   얼굴 사진은 `python3 business-card/scripts/prepare_photo.py 사진.jpg`로 `site/photo.jpg`를 만들면 명함 페이지·종이 명함·공유 이미지에 함께 들어갑니다.
 2. 다시 생성합니다.
 
    ```sh
@@ -27,6 +28,6 @@ QR을 찍으면 열리는 모바일 명함 페이지와 인쇄용 명함 파일�
    NODE_PATH="$(npm root -g)" node business-card/scripts/render.cjs   # Playwright 필요
    ```
 
-3. `site/` 폴더를 Vercel 프로젝트 `kimmuyong-card`에 다시 배포합니다.
+3. 커밋·푸시한 뒤 Vercel 프로젝트 `kimmuyong-card`(Root Directory: `business-card/site`)를 다시 배포합니다.
 
 명함 주소(`siteUrl`)가 바뀌지 않으면 이미 인쇄한 QR은 그대로 쓸 수 있습니다.

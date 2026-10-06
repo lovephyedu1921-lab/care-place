@@ -38,6 +38,12 @@
   }
   .front .top { display: flex; justify-content: space-between; align-items: center; }
   .front .eyebrow { font-size: 5.6pt; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; opacity: .7; }
+  .has-photo .rings { right: calc(var(--b) - 25.5mm); bottom: auto; top: calc(var(--b) - 18mm); }
+  .front .avatar {
+    position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    width: 25mm; height: 25mm; border-radius: 50%; object-fit: cover;
+    border: .6mm solid rgba(255,255,255,.92);
+  }
   .front .name { position: absolute; left: 0; top: 9.5mm; }
   .front h1 { margin: 0; font-size: 21pt; line-height: 1; font-weight: 800; letter-spacing: -.02em; }
   .front .en { margin: 1.8mm 0 0; font-size: 7pt; font-weight: 500; letter-spacing: .05em; opacity: .8; }
@@ -75,6 +81,7 @@
       <div class="top">
         <span class="eyebrow">Business Card</span>
       </div>
+
       <div class="name">
         <h1>김무용</h1>
         <p class="en">Kim Muyong</p>
