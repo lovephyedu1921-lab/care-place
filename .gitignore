@@ -1,0 +1,8 @@
+# OAuth 인증 정보 — 절대 커밋하지 마세요
+client_secrets.json
+token.pickle
+
+# 생성된 영상 파일
+*.mp4
+
+__pycache__/
