@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 홍보영상 시안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root { --g:#2D5016; --g2:#4F7A33; --o:#C8943A; --c:#F5F0E8; --c2:#EDE4D4; --ink:#2B2A24; --red:#C25B3F; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1920px; height:1080px; overflow:hidden; background:var(--c);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; }
+  .scene { position:absolute; inset:0; opacity:0; }
+  .scene > svg { position:absolute; inset:0; width:1920px; height:1080px; }
+  .hanji { position:absolute; inset:0; background:url(hanji.png) center/cover; mix-blend-mode:multiply; opacity:.6; }
+  .t { position:absolute; white-space:nowrap; }
+  .h1 { font-family:'Noto Serif KR', serif; font-weight:900; font-size:88px; letter-spacing:-1px; line-height:1.22; color:var(--g); }
+  .h2 { font-family:'Noto Serif KR', serif; font-weight:700; font-size:54px; color:var(--o); }
+  .sub { font-weight:500; font-size:34px; color:#5d5849; letter-spacing:.3px; }
+  .cap { font-weight:700; font-size:26px; letter-spacing:4px; color:var(--o); }
+  #wm { position:absolute; right:64px; top:48px; display:flex; align-items:center; gap:14px; opacity:0;
+        font-family:'Noto Serif KR', serif; font-weight:700; font-size:28px; color:var(--g); }
+  #draft { position:absolute; right:28px; bottom:20px; font-size:18px; color:rgba(0,0,0,.35); letter-spacing:1px; }
+  #fade { position:absolute; inset:0; background:#000; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- 공용 심볼: 그릇(담다) 위에 새싹 -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="mark" viewBox="-100 -100 200 200">
+      <circle r="90" fill="none" stroke="#2D5016" stroke-width="9"/>
+      <path d="M-58,8 Q0,82 58,8 Z" fill="#C8943A"/>
+      <path d="M0,10 L0,-30" stroke="#2D5016" stroke-width="8" stroke-linecap="round"/>
+      <path d="M-2,-22 C-14,-56 -50,-60 -58,-44 C-48,-22 -22,-14 -2,-22 Z" fill="#2D5016"/>
+      <path d="M2,-32 C16,-66 52,-68 60,-52 C50,-30 24,-24 2,-32 Z" fill="#4F7A33"/>
+    </symbol>
+    <symbol id="markw" viewBox="-100 -100 200 200">
+      <circle r="90" fill="none" stroke="#F5F0E8" stroke-width="9"/>
+      <path d="M-58,8 Q0,82 58,8 Z" fill="#C8943A"/>
+      <path d="M0,10 L0,-30" stroke="#F5F0E8" stroke-width="8" stroke-linecap="round"/>
+      <path d="M-2,-22 C-14,-56 -50,-60 -58,-44 C-48,-22 -22,-14 -2,-22 Z" fill="#F5F0E8"/>
+      <path d="M2,-32 C16,-66 52,-68 60,-52 C50,-30 24,-24 2,-32 Z" fill="#DCE8C8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- S1 · 영일대 일출 -->
+<div class="scene" id="s1">
+  <svg viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="sky1a" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#16213a"/><stop offset=".55" stop-color="#5e5470"/><stop offset="1" stop-color="#d9957a"/>
+      </linearGradient>
+      <linearGradient id="sky1b" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#40607e"/><stop offset=".55" stop-color="#e2ae92"/><stop offset="1" stop-color="#f9d7a4"/>
+      </linearGradient>
+      <radialGradient id="glow1">
+        <stop offset="0" stop-color="#fff3d6"/><stop offset=".25" stop-color="#ffd59a" stop-opacity=".7"/><stop offset="1" stop-color="#ffb070" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sea1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4a5f70"/><stop offset="1" stop-color="#121d28"/>
+      </linearGradient>
+    </defs>
+    <g id="s1cam">
+      <rect width="1920" height="1080" fill="url(#sky1a)"/>
+      <rect id="s1sky2" width="1920" height="1080" fill="url(#sky1b)" opacity="0"/>
+      <circle id="s1glow" cx="960" cy="700" r="520" fill="url(#glow1)"/>
+      <circle id="s1sun" cx="960" cy="700" r="64" fill="#fff0cc"/>
+      <rect y="690" width="1920" height="390" fill="url(#sea1)"/>
+      <g id="s1refl"></g>
+      <g id="s1waves" stroke="#8fa3b0" stroke-width="2" fill="none" opacity=".35"></g>
+      <!-- 영일대 정자 실루엣 -->
+      <g fill="#131b25">
+        <rect x="1620" y="724" width="300" height="9"/>
+        <rect x="1650" y="733" width="6" height="24"/><rect x="1730" y="733" width="6" height="24"/>
+        <rect x="1810" y="733" width="6" height="24"/><rect x="1890" y="733" width="6" height="24"/>
+        <rect x="1395" y="716" width="240" height="14"/>
+        <rect x="1405" y="730" width="8" height="30"/><rect x="1470" y="730" width="8" height="30"/>
+        <rect x="1545" y="730" width="8" height="30"/><rect x="1615" y="730" width="8" height="30"/>
+        <rect x="1415" y="662" width="9" height="54"/><rect x="1478" y="662" width="9" height="54"/>
+        <rect x="1543" y="662" width="9" height="54"/><rect x="1606" y="662" width="9" height="54"/>
+        <path d="M1350,664 Q1515,640 1680,664 L1688,650 Q1660,656 1640,650 Q1515,606 1390,650 Q1370,656 1342,650 Z"/>
+        <rect x="1450" y="610" width="8" height="34"/><rect x="1572" y="610" width="8" height="34"/>
+        <path d="M1418,614 Q1515,596 1612,614 L1620,602 Q1600,606 1588,600 Q1515,566 1442,600 Q1430,606 1410,602 Z"/>
+        <rect x="1511" y="560" width="8" height="16"/>
+      </g>
+      <g id="s1birds" stroke="#1c2633" stroke-width="3" fill="none" stroke-linecap="round"></g>
+    </g>
+  </svg>
+</div>
+
+<!-- S2 · 통증 -->
+<div class="scene" id="s2">
+  <div class="hanji"></div>
+  <svg viewBox="0 0 1920 1080">
+    <circle cx="610" cy="560" r="250" fill="#EDE4D4"/>
+    <circle cx="1310" cy="560" r="250" fill="#EDE4D4"/>
+    <ellipse cx="610" cy="752" rx="120" ry="14" fill="#d9cdb6"/>
+    <ellipse cx="1320" cy="752" rx="130" ry="14" fill="#d9cdb6"/>
+    <g id="s2man"></g>
+    <g id="s2elder"></g>
+    <g id="s2pulse" fill="none" stroke="#C25B3F"></g>
+  </svg>
+  <div class="t cap" id="s2tag1" style="left:452px;top:520px" data-in="1.3">허리</div>
+  <div class="t cap" id="s2tag2" style="left:1392px;top:650px" data-in="1.8">무릎</div>
+  <div class="t h1" style="left:0;width:1920px;text-align:center;top:808px;font-size:76px" data-in=".5">통증은 일상을 멈추게 합니다</div>
+  <div class="t sub" style="left:0;width:1920px;text-align:center;top:920px" data-in="1.1">어느 날 찾아온 목 · 허리 · 무릎 통증</div>
+</div>
+
+<!-- S3 · 장성동 병원 외관 -->
+<div class="scene" id="s3">
+  <svg viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#dfeaed"/><stop offset="1" stop-color="#f8f0e2"/>
+      </linearGradient>
+    </defs>
+    <g id="s3cam">
+      <rect width="1920" height="1080" fill="url(#sky3)"/>
+      <circle cx="1580" cy="190" r="70" fill="#fff6e0"/>
+      <g id="s3clouds" fill="#fff" opacity=".8"></g>
+      <!-- 먼 건물 -->
+      <g fill="#e2dccf">
+        <rect x="60" y="470" width="200" height="430"/><rect x="250" y="520" width="170" height="380"/>
+        <rect x="1580" y="500" width="190" height="400"/><rect x="1760" y="450" width="180" height="450"/>
+      </g>
+      <!-- 이웃 건물 -->
+      <rect x="380" y="430" width="300" height="470" fill="#d6cbb8"/>
+      <rect x="1240" y="390" width="330" height="510" fill="#cdc2ae"/>
+      <g id="s3nwin" fill="#bfb39c"></g>
+      <!-- 소담한방병원 건물 (7층) -->
+      <rect x="700" y="214" width="520" height="686" fill="#f7f3ea"/>
+      <rect x="700" y="214" width="520" height="16" fill="#2D5016"/>
+      <g id="s3win"></g>
+      <rect x="700" y="804" width="520" height="96" fill="#e9e1d1"/>
+      <rect x="880" y="820" width="160" height="80" fill="#9fb6b8"/>
+      <rect x="958" y="820" width="4" height="80" fill="#e9e1d1"/>
+      <rect x="850" y="804" width="220" height="14" fill="#2D5016"/>
+      <!-- 간판 -->
+      <g id="s3sign">
+        <rect x="738" y="246" width="444" height="96" rx="6" fill="#2D5016"/>
+        <use href="#markw" x="756" y="258" width="72" height="72"/>
+        <text x="1010" y="312" text-anchor="middle" font-family="Noto Serif KR" font-weight="900" font-size="54" fill="#F5F0E8">소담한방병원</text>
+      </g>
+      <!-- 거리 -->
+      <rect x="0" y="900" width="1920" height="44" fill="#d5cbb9"/>
+      <rect x="0" y="944" width="1920" height="136" fill="#8f8b82"/>
+      <g fill="#e9e3d6"><rect id="s3dash" x="0" y="1006" width="1920" height="8"/></g>
+      <g id="s3car"></g>
+      <!-- 가로수 -->
+      <g id="s3trees"></g>
+    </g>
+  </svg>
+  <div class="t" style="left:110px;top:600px;" data-in=".6" data-y="0" data-x="-40">
+    <div style="background:rgba(245,240,232,.94);padding:30px 44px 34px;border-left:10px solid var(--o);box-shadow:0 10px 30px rgba(0,0,0,.08)">
+      <div class="cap">포항 장성동</div>
+      <div class="h1" style="font-size:80px;margin-top:4px">소담한방병원</div>
+      <div class="sub" style="font-size:28px;margin-top:6px">가까운 곳에서, 소담하게 돌보겠습니다</div>
+    </div>
+  </div>
+</div>
+
+<!-- S4 · 상담 -->
+<div class="scene" id="s4">
+  <div class="hanji"></div>
+  <svg viewBox="0 0 1920 1080">
+    <circle cx="1300" cy="560" r="400" fill="#EDE4D4"/>
+    <rect x="860" y="712" width="900" height="6" rx="3" fill="#d4c6ac"/>
+    <g id="s4scene"></g>
+    <g id="s4b1">
+      <path d="M880,330 h220 a24,24 0 0 1 24,24 v70 a24,24 0 0 1 -24,24 h-150 l-34,34 l4,-34 h-40 a24,24 0 0 1 -24,-24 v-70 a24,24 0 0 1 24,-24 z" fill="#fff" stroke="#d9cdb6" stroke-width="3"/>
+      <circle id="s4d1" cx="944" cy="389" r="11" fill="#9a9381"/><circle id="s4d2" cx="990" cy="389" r="11" fill="#9a9381"/><circle id="s4d3" cx="1036" cy="389" r="11" fill="#9a9381"/>
+    </g>
+    <g id="s4b2">
+      <path d="M1500,310 h170 a24,24 0 0 1 24,24 v70 a24,24 0 0 1 -24,24 h-30 l4,34 l-34,-34 h-110 a24,24 0 0 1 -24,-24 v-70 a24,24 0 0 1 24,-24 z" fill="#2D5016"/>
+      <path d="M1545,372 l26,24 l46,-50" stroke="#F5F0E8" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </svg>
+  <div class="t h2" style="left:150px;top:340px" data-in=".4">먼저,</div>
+  <div class="t h1" style="left:150px;top:420px;font-size:96px" data-in=".8">충분히 듣습니다</div>
+  <div class="t sub" style="left:154px;top:572px" data-in="1.4">증상부터 생활 습관까지<br>꼼꼼하게 살핍니다</div>
+</div>
+
+<!-- S5 · 치료 몽타주 -->
+<div class="scene" id="s5">
+  <div class="hanji"></div>
+  <svg viewBox="0 0 1920 1080">
+    <defs><clipPath id="c5"><circle r="282"/></clipPath></defs>
+    <g transform="translate(600,520)">
+      <circle r="330" fill="none" stroke="#C8943A" stroke-width="2" opacity=".6"/>
+      <circle id="s5ring" r="312" fill="none" stroke="#2D5016" stroke-width="4" stroke-dasharray="6 14" opacity=".5"/>
+      <circle r="290" fill="#EDE4D4" stroke="#2D5016" stroke-width="6"/>
+      <g clip-path="url(#c5)">
+        <!-- 0 침 -->
+        <g id="ic0">
+          <circle cy="-215" r="58" fill="#dcc2a2"/>
+          <rect x="-28" y="-170" width="56" height="40" fill="#dcc2a2"/>
+          <path d="M-130,300 C-145,80 -160,-40 -112,-92 C-84,-122 -44,-128 -30,-140 L30,-140 C44,-128 84,-122 112,-92 C160,-40 145,80 130,300 Z" fill="#e8d3b6"/>
+          <path d="M0,-130 L0,280" stroke="#d1b48d" stroke-width="5" stroke-dasharray="14 10"/>
+          <g id="ic0pts"></g>
+          <g id="ic0n"></g>
+        </g>
+        <!-- 1 추나 -->
+        <g id="ic1">
+          <path d="M-150,250 C-140,190 -80,170 0,176 C80,170 140,190 150,250 L150,300 L-150,300 Z" fill="#e3d5bc"/>
+          <g id="ic1v"></g>
+          <g id="ic1arr" fill="none" stroke="#C8943A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-200,-120 Q-250,0 -200,120 M-214,96 L-200,120 L-178,104"/>
+            <path d="M200,-120 Q250,0 200,120 M214,96 L200,120 L178,104"/>
+          </g>
+        </g>
+        <!-- 2 도수 -->
+        <g id="ic2">
+          <circle cy="-110" r="74" fill="#dcc2a2"/>
+          <rect x="-34" y="-50" width="68" height="70" fill="#dcc2a2"/>
+          <path d="M-260,300 C-260,90 -180,40 -60,14 L60,14 C180,40 260,90 260,300 Z" fill="#e8d3b6"/>
+          <g id="ic2fx" fill="none"></g>
+        </g>
+        <!-- 3 한약 -->
+        <g id="ic3">
+          <g id="ic3steam" fill="none" stroke="#b8ab95" stroke-width="10" stroke-linecap="round"></g>
+          <path d="M150,40 L250,-14" stroke="#6e4627" stroke-width="20" stroke-linecap="round"/>
+          <path d="M-148,28 L-222,-8 L-214,16 L-150,64 Z" fill="#7d4f2b"/>
+          <path d="M-152,-20 C-172,120 -110,192 0,192 C110,192 172,120 152,-20 Z" fill="#8a5a33"/>
+          <path d="M-120,40 C-110,120 -60,160 0,166" stroke="#a5703f" stroke-width="10" fill="none" stroke-linecap="round" opacity=".6"/>
+          <ellipse cy="-20" rx="156" ry="28" fill="#6e4627"/>
+          <ellipse cy="-40" rx="120" ry="22" fill="#a06d40"/>
+          <circle cy="-62" r="16" fill="#6e4627"/>
+          <g fill="#4F7A33"><ellipse cx="-200" cy="205" rx="48" ry="18" transform="rotate(-25 -200 205)"/><ellipse cx="-150" cy="232" rx="40" ry="15" transform="rotate(15 -150 232)"/>
+            <ellipse cx="205" cy="200" rx="46" ry="17" transform="rotate(30 205 200)"/></g>
+          <g fill="#d9b277" stroke="#b8894a" stroke-width="4"><circle cx="-60" cy="236" r="22"/><circle cx="70" cy="240" r="18"/><circle cx="140" cy="236" r="14"/></g>
+          <g fill="#b53a2a"><circle cx="10" cy="250" r="9"/><circle cx="-14" cy="258" r="8"/><circle cx="104" cy="262" r="8"/></g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div id="s5txt"></div>
+  <div class="t" id="s5chips" style="left:1080px;top:880px;display:flex;gap:16px"></div>
+</div>
+
+<!-- S6 · 입원 병실 -->
+<div class="scene" id="s6">
+  <svg viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="out6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2e6"/><stop offset="1" stop-color="#f7ecd8"/></linearGradient>
+      <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaf0" stop-opacity=".9"/><stop offset="1" stop-color="#fffaf0" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g id="s6cam">
+      <rect width="1920" height="1080" fill="#efe4d2"/>
+      <rect y="800" width="1920" height="280" fill="#d9c3a0"/>
+      <g stroke="#c9b18b" stroke-width="3"><line x1="0" y1="860" x2="1920" y2="860"/><line x1="0" y1="940" x2="1920" y2="940"/><line x1="0" y1="1030" x2="1920" y2="1030"/></g>
+      <rect y="792" width="1920" height="12" fill="#c6ad86"/>
+      <!-- 창문 -->
+      <rect x="110" y="150" width="410" height="440" fill="url(#out6)"/>
+      <g fill="#7fa25b" opacity=".85"><circle cx="190" cy="260" r="60"/><circle cx="250" cy="220" r="50"/><circle cx="150" cy="330" r="46"/><circle cx="460" cy="520" r="70"/></g>
+      <path d="M110,300 C180,280 220,250 280,240" stroke="#6b5136" stroke-width="10" fill="none"/>
+      <g fill="#fbf7ef"><rect x="100" y="140" width="430" height="16"/><rect x="100" y="584" width="430" height="16"/><rect x="100" y="140" width="16" height="460"/><rect x="514" y="140" width="16" height="460"/><rect x="308" y="140" width="14" height="460"/></g>
+      <path d="M60,120 L150,120 C140,300 160,450 140,640 L60,640 Z" fill="#e6d6ba"/>
+      <path d="M480,120 L570,120 L570,640 L500,640 C480,450 500,300 480,120 Z" fill="#e6d6ba"/>
+      <g stroke="#d6c3a0" stroke-width="4" fill="none"><path d="M90,130 C85,300 95,480 88,630"/><path d="M118,130 C112,300 124,480 116,630"/><path d="M530,130 C534,300 526,480 534,630"/></g>
+      <rect x="40" y="108" width="560" height="14" rx="7" fill="#b98a55"/>
+      <!-- 침대 -->
+      <rect x="560" y="470" width="44" height="330" rx="10" fill="#b98a55"/>
+      <rect x="590" y="660" width="600" height="40" rx="8" fill="#b98a55"/>
+      <rect x="610" y="700" width="18" height="100" fill="#a3784a"/><rect x="1160" y="700" width="18" height="100" fill="#a3784a"/>
+      <rect x="600" y="600" width="580" height="64" rx="18" fill="#fffdf8"/>
+      <rect x="626" y="566" width="160" height="48" rx="22" fill="#fff" stroke="#e5dccb" stroke-width="3"/>
+      <path d="M800,588 L1170,588 C1192,588 1196,610 1194,640 L1190,690 L800,690 C782,690 780,600 800,588 Z" fill="#5b7f3c"/>
+      <path d="M820,612 L1180,612" stroke="#C8943A" stroke-width="5"/>
+      <path d="M800,588 C840,600 850,660 820,690" stroke="#4a6a30" stroke-width="5" fill="none"/>
+      <!-- 협탁 -->
+      <rect x="1220" y="640" width="140" height="160" rx="6" fill="#c49763"/>
+      <rect x="1232" y="690" width="116" height="4" fill="#a3784a"/>
+      <rect x="1262" y="590" width="56" height="50" rx="8" fill="#f2ebe0"/>
+      <g fill="#4F7A33"><ellipse cx="1290" cy="560" rx="14" ry="36"/><ellipse cx="1268" cy="568" rx="12" ry="30" transform="rotate(-30 1268 568)"/><ellipse cx="1312" cy="568" rx="12" ry="30" transform="rotate(30 1312 568)"/></g>
+      <!-- 햇살 -->
+      <polygon id="s6beam" points="140,170 500,170 1360,1080 640,1080" fill="url(#beam)" style="mix-blend-mode:screen"/>
+      <g id="s6dust" fill="#fffaf0"></g>
+    </g>
+  </svg>
+  <div class="t h2" style="left:1450px;top:330px" data-in=".5">편안한</div>
+  <div class="t h1" style="left:1450px;top:404px;font-size:96px" data-in=".9">입원 치료</div>
+  <div class="t sub" style="left:1454px;top:548px" data-in="1.5">회복에 집중할 수 있는<br>정갈한 병실</div>
+</div>
+
+<!-- S7 · 원장 한마디 -->
+<div class="scene" id="s7">
+  <div class="hanji"></div>
+  <svg viewBox="0 0 1920 1080">
+    <g fill="none" stroke="#C8943A" opacity=".25"><circle cx="960" cy="540" r="420" stroke-width="2"/><circle cx="960" cy="540" r="380" stroke-width="1"/></g>
+    <text x="300" y="400" font-family="Noto Serif KR" font-weight="900" font-size="260" fill="#C8943A" opacity=".35">“</text>
+  </svg>
+  <div class="t" style="left:0;width:1920px;top:380px;text-align:center;font-family:'Noto Serif KR';font-weight:700;font-size:66px;line-height:1.55;color:var(--g)">
+    <div data-in=".3">환자분이 다시 일상으로 돌아가시는 것,</div>
+    <div data-in="1.3">그게 저희의 목표입니다.</div>
+  </div>
+  <div class="t sub" style="left:0;width:1920px;text-align:center;top:650px;font-size:32px" data-in="2.2">— 소담한방병원 원장</div>
+</div>
+
+<!-- S8 · 다시 일상으로 -->
+<div class="scene" id="s8">
+  <svg viewBox="0 0 1920 1080">
+    <defs>
+      <linearGradient id="sky8" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe4ea"/><stop offset="1" stop-color="#fbeed6"/></linearGradient>
+      <linearGradient id="sea8" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb0bb"/><stop offset="1" stop-color="#4c8492"/></linearGradient>
+      <radialGradient id="sun8"><stop offset="0" stop-color="#fffaf0"/><stop offset=".3" stop-color="#fff1cf" stop-opacity=".8"/><stop offset="1" stop-color="#fff1cf" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#sky8)"/>
+    <circle cx="1560" cy="200" r="260" fill="url(#sun8)"/>
+    <g id="s8clouds" fill="#fff" opacity=".85"></g>
+    <rect y="600" width="1920" height="170" fill="url(#sea8)"/>
+    <g fill="#5d8a96" opacity=".9">
+      <rect x="160" y="588" width="210" height="8"/><rect x="175" y="596" width="5" height="14"/><rect x="355" y="596" width="5" height="14"/>
+      <rect x="182" y="556" width="6" height="32"/><rect x="342" y="556" width="6" height="32"/>
+      <path d="M140,560 Q265,544 390,560 L396,550 Q265,520 134,550 Z"/>
+      <rect x="370" y="592" width="260" height="6"/>
+    </g>
+    <g id="s8waves" stroke="#e8f3f4" stroke-width="3" fill="none" opacity=".6"></g>
+    <path d="M0,770 C400,748 900,780 1920,756 L1920,1080 L0,1080 Z" fill="#efdcb8"/>
+    <path d="M0,770 C400,748 900,780 1920,756" stroke="#fff8ea" stroke-width="10" fill="none" opacity=".8"/>
+    <path d="M0,940 C500,900 1200,930 1920,900 L1920,1000 C1200,1030 500,1000 0,1040 Z" fill="#e6cfa4" opacity=".7"/>
+    <g id="s8ppl"></g>
+    <g id="s8birds" stroke="#3c5a64" stroke-width="3" fill="none" stroke-linecap="round"></g>
+  </svg>
+  <div class="t h1" style="left:0;width:1920px;text-align:center;top:150px;font-size:100px" data-in=".6">다시, 나의 일상으로</div>
+</div>
+
+<!-- S9 · 엔딩 -->
+<div class="scene" id="s9">
+  <div class="hanji"></div>
+  <svg viewBox="0 0 1920 1080">
+    <g fill="none" stroke="#C8943A" opacity=".22"><circle cx="960" cy="330" r="190" stroke-width="2"/><circle cx="960" cy="330" r="240" stroke-width="1"/><circle cx="960" cy="330" r="300" stroke-width="1"/></g>
+    <g transform="translate(960,330)">
+      <circle id="s9ring" r="120" fill="none" stroke="#2D5016" stroke-width="12" stroke-dasharray="754" stroke-dashoffset="754" transform="rotate(-90)"/>
+      <g id="s9inner" opacity="0">
+        <path d="M-77,11 Q0,109 77,11 Z" fill="#C8943A"/>
+        <path d="M0,13 L0,-40" stroke="#2D5016" stroke-width="11" stroke-linecap="round"/>
+        <path d="M-3,-29 C-19,-75 -67,-80 -77,-59 C-64,-29 -29,-19 -3,-29 Z" fill="#2D5016"/>
+        <path d="M3,-43 C21,-88 69,-90 80,-69 C67,-40 32,-32 3,-43 Z" fill="#4F7A33"/>
+      </g>
+    </g>
+  </svg>
+  <div class="t h1" style="left:0;width:1920px;text-align:center;top:470px;font-size:116px" data-in="1.0">소담한방병원</div>
+  <div class="t h2" style="left:0;width:1920px;text-align:center;top:630px;font-size:46px" data-in="1.6">소담하게, 일상을 되찾다</div>
+  <div class="t" style="left:0;width:1920px;top:770px;display:flex;justify-content:center;gap:0" data-in="2.3">
+    <div style="padding:0 56px;text-align:center"><div class="cap" style="font-size:22px">대표전화</div><div style="font-size:40px;font-weight:700;margin-top:8px;color:var(--g)">054-000-0000</div></div>
+    <div style="padding:0 56px;text-align:center;border-left:2px solid #d8ccb4;border-right:2px solid #d8ccb4"><div class="cap" style="font-size:22px">주소</div><div style="font-size:32px;font-weight:500;margin-top:12px">포항시 북구 삼흥로32번길 18 (장성동)</div></div>
+    <div style="padding:0 56px;text-align:center"><div class="cap" style="font-size:22px">진료시간</div><div style="font-size:32px;font-weight:500;margin-top:12px">평일 09:00 – 18:00</div></div>
+  </div>
+  <div class="t" style="left:0;width:1920px;text-align:center;top:960px;font-size:20px;color:#9a917c" data-in="2.6">※ 시안용 영상입니다. 전화번호와 진료시간은 병원 확인 후 반영합니다.</div>
+</div>
+
+<div id="wm"><svg width="52" height="52"><use href="#mark" width="52" height="52"/></svg>소담한방병원</div>
+<div id="draft">시안 v0.1</div>
+<div id="fade"></div>
+</div>
+
+<script>
+const D = Math.PI / 180;
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const eo = x => 1 - Math.pow(1 - x, 3);
+const eio = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const prog = (t, a, d) => clamp((t - a) / d);
+const f1 = v => v.toFixed(1);
+const pt = p => f1(p[0]) + ',' + f1(p[1]);
+
+// 장면 구간(초). 다음 장면이 위에서 0.5초 동안 페이드 인 한다.
+const SCENES = [
+  ['s1', 0, 4.3], ['s2', 3.8, 9.3], ['s3', 8.8, 14.3], ['s4', 13.8, 20.3], ['s5', 19.8, 32.3],
+  ['s6', 31.8, 40.3], ['s7', 39.8, 45.3], ['s8', 44.8, 53.3], ['s9', 52.8, 60.01],
+];
+const DURATION = 60;
+
+// 막대 인형. 각도는 아래 방향 0°, 앞쪽(+) 기준. flip이면 왼쪽을 본다.
+function fig(o) {
+  const s = o.s || 1, fl = o.flip ? -1 : 1, c = o.c || '#2D5016', cb = o.cb || '#a3a891', t = o.t || 0;
+  const V = (p, l, a) => [p[0] + fl * l * s * Math.sin(a * D), p[1] + l * s * Math.cos(a * D)];
+  const H = [o.x, o.y];
+  const up = l => [H[0] + fl * l * s * Math.sin(t * D), H[1] - l * s * Math.cos(t * D)];
+  const N = up(68), Hd = up(96), Sh = up(60);
+  const limb = (r, a, l1, l2) => { const m = V(r, l1, a[0]), e = V(m, l2, a[1]); return { d: `M${pt(r)}L${pt(m)}L${pt(e)}`, m, e }; };
+  const L = o.legs || [[4, 0], [-6, -2]], A = o.arms || [[10, 16], [-8, -4]];
+  const lf = limb(H, L[0], 45, 45), lb = limb(H, L[1], 45, 45);
+  const af = limb(Sh, A[0], 38, 36), ab = limb(Sh, A[1], 38, 36);
+  const lw = 13 * s, tw = 24 * s;
+  const P = (l, col, w) => `<path d="${l.d}" stroke="${col}" stroke-width="${f1(w)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const torso = `M${pt(H)}L${pt(N)}`;
+  let g = '';
+  if (o.behind) g += o.behind({ H, Sh, af, ab, s, fl });
+  g += P(lb, cb, lw);
+  g += o.coat ? P(ab, cb, lw + 6 * s) + P(ab, '#f4f1ea', lw) : P(ab, cb, lw);
+  g += P(lf, c, lw);
+  if (o.coat) g += `<path d="${torso}" stroke="${c}" stroke-width="${f1(tw + 7 * s)}" stroke-linecap="round"/><path d="${torso}" stroke="#fff" stroke-width="${f1(tw)}" stroke-linecap="round"/>`;
+  else g += `<path d="${torso}" stroke="${o.tc || c}" stroke-width="${f1(tw)}" stroke-linecap="round"/>`;
+  g += `<circle cx="${f1(Hd[0])}" cy="${f1(Hd[1])}" r="${f1(19 * s)}" fill="${c}"/>`;
+  g += o.coat ? P(af, c, lw + 7 * s) + P(af, '#fff', lw) : P(af, c, lw);
+  if (o.extra) g += o.extra({ H, N, Hd, Sh, af, ab, lf, lb, s, fl });
+  return g;
+}
+function walkPose(ph) {
+  const a = 24 * Math.sin(ph), b = -a;
+  return {
+    legs: [[a, a - 26 * Math.max(0, Math.cos(ph))], [b, b - 26 * Math.max(0, -Math.cos(ph))]],
+    arms: [[-18 * Math.sin(ph), -18 * Math.sin(ph) + 14], [18 * Math.sin(ph), 18 * Math.sin(ph) + 14]],
+    bob: -3 * Math.cos(2 * ph),
+  };
+}
+
+// data-in 이 붙은 요소: 아래에서 떠오르며 나타남
+const reveals = [...document.querySelectorAll('[data-in]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.in, d: +(el.dataset.d || .9),
+  y: el.dataset.y !== undefined ? +el.dataset.y : 28, x: +(el.dataset.x || 0),
+}));
+
+// ---------- 정적 요소 생성 ----------
+(function build() {
+  // S3 창문
+  let w = '';
+  for (let f = 0; f < 6; f++) for (let i = 0; i < 5; i++) {
+    const x = 730 + i * 98, y = 370 + f * 72;
+    const lit = (f * 5 + i) % 7 === 2 || (f * 3 + i) % 5 === 0;
+    w += `<rect x="${x}" y="${y}" width="70" height="46" rx="3" fill="${lit ? '#f7dfa8' : '#b9cdd0'}"/>`;
+  }
+  $('s3win').innerHTML = w;
+  w = '';
+  for (let f = 0; f < 6; f++) for (let i = 0; i < 3; i++) w += `<rect x="${410 + i * 90}" y="${470 + f * 70}" width="54" height="38"/>`;
+  for (let f = 0; f < 7; f++) for (let i = 0; i < 3; i++) w += `<rect x="${1275 + i * 100}" y="${430 + f * 68}" width="60" height="38"/>`;
+  $('s3nwin').innerHTML = w;
+  w = '';
+  for (const [x, r] of [[180, 70], [560, 64], [1300, 72], [1660, 66]]) {
+    w += `<rect x="${x - 8}" y="${900 - 150}" width="16" height="150" fill="#7a5a3c"/>`;
+    w += `<circle cx="${x}" cy="${900 - 160}" r="${r}" fill="#6f9a4a"/><circle cx="${x - r * .5}" cy="${900 - 130}" r="${r * .7}" fill="#5f8a3e"/><circle cx="${x + r * .55}" cy="${900 - 135}" r="${r * .65}" fill="#7aa653"/>`;
+  }
+  $('s3trees').innerHTML = w;
+  $('s3dash').setAttribute('fill', 'none');
+  let dash = '';
+  for (let x = 0; x < 2200; x += 160) dash += `<rect x="${x}" y="1006" width="90" height="8"/>`;
+  $('s3dash').outerHTML = `<g id="s3dash">${dash}</g>`;
+
+  // S4 상담 장면 (환자: 왼쪽, 한의사: 오른쪽)
+  const chair = (x, fl) => `<rect x="${x - (fl ? 20 : 50)}" y="652" width="70" height="14" rx="5" fill="#b98a55"/>
+    <rect x="${x + (fl ? 40 : -50)}" y="520" width="12" height="146" rx="5" fill="#b98a55"/>
+    <rect x="${x - (fl ? 14 : 44)}" y="664" width="8" height="48" fill="#a3784a"/><rect x="${x + (fl ? 38 : 8)}" y="664" width="8" height="48" fill="#a3784a"/>`;
+  const sit = { legs: [[86, 2], [80, -2]] };
+  let s4 = chair(1040, false) + chair(1560, true);
+  s4 += `<rect x="1170" y="590" width="260" height="18" rx="5" fill="#b98a55"/><rect x="1186" y="608" width="12" height="104" fill="#a3784a"/><rect x="1402" y="608" width="12" height="104" fill="#a3784a"/>`;
+  s4 += `<rect x="1280" y="548" width="40" height="42" rx="6" fill="#f2ebe0"/><g fill="#4F7A33"><ellipse cx="1300" cy="528" rx="10" ry="26"/><ellipse cx="1286" cy="534" rx="9" ry="22" transform="rotate(-30 1286 534)"/><ellipse cx="1314" cy="534" rx="9" ry="22" transform="rotate(30 1314 534)"/></g>`;
+  s4 += `<rect x="1215" y="576" width="46" height="14" rx="3" fill="#fffdf8"/>`;
+  s4 += fig({ x: 1040, y: 644, s: 1.5, t: 4, c: '#6e6a58', cb: '#aaa592', ...sit, arms: [[28, 84], [20, 70]] });
+  s4 += fig({ x: 1560, y: 644, s: 1.5, t: 2, flip: true, coat: true, c: '#2D5016', cb: '#8aa074', ...sit, arms: [[26, 86], [18, 72]] });
+  $('s4scene').innerHTML = s4;
+
+  // S5 침 자리
+  $('ic0pts').innerHTML = [[-46, -40], [46, -40], [-52, 60], [52, 60], [0, 150]]
+    .map(([x, y], i) => `<circle id="ic0p${i}" cx="${x}" cy="${y}" r="8" fill="#C8943A"/>`).join('');
+
+  // S5 오른쪽 텍스트
+  const items = [
+    ['鍼', '침', '경혈 자극으로 몸의 균형을 돕습니다'],
+    ['推拿', '추나', '틀어진 척추와 관절을 바로잡는 한방 수기요법'],
+    ['徒手', '도수치료', '손으로 근육과 관절을 부드럽게 풀어줍니다'],
+    ['韓藥', '한약', '체질과 증상에 맞춘 한약 처방'],
+  ];
+  $('s5txt').innerHTML = items.map(([hj, k, sub], i) => `<div class="p5" id="p5_${i}" style="position:absolute;inset:0;opacity:0">
+      <div class="t" style="left:1040px;top:90px;font-family:'Noto Serif KR';font-weight:900;font-size:300px;color:var(--o);opacity:.13">${hj}</div>
+      <div class="t cap" style="left:1084px;top:330px;font-size:30px">0${i + 1} / 04</div>
+      <div class="t h1" style="left:1080px;top:372px;font-size:${k.length > 2 ? 132 : 156}px">${k}</div>
+      <div class="t sub" style="left:1084px;top:${k.length > 2 ? 560 : 590}px">${sub}</div></div>`).join('');
+  $('s5chips').innerHTML = items.map(([, k], i) => `<div id="chip${i}" style="padding:12px 30px;border-radius:40px;font-size:28px;font-weight:700;border:2px solid #2D5016">${k}</div>`).join('');
+})();
+
+// ---------- 프레임 렌더 ----------
+function renderAt(T) {
+  // 장면 투명도
+  let idx = 0;
+  SCENES.forEach(([id, a, b], i) => {
+    const el = $(id);
+    const nextFull = SCENES[i + 1] ? T >= SCENES[i + 1][1] + .5 : false;
+    const vis = T >= a && T < b && !nextFull;
+    el.style.display = vis ? 'block' : 'none';
+    el.style.opacity = i === 0 ? 1 : eio(prog(T, a, .5));
+    if (vis) idx = i;
+  });
+  const lt = id => T - SCENES.find(s => s[0] === id)[1];
+
+  reveals.forEach(r => {
+    const p = eo(prog(lt(r.scene), r.a, r.d));
+    r.el.style.opacity = p;
+    r.el.style.transform = `translate(${(1 - p) * r.x}px,${(1 - p) * r.y}px)`;
+  });
+
+  $('fade').style.opacity = 1 - eo(prog(T, 0, 1.2)) + eio(prog(T, 59.3, .7));
+  $('wm').style.opacity = eo(prog(T, 9.6, .6)) * (1 - eo(prog(T, 52.8, .5)));
+
+  const vis = id => $(id).style.display !== 'none';
+
+  // S1 일출
+  if (vis('s1')) {
+    const t = lt('s1'), p = eio(prog(t, 0, 4.3));
+    const k = 1 + .07 * p;
+    $('s1cam').setAttribute('transform', `translate(960,620) scale(${k}) translate(-960,-620)`);
+    const sy = 760 - 150 * eo(prog(t, 0, 4.3));
+    $('s1sun').setAttribute('cy', sy); $('s1glow').setAttribute('cy', sy);
+    $('s1sky2').setAttribute('opacity', p * .9);
+    let r = '';
+    for (let i = 0; i < 9; i++) {
+      const y = 704 + i * i * 4.2, w = (150 - i * 9) * (.35 + p * .9) * (1 + .25 * Math.sin(t * 3 + i * 1.7));
+      r += `<rect x="${f1(960 - w / 2 + 12 * Math.sin(t * 1.3 + i))}" y="${y}" width="${f1(w)}" height="${3 + i * .6}" rx="2" fill="#ffd9a0" opacity="${f1(clamp(.85 - i * .07) * (.3 + p * .7))}"/>`;
+    }
+    $('s1refl').innerHTML = r;
+    let wv = '';
+    for (let i = 0; i < 7; i++) {
+      const y = 760 + i * 46, x0 = ((t * 40 + i * 230) % 400) - 400;
+      for (let x = x0; x < 1920; x += 400) wv += `<path d="M${f1(x)},${y} q40,-8 80,0 t80,0"/>`;
+    }
+    $('s1waves').innerHTML = wv;
+    let bd = '';
+    for (let i = 0; i < 3; i++) {
+      const x = 300 + i * 70 + t * 70, y = 330 + i * 26 + Math.sin(t * 2 + i) * 8, fl = 10 * Math.sin(t * 9 + i * 2);
+      bd += `<path d="M${f1(x - 18)},${f1(y - fl)} Q${f1(x - 8)},${f1(y - 4)} ${f1(x)},${f1(y)} Q${f1(x + 8)},${f1(y - 4)} ${f1(x + 18)},${f1(y - fl)}"/>`;
+    }
+    $('s1birds').innerHTML = bd;
+  }
+
+  // S2 통증
+  if (vis('s2')) {
+    const t = lt('s2');
+    const pm = eo(prog(t, .6, .8)), pe = eo(prog(t, 1.1, .8));
+    $('s2man').innerHTML = fig({ x: 610, y: 600, s: 1.6, t: 14 + 3 * Math.sin(t * 1.2), c: '#3d3c34', cb: '#9a9483',
+      legs: [[5, 0], [-7, -2]], arms: [[-62, 40], [12, 22]] });
+    $('s2man').setAttribute('opacity', pm);
+    $('s2elder').innerHTML = fig({ x: 1300, y: 600, s: 1.6, t: 40, c: '#3d3c34', cb: '#9a9483',
+      legs: [[25, -5], [-10, 0]], arms: [[5, -49], [30, 20]],
+      behind: ({ ab, s }) => `<path d="M${pt(ab.e)} L${f1(ab.e[0] + 10 * s)},${f1(600 + 92 * s)}" stroke="#7a5a3c" stroke-width="${f1(7 * s)}" stroke-linecap="round"/>` });
+    $('s2elder').setAttribute('opacity', pe);
+    let pl = '';
+    const pulse = (cx, cy, t0) => {
+      for (let j = 0; j < 2; j++) {
+        const q = ((t - t0) * .9 + j * .5) % 1;
+        if (t < t0) continue;
+        pl += `<circle cx="${cx}" cy="${cy}" r="${f1(14 + q * 60)}" stroke-width="${f1(6 * (1 - q))}" opacity="${f1(1 - q)}"/>`;
+      }
+      if (t > t0) pl += `<circle cx="${cx}" cy="${cy}" r="12" fill="#C25B3F" stroke="none" opacity="${f1(.7 + .3 * Math.sin(t * 6))}"/>`;
+    };
+    pulse(596, 568, 1.2);
+    pulse(1300 + 19 * 1.6 * Math.sin(25 * D) * 1.0 + 4, 600 + 44 * 1.6, 1.7);
+    $('s2pulse').innerHTML = pl;
+  }
+
+  // S3 외관
+  if (vis('s3')) {
+    const t = lt('s3'), p = eio(prog(t, 0, 5.5));
+    const k = 1 + .1 * p;
+    $('s3cam').setAttribute('transform', `translate(960,420) scale(${k}) translate(-960,${f1(-420 + 30 * p)})`);
+    const cx = -360 + t * 520;
+    $('s3car').innerHTML = `<g transform="translate(${f1(cx)},0)"><rect x="0" y="952" width="260" height="56" rx="18" fill="#C8943A"/>
+      <path d="M40,952 L70,912 L180,912 L220,952 Z" fill="#b07f2c"/><path d="M82,920 L120,920 L120,950 L62,950 Z M130,920 L172,920 L204,950 L130,950 Z" fill="#dce9ec"/>
+      <circle cx="58" cy="1010" r="24" fill="#2b2a24"/><circle cx="204" cy="1010" r="24" fill="#2b2a24"/><circle cx="58" cy="1010" r="9" fill="#9a9381"/><circle cx="204" cy="1010" r="9" fill="#9a9381"/></g>`;
+    let cl = '';
+    for (const [x, y, s] of [[200, 160, 1], [1100, 110, .8], [1500, 300, .7]]) {
+      const xx = x + t * 14;
+      cl += `<g transform="translate(${f1(xx)},${y}) scale(${s})"><ellipse rx="110" ry="30"/><ellipse cx="-40" cy="-20" rx="60" ry="34"/><ellipse cx="40" cy="-14" rx="50" ry="28"/></g>`;
+    }
+    $('s3clouds').innerHTML = cl;
+  }
+
+  // S4 상담
+  if (vis('s4')) {
+    const t = lt('s4');
+    const b1 = eo(prog(t, 1.0, .5)) * (1 - prog(t, 3.0, .4));
+    $('s4b1').setAttribute('opacity', b1);
+    $('s4b1').setAttribute('transform', `translate(0,${f1((1 - eo(prog(t, 1, .5))) * 20)})`);
+    ['s4d1', 's4d2', 's4d3'].forEach((id, i) => $(id).setAttribute('cy', f1(389 - 10 * Math.max(0, Math.sin(t * 7 - i * .8)))));
+    const b2 = eo(prog(t, 3.2, .5));
+    $('s4b2').setAttribute('opacity', b2);
+    $('s4b2').setAttribute('transform', `translate(0,${f1((1 - b2) * 20)})`);
+  }
+
+  // S5 치료 몽타주 (3초씩 4개)
+  if (vis('s5')) {
+    const t = lt('s5');
+    $('s5ring').setAttribute('transform', `rotate(${f1(t * 6)})`);
+    for (let i = 0; i < 4; i++) {
+      const a = i * 3, o = i === 0 ? 1 : eio(prog(t, a - .2, .45));
+      const out = i === 3 ? 0 : eio(prog(t, a + 3 - .2, .45));
+      const op = clamp(o - out);
+      $('ic' + i).setAttribute('opacity', op);
+      $('ic' + i).setAttribute('transform', `scale(${f1(1 + .06 * (1 - o))})`);
+      const tp = $('p5_' + i);
+      tp.style.opacity = op;
+      tp.style.transform = `translateY(${f1((1 - o) * 30 - out * 0)}px)`;
+      const active = t >= a - .2 && (i === 3 || t < a + 2.8);
+      const chip = $('chip' + i);
+      chip.style.background = active ? '#2D5016' : 'transparent';
+      chip.style.color = active ? '#F5F0E8' : '#2D5016';
+    }
+    // 침
+    const t0 = t;
+    let nd = '';
+    [[-46, -40], [46, -40], [-52, 60], [52, 60]].forEach(([x, y], i) => {
+      const q = eo(prog(t0, .4 + i * .4, .5));
+      if (q <= 0) return;
+      nd += `<g transform="translate(${x},${f1(y - (1 - q) * 70)}) rotate(${i % 2 ? 6 : -6})" opacity="${f1(q)}">
+        <line x1="0" y1="0" x2="0" y2="-92" stroke="#8e959b" stroke-width="3.5"/><rect x="-6" y="-120" width="12" height="32" rx="3" fill="#C8943A"/>
+        <rect x="-6" y="-112" width="12" height="3" fill="#8a6524"/><rect x="-6" y="-104" width="12" height="3" fill="#8a6524"/></g>`;
+    });
+    $('ic0n').innerHTML = nd;
+    for (let i = 0; i < 5; i++) $('ic0p' + i).setAttribute('r', f1(8 + 3 * Math.max(0, Math.sin(t * 4 - i))));
+    // 추나
+    const t1 = t - 3, offs = [14, -20, 24, -12, 18, -16, 10];
+    let vb = '';
+    offs.forEach((o, i) => {
+      const x = o * (1 - eio(prog(t1, .5, 1.7))), y = -200 + i * 56;
+      if (i) vb += `<ellipse cx="${f1(x * .9)}" cy="${y - 8}" rx="36" ry="7" fill="#C8943A" opacity=".7"/>`;
+      vb += `<rect x="${f1(x - 82)}" y="${y + 8}" width="164" height="12" rx="6" fill="#d9c9ad"/>`;
+      vb += `<rect x="${f1(x - 50)}" y="${y}" width="100" height="40" rx="15" fill="#f6efe2" stroke="#2D5016" stroke-width="5"/>`;
+    });
+    $('ic1v').innerHTML = vb;
+    $('ic1arr').setAttribute('opacity', f1(eo(prog(t1, .2, .5)) * (1 - .6 * prog(t1, 2.2, .6))));
+    // 도수
+    const t2 = t - 6;
+    let fx = '';
+    for (const [cx, cy, dir] of [[-140, 60, 1], [140, 60, -1]]) {
+      const q = (t2 * .8) % 1;
+      fx += `<circle cx="${cx}" cy="${cy}" r="${f1(20 + q * 50)}" stroke="#C8943A" stroke-width="${f1(5 * (1 - q))}" opacity="${f1(1 - q)}"/>`;
+      fx += `<circle cx="${cx}" cy="${cy}" r="16" fill="#C8943A" opacity=".85"/>`;
+      fx += `<g transform="translate(${cx},${cy}) rotate(${f1(dir * t2 * 120)})"><path d="M0,-78 A78,78 0 0 1 74,-24" stroke="#2D5016" stroke-width="9" stroke-linecap="round"/><path d="M60,-36 L76,-18 L84,-44" stroke="#2D5016" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+    }
+    $('ic2fx').innerHTML = fx;
+    // 한약 김
+    const t3 = t - 9;
+    let st = '';
+    [-50, 0, 50].forEach((x, i) => {
+      const q = ((t3 * .55 + i * .33) % 1 + 1) % 1;
+      const y = -90 - q * 140;
+      st += `<path d="M${x},${f1(y)} c-24,-30 24,-50 0,-80 c-24,-30 24,-50 0,-80" opacity="${f1(Math.sin(q * Math.PI) * .9)}"/>`;
+    });
+    $('ic3steam').innerHTML = st;
+  }
+
+  // S6 병실
+  if (vis('s6')) {
+    const t = lt('s6'), p = eio(prog(t, 0, 8.5));
+    $('s6cam').setAttribute('transform', `translate(960,540) scale(${f1(1.07 - .07 * p * 1000 / 1000)}) translate(${f1(-960 + 30 * p)},-540)`);
+    $('s6beam').setAttribute('opacity', f1(.45 + .12 * Math.sin(t * 1.3)));
+    let ds = '';
+    for (let i = 0; i < 26; i++) {
+      const x = 260 + ((i * 137) % 700) + 30 * Math.sin(t * .6 + i), y = 260 + ((i * 263) % 640) - t * 12 + 15 * Math.cos(t * .5 + i * 2);
+      ds += `<circle cx="${f1(x + (y - 260) * .55)}" cy="${f1(y)}" r="${2 + (i % 3)}" opacity="${f1(.35 + .3 * Math.sin(t * 2 + i))}"/>`;
+    }
+    $('s6dust').innerHTML = ds;
+  }
+
+  // S8 다시 일상으로
+  if (vis('s8')) {
+    const t = lt('s8');
+    let wv = '';
+    for (let i = 0; i < 5; i++) {
+      const y = 620 + i * 32, x0 = -((t * 50 + i * 170) % 300);
+      for (let x = x0; x < 1920; x += 300) wv += `<path d="M${f1(x)},${y} q30,-7 60,0 t60,0"/>`;
+    }
+    $('s8waves').innerHTML = wv;
+    let cl = '';
+    for (const [x, y, s] of [[300, 360, .9], [900, 300, .7], [1300, 420, .6]]) {
+      cl += `<g transform="translate(${f1(x + t * 12)},${y}) scale(${s})"><ellipse rx="110" ry="30"/><ellipse cx="-40" cy="-20" rx="60" ry="34"/><ellipse cx="40" cy="-14" rx="50" ry="28"/></g>`;
+    }
+    $('s8clouds').innerHTML = cl;
+    // 걷는 사람들: 직장인, 어르신과 손주
+    const ph = t * 5.2;
+    const wkA = walkPose(ph), wkB = walkPose(ph * .85 + 1.3), wkC = walkPose(ph * 1.2 + 2.1);
+    let pp = '';
+    const shadow = (x, y, s) => `<ellipse cx="${f1(x)}" cy="${f1(y + 92 * s)}" rx="${f1(46 * s)}" ry="${f1(8 * s)}" fill="#cdb48a" opacity=".6"/>`;
+    const xA = 380 + t * 58, xB = 1080 + t * 44;
+    pp += shadow(xA, 830, 1.7) + fig({ x: xA, y: 830 + wkA.bob, s: 1.7, t: 4, c: '#2D5016', cb: '#8aa074', legs: wkA.legs, arms: wkA.arms,
+      extra: ({ af }) => `<rect x="${f1(af.e[0] - 22)}" y="${f1(af.e[1] - 4)}" width="44" height="34" rx="6" fill="#C8943A"/>` });
+    pp += shadow(xB, 830, 1.65) + fig({ x: xB, y: 830 + wkB.bob, s: 1.65, t: 6, c: '#4F7A33', cb: '#9fb58a', legs: wkB.legs, arms: wkB.arms });
+    pp += shadow(xB + 110, 890, 1.0) + fig({ x: xB + 110, y: 890 + wkC.bob, s: 1.0, t: 2, c: '#C8943A', cb: '#dcc08f', legs: wkC.legs, arms: [[-30, -40], wkC.arms[1]] });
+    $('s8ppl').innerHTML = pp;
+    let bd = '';
+    for (let i = 0; i < 3; i++) {
+      const x = 700 + i * 80 + t * 60, y = 420 + i * 22 + Math.sin(t * 2 + i) * 8, fl = 10 * Math.sin(t * 9 + i * 2);
+      bd += `<path d="M${f1(x - 16)},${f1(y - fl)} Q${f1(x - 7)},${f1(y - 4)} ${f1(x)},${f1(y)} Q${f1(x + 7)},${f1(y - 4)} ${f1(x + 16)},${f1(y - fl)}"/>`;
+    }
+    $('s8birds').innerHTML = bd;
+  }
+
+  // S9 엔딩
+  if (vis('s9')) {
+    const t = lt('s9');
+    $('s9ring').setAttribute('stroke-dashoffset', f1(754 * (1 - eio(prog(t, .2, 1.2)))));
+    const q = eo(prog(t, .9, .7));
+    $('s9inner').setAttribute('opacity', q);
+    $('s9inner').setAttribute('transform', `scale(${f1(.8 + .2 * q)})`);
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+// 브라우저에서 열면 실시간 재생(미리보기). ?render 이면 외부에서 프레임 단위로 호출.
+function fit() {
+  const k = Math.min(innerWidth / 1920, innerHeight / 1080);
+  const st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1920 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1080 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else {
+  renderAt(0);
+}
+</script>
+</body>
+</html>
