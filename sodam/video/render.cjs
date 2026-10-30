@@ -15,7 +15,7 @@ const browser = await chromium.launch({ proxy });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
 await page.goto('file://' + resolve(here, 'index.html') + '?render');
 await page.evaluate(async () => {
-  const all = [...document.querySelectorAll('svg text')].map(t => t.textContent).join('') + document.body.innerText;
+  const all = [...document.querySelectorAll('svg text')].map(t => t.textContent).join('') + document.body.textContent;
   const loads = [];
   for (const w of [500, 700, 900]) loads.push(document.fonts.load(`${w} 40px "Noto Serif KR"`, all));
   for (const w of [400, 500, 700]) loads.push(document.fonts.load(`${w} 40px "Noto Sans KR"`, all));
