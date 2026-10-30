@@ -14,5 +14,5 @@
 
 - 색상: 로고 세이지 그린 `#6F8E5C`, 홈페이지 코랄 버튼 `#E48E6B`, 글자색 `#3B312F`
 - 사진이 캡처 해상도라 약간 부드럽습니다. 병원 원본 사진을 받으면 `assets/`의 같은 이름 파일만 바꾸고 `./build.sh`로 다시 만들면 됩니다.
-- v2.1 배경음악: Hedra(ElevenLabs Music)로 만든 '모던 한국풍 퓨전' 연주곡(가야금·대금 + 로파이 비트, 120BPM, 32초) `audio/bgm-korean-fusion.mp3`. 상업적 사용 조건은 Hedra 요금제 약관을 확인하세요.
+- v2.1 배경음악: Hedra(ElevenLabs Music)로 만든 '모던 한국풍 퓨전' 연주곡(가야금·대금 + 로파이 비트, 120BPM, 32초) `audio/bgm-korean-fusion-1.mp3`. 상업적 사용 조건은 Hedra 요금제 약관을 확인하세요.
 - v2 배경음악: `make_music.py`로 직접 합성
