@@ -5,7 +5,7 @@ const { mkdirSync } = require('node:fs');
 const { resolve } = require('node:path');
 
 const here = __dirname;
-const IMAGES = require('node:fs').readdirSync(resolve(here, 'assets')).filter(f => f.endsWith('.jpg')).map(f => `assets/${f}`);
+const IMAGES = require('node:fs').readdirSync(resolve(here, 'assets')).filter(f => /\.(jpg|png)$/.test(f)).map(f => `assets/${f}`);
 const [out = 'frames', fpsArg = '30', fromArg = '0', toArg, stepArg = '1'] = process.argv.slice(2);
 const fps = +fpsArg, step = +stepArg;
 mkdirSync(out, { recursive: true });

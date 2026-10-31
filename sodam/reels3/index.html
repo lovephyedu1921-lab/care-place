@@ -113,10 +113,18 @@
   </div>
 </div></div>
 
-<!-- 7 · 진료 공간 그리드 -->
+<!-- 7 · 의료진 -->
 <div class="scene" id="v7"><div class="c">
   <div class="a m" style="left:96px;top:250px"><div class="cap" style="color:var(--sage)" data-a=".1" data-fx="rise">의료인 6인 + 물리치료사 3인</div></div>
-  <div class="a m" style="left:90px;top:300px"><div style="font-size:96px;font-weight:900;letter-spacing:-4px" data-a=".2" data-fx="rise">양 · 한방 협진</div></div>
+  <div class="a m" style="left:90px;top:300px"><div style="font-size:96px;font-weight:900;letter-spacing:-4px" data-a=".2" data-fx="rise">소담의 의료진</div></div>
+  <div class="a" id="v7lead" style="left:60px;top:470px;width:960px;height:420px;border-radius:32px;background:#EDF1E8;overflow:hidden">
+    <img src="assets/doc_kimjh.png" style="position:absolute;left:40px;bottom:0;height:400px">
+    <div class="a" style="left:380px;top:96px">
+      <div class="cap" style="color:var(--sage-d);font-size:30px">대표원장</div>
+      <div style="font-size:92px;font-weight:900;letter-spacing:-3px;margin-top:4px">김지현</div>
+      <div style="font-size:28px;font-weight:500;color:var(--gray);line-height:1.55;margin-top:10px">대한암한의학회 · 대한통합암학회<br>한방부인과학회 회원</div>
+    </div>
+  </div>
   <div id="v7grid"></div>
 </div></div>
 
@@ -160,12 +168,17 @@ const f1 = v => (+v).toFixed(1);
 $('v2path').setAttribute('d', window.MARK_D);
 $('v9path').setAttribute('d', window.MARK_D);
 
-// 진료 공간 그리드: 2열 × 3행
-const TILES = [['g1', '병원 로비'], ['g2', '접수 · 수납'], ['g3', '상담실'], ['g4', '족욕실'], ['g5', '한방 진료실'], ['g6', '입원실']];
-$('v7grid').innerHTML = TILES.map(([g, label], i) => {
-  const x = 60 + (i % 2) * 492, y = 480 + Math.floor(i / 2) * 362;
-  return `<div class="tile" id="t${i}" style="left:${x}px;top:${y}px;width:468px;height:338px"><div style="background-image:url(assets/grid_${g}.jpg)"></div>
-    <span style="position:absolute;left:18px;bottom:16px;padding:8px 18px;border-radius:30px;background:rgba(255,255,255,.92);font-size:26px;font-weight:800;color:#3B312F">${label}</span></div>`;
+// 의료진 그리드: 2행 × 4열 (홈페이지 의료진 소개 순서)
+const STAFF = [['doc_sonje', '손주은', '한의사 원장'], ['doc_leesb', '이수빈', '사상체질과 전문의'], ['doc_namhj', '남현진', '한의사 원장'], ['doc_sonyy', '손예영', '한의사 원장'],
+  ['doc_yooyc', '유영철', '산부인과 전문의'], ['pt_jungnr', '정나라', '도수치료센터장'], ['pt_hansy', '한소영', '물리치료사'], ['pt_kimsh', '김서혜', '물리치료사']];
+$('v7grid').innerHTML = STAFF.map(([img, name, role], i) => {
+  const x = 60 + (i % 4) * 244, y = 914 + Math.floor(i / 4) * 290;
+  const bg = i < 5 ? '#F2EEE7' : '#FBEFE8';
+  return `<div class="tile" id="t${i}" style="left:${x}px;top:${y}px;width:228px;height:274px;background:${bg}">
+    <img src="assets/${img}.png" style="position:absolute;left:50%;bottom:62px;height:200px;transform:translateX(-50%)">
+    <div style="position:absolute;left:0;right:0;top:auto;bottom:0;height:70px;background:#fff;text-align:center;padding-top:6px">
+      <div style="font-size:28px;font-weight:800;line-height:1.15">${name}</div>
+      <div style="font-size:19px;font-weight:500;color:#857C77;letter-spacing:-.5px">${role}</div></div></div>`;
 }).join('');
 
 // [id, 시작, 끝, 초록 배경 여부] — 장면 경계는 배경음악(120BPM, 32초)과 맞춤
@@ -246,11 +259,14 @@ function extra(id, t) {
   if (id === 'v5') kb('v5img', t, 3.5, 1.12, 1.0);
   if (id === 'v6') kb('v6img', t, 3.5, 1.04, 1.12);
   if (id === 'v7') {
-    TILES.forEach((_, i) => {
-      const el = $('t' + i), p = expo(prog(t, .35 + i * .12, .7));
-      el.style.opacity = clamp(p * 2);
-      el.style.transform = `translateY(${f1((1 - p) * 70)}px) scale(${(0.92 + .08 * p).toFixed(4)})`;
-      el.firstElementChild.style.transform = `scale(${(1.15 - .1 * io(prog(t, .35 + i * .12, 3))).toFixed(4)})`;
+    const lp = expo(prog(t, .3, .8)), lead = $('v7lead');
+    lead.style.opacity = clamp(lp * 2);
+    lead.style.transform = `translateY(${f1((1 - lp) * 80)}px)`;
+    lead.firstElementChild.style.transform = `translateX(${f1((1 - expo(prog(t, .45, .9))) * -60)}px)`;
+    STAFF.forEach((_, i) => {
+      const el = $('t' + i), p = back(prog(t, .7 + i * .09, .5));
+      el.style.opacity = clamp(prog(t, .7 + i * .09, .5) * 3);
+      el.style.transform = `translateY(${f1((1 - Math.min(p, 1)) * 40)}px) scale(${(0.85 + .15 * p).toFixed(4)})`;
     });
   }
   if (id === 'v8') {
