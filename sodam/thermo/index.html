@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 고주파온열치료 설명 릴스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=block" rel="stylesheet">
+<script src="assets/mark.js"></script>
+<style>
+  :root { --bg:#FAF8F4; --sage:#6F8E5C; --sage-d:#56744A; --ink:#3B312F; --coral:#E48E6B; --coral-d:#C4673F; --heat:#F0A04B; --gray:#857C77; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; background:var(--bg);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; letter-spacing:-1px; }
+  #wipe { position:absolute; left:540px; top:960px; width:2400px; height:2400px; margin:-1200px 0 0 -1200px; border-radius:50%; background:var(--sage); transform:scale(0); }
+  .scene { position:absolute; inset:0; display:none; overflow:hidden; }
+  .c { position:absolute; inset:0; }
+  .a { position:absolute; }
+  .m { overflow:hidden; padding:0 .04em .1em; margin:0 -.04em -.1em; }
+  .m > * { display:block; }
+  .cap { font-size:32px; font-weight:800; letter-spacing:6px; }
+  .h { font-size:84px; font-weight:900; line-height:1.25; letter-spacing:-3px; }
+  .d { font-size:40px; font-weight:500; color:var(--gray); line-height:1.5; }
+  .chip { display:inline-block; padding:16px 34px; border-radius:60px; font-size:36px; font-weight:700; white-space:nowrap; }
+  .photo { position:absolute; overflow:hidden; border-radius:36px; box-shadow:0 30px 60px rgba(40,30,20,.14); }
+  .photo > div { position:absolute; inset:0; background-size:cover; background-position:center; }
+  .card { background:#fff; border-radius:36px; box-shadow:0 14px 40px rgba(40,30,20,.07); }
+  .num { position:absolute; left:96px; top:240px; width:96px; height:96px; border-radius:28px; background:var(--coral); color:#fff;
+         font-size:46px; font-weight:900; display:flex; align-items:center; justify-content:center; }
+  svg.mk path { fill:currentColor; }
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="wipe"></div>
+
+<!-- 1 · 훅 -->
+<div class="scene" id="s1"><div class="c">
+  <svg class="a" style="left:0;top:0" width="1080" height="1920"><g id="s1heat" fill="none" stroke="#F0A04B" stroke-linecap="round"></g></svg>
+  <div class="a m" style="left:96px;top:560px"><div class="cap" style="color:var(--coral-d)" data-a=".1" data-fx="rise">암 치료 중이라면</div></div>
+  <div class="a h" style="left:90px;top:620px;font-size:112px;letter-spacing:-5px;line-height:1.2">
+    <div class="m"><div data-a=".25" data-fx="rise">왜</div></div>
+    <div class="m"><div style="color:var(--coral-d)" data-a=".45" data-fx="rise">고주파 온열치료를</div></div>
+    <div class="m"><div data-a=".7" data-fx="rise">함께 받을까요?</div></div>
+  </div>
+</div></div>
+
+<!-- 2 · 고주파온열치료란? -->
+<div class="scene" id="s2"><div class="c">
+  <div class="photo" style="left:60px;top:240px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s2img" style="background-image:url(assets/thermo_wide.jpg)"></div></div>
+  <div class="a m" style="left:96px;top:940px"><div class="cap" style="color:var(--coral-d)" data-a=".4" data-fx="rise">고주파온열치료란?</div></div>
+  <div class="a h" style="left:90px;top:992px">
+    <div class="m"><div data-a=".5" data-fx="rise">종양 부위에</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span style="color:var(--coral-d)">열을 전달</span>하는</div></div>
+    <div class="m"><div data-a=".74" data-fx="rise">보조요법입니다</div></div>
+  </div>
+  <div class="a m" style="left:96px;top:1340px"><div class="d" style="font-size:34px" data-a="1.1" data-fx="rise">특정 주파수의 에너지를 사용합니다</div></div>
+</div></div>
+
+<!-- 3 · 원리: 암세포는 열에 약하다 -->
+<div class="scene" id="s3"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">01</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">암세포는</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span style="color:var(--coral-d)">열에 약합니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620"><g id="s3waves" fill="none" stroke="#F0A04B" stroke-linecap="round"></g><g id="s3cells"></g></svg>
+  </div>
+  <div class="a" style="left:96px;top:1270px;display:flex;gap:16px" data-a=".6" data-fx="up">
+    <div class="chip" style="background:#EDF1E8;color:var(--sage-d)">● 정상 세포</div>
+    <div class="chip" style="background:#FBE9E1;color:var(--coral-d)">● 암세포</div>
+  </div>
+  <div class="a m" style="left:96px;top:1380px"><div class="d" style="font-size:36px" data-a="1.2" data-fx="rise">정상 세포보다 열 스트레스에 상대적으로 취약해요</div></div>
+</div></div>
+
+<!-- 4 · 종양에 집중 -->
+<div class="scene" id="s4"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">02</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">종양 부위에</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span style="color:var(--coral-d)">집중하는 온열</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <defs><radialGradient id="hot"><stop offset="0" stop-color="#F0A04B" stop-opacity=".9"/><stop offset=".5" stop-color="#F0A04B" stop-opacity=".35"/><stop offset="1" stop-color="#F0A04B" stop-opacity="0"/></radialGradient></defs>
+      <rect x="230" y="70" width="500" height="44" rx="22" fill="#6F8E5C"/>
+      <rect x="230" y="506" width="500" height="44" rx="22" fill="#6F8E5C"/>
+      <rect x="120" y="200" width="720" height="220" rx="110" fill="#F3E6DA"/>
+      <g id="s4rf" fill="none" stroke="#6F8E5C" stroke-linecap="round"></g>
+      <circle id="s4glow" cx="480" cy="310" r="150" fill="url(#hot)"/>
+      <circle id="s4tumor" cx="480" cy="310" r="38" fill="#E48E6B"/>
+      <text x="480" y="160" text-anchor="middle" font-family="Noto Sans KR" font-weight="700" font-size="26" fill="#56744A">전극</text>
+      <text x="480" y="485" text-anchor="middle" font-family="Noto Sans KR" font-weight="700" font-size="26" fill="#56744A">전극</text>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1290px;display:flex;flex-wrap:wrap;gap:16px;width:900px">
+    <div class="chip" style="background:#FBE9E1;color:var(--coral-d)" data-a="1.0" data-fx="pop">선택적 표적 온열</div>
+    <div class="chip" style="background:#EDF1E8;color:var(--sage-d)" data-a="1.15" data-fx="pop">정상 조직 보호 우선</div>
+  </div>
+</div></div>
+
+<!-- 5 · 항암·방사선과 병행 -->
+<div class="scene" id="s5"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">03</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">항암 · 방사선 치료와</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span style="color:var(--coral-d)">함께 받습니다</span></div></div>
+  </div>
+  <div class="a" id="s5a" style="left:60px;top:700px;width:300px;height:300px;border-radius:50%;background:#EDF1E8;display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:900;color:var(--sage-d)">항암</div>
+  <div class="a" id="s5p1" style="left:360px;top:800px;width:60px;text-align:center;font-size:80px;font-weight:300;color:#b9b2a6;line-height:1">+</div>
+  <div class="a" id="s5b" style="left:390px;top:700px;width:300px;height:300px;border-radius:50%;background:#EDF1E8;display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:900;color:var(--sage-d)">방사선</div>
+  <div class="a" id="s5p2" style="left:690px;top:800px;width:60px;text-align:center;font-size:80px;font-weight:300;color:#b9b2a6;line-height:1">+</div>
+  <div class="a" id="s5c" style="left:720px;top:700px;width:300px;height:300px;border-radius:50%;background:var(--coral);display:flex;align-items:center;justify-content:center;text-align:center;font-size:48px;font-weight:900;color:#fff;line-height:1.2">고주파<br>온열</div>
+  <div class="a" id="s5bar" style="left:120px;top:1060px;width:840px;height:10px;border-radius:5px;background:var(--coral);transform-origin:center"></div>
+  <div class="a m" style="left:0;width:1080px;top:1110px;text-align:center"><div style="font-size:56px;font-weight:900" data-a="1.7" data-fx="rise">표준치료와 함께하는 보조요법</div></div>
+  <div class="a m" style="left:0;width:1080px;top:1200px;text-align:center"><div class="d" style="font-size:34px" data-a="1.85" data-fx="rise">표준치료를 대신하지 않습니다</div></div>
+</div></div>
+
+<!-- 6 · 체온·혈류 -->
+<div class="scene" id="s6"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">04</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">체온 · 혈류를 높여</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span style="color:var(--coral-d)">회복을 돕습니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <!-- 온도계 -->
+      <rect x="110" y="90" width="70" height="380" rx="35" fill="#F3EDE4"/>
+      <circle cx="145" cy="500" r="62" fill="#F3EDE4"/>
+      <rect id="s6merc" x="125" y="110" width="30" height="360" rx="15" fill="#E48E6B"/>
+      <circle cx="145" cy="500" r="44" fill="#E48E6B"/>
+      <!-- 혈관 -->
+      <path id="s6vessel" d="M280,330 C380,230 480,430 580,330 S780,230 880,330" stroke="#F3D3C3" stroke-width="70" fill="none" stroke-linecap="round"/>
+      <g id="s6flow" fill="#E48E6B"></g>
+      <text x="580" y="150" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="34" fill="#C4673F">혈류 개선</text>
+      <text x="145" y="60" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="34" fill="#C4673F">체온</text>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1290px;display:flex;flex-wrap:wrap;gap:16px;width:900px">
+    <div class="chip" style="background:#FBE9E1;color:var(--coral-d)" data-a="1.0" data-fx="pop">면역 환경에 유리</div>
+    <div class="chip" style="background:#EDF1E8;color:var(--sage-d)" data-a="1.12" data-fx="pop">통증 · 긴장 완화에 도움</div>
+    <div class="chip" style="background:#EDF1E8;color:var(--sage-d)" data-a="1.24" data-fx="pop">전신 컨디션 관리</div>
+  </div>
+</div></div>
+
+<!-- 7 · 이런 분께 -->
+<div class="scene" id="s7"><div class="c">
+  <div class="a m" style="left:96px;top:300px"><div class="cap" style="color:var(--coral-d)" data-a=".05" data-fx="rise">CHECK</div></div>
+  <div class="a h" style="left:90px;top:350px">
+    <div class="m"><div data-a=".12" data-fx="rise">이런 분께</div></div>
+    <div class="m"><div data-a=".24" data-fx="rise"><span style="color:var(--coral-d)">권해 드려요</span></div></div>
+  </div>
+  <div id="s7list"></div>
+</div></div>
+
+<!-- 8 · 의료진 상담 -->
+<div class="scene" id="s8"><div class="c">
+  <div class="photo" style="left:60px;top:260px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s8img" style="background-image:url(assets/thermo_wide.jpg)"></div></div>
+  <div class="a" style="left:60px;top:260px;padding:14px 26px;border-radius:36px 0 28px 0;background:var(--coral);color:#fff;font-size:30px;font-weight:800" data-a=".4" data-fx="pop">네오써모스 고주파온열치료기</div>
+  <div class="a h" style="left:90px;top:960px">
+    <div class="m"><div data-a=".5" data-fx="rise">적용 여부와 강도는</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span style="color:var(--sage-d)">의료진이 함께</span> 정합니다</div></div>
+  </div>
+  <div class="a m" style="left:96px;top:1200px"><div class="d" style="font-size:34px" data-a="1.0" data-fx="rise">개인의 상태와 치료 일정에 맞춰 결정합니다</div></div>
+</div></div>
+
+<!-- 9 · 엔딩 -->
+<div class="scene" id="s9"><div class="c" style="color:#fff">
+  <svg class="a mk" id="s9mark" style="left:450px;top:360px;color:#fff" width="180" height="253" viewBox="0 0 912 1280"><path id="s9path"/></svg>
+  <div class="a" style="left:0;width:1080px;top:660px;text-align:center;font-size:96px;letter-spacing:-3px">
+    <div class="m" style="display:inline-block"><div data-a=".6" data-fx="rise"><span style="font-weight:900">소담</span><span style="font-weight:400">한방병원</span></div></div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:820px;text-align:center"><div style="font-size:38px;font-weight:500;color:#E3EDD9" data-a=".8" data-fx="rise">통합암치료센터 · 고주파온열치료</div></div>
+  <div class="a m" style="left:0;width:1080px;top:930px;text-align:center"><div style="font-size:34px;font-weight:700;letter-spacing:6px;color:#DDE8D3" data-a=".95" data-fx="rise">상담 문의</div></div>
+  <div class="a m" style="left:0;width:1080px;top:980px;text-align:center"><div style="font-size:120px;font-weight:900;letter-spacing:-3px" data-a="1.05" data-fx="rise">054) 727.2550</div></div>
+  <div class="a" style="left:0;width:1080px;top:1190px;display:flex;justify-content:center" data-a="1.4" data-fx="pop">
+    <div class="chip" style="background:var(--coral);font-size:40px;padding:22px 52px">프로필 링크에서 자세히 보기</div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:1340px;text-align:center"><div style="font-size:38px;font-weight:700;opacity:.9;letter-spacing:0" data-a="1.7" data-fx="rise">@sodamhb</div></div>
+</div></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, d) => clamp((t - a) / d);
+const expo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.6; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const f1 = v => (+v).toFixed(1);
+
+$('s9path').setAttribute('d', window.MARK_D);
+
+// 이런 분께 (홈페이지 '고주파온열치료 부위·대상' 문구)
+const WHO = ['항암치료 중인 분', '수술 전·후 회복이 필요한 분', '방사선 치료 중 증상 관리가 필요한 분', '표준치료 후 추가 관리가 필요한 분'];
+$('s7list').innerHTML = WHO.map((s, i) => `
+  <div class="a card" id="w${i}" style="left:60px;top:${640 + i * 176}px;width:960px;height:148px">
+    <svg class="a" style="left:40px;top:38px" width="72" height="72" viewBox="0 0 72 72">
+      <circle cx="36" cy="36" r="36" fill="#FBE9E1"/>
+      <path id="wc${i}" d="M21,37 L32,48 L52,26" fill="none" stroke="#C4673F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/>
+    </svg>
+    <div class="a" style="left:140px;top:42px;font-size:44px;font-weight:800;letter-spacing:-1.5px">${s}</div>
+  </div>`).join('');
+
+// 세포 배치 (정상 세포: 초록, 암세포: 코랄)
+const CELLS = [];
+for (let r = 0; r < 4; r++) for (let c = 0; c < 7; c++) {
+  const x = 110 + c * 124 + (r % 2) * 40, y = 190 + r * 110;
+  const cancer = [[0, 2], [1, 4], [2, 1], [2, 5], [3, 3], [1, 0]].some(([rr, cc]) => rr === r && cc === c);
+  CELLS.push({ x, y, cancer, seed: r * 7 + c });
+}
+
+// 장면 경계는 소담 주제곡(120BPM, 32초)과 맞춤
+const SCENES = [
+  ['s1', 0, 3.5], ['s2', 3.5, 7], ['s3', 7, 10.5], ['s4', 10.5, 14], ['s5', 14, 17.5], ['s6', 17.5, 21],
+  ['s7', 21, 24.5], ['s8', 24.5, 27.5], ['s9', 27.5, 32, 1],
+];
+const DURATION = 32;
+window.SIZE = [1080, 1920];
+
+const anim = [...document.querySelectorAll('[data-fx]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.a, d: +(el.dataset.d || (el.dataset.fx === 'pop' ? .5 : .75)), fx: el.dataset.fx,
+}));
+
+function applyFx(o, t) {
+  const p = prog(t, o.a, o.d), s = o.el.style;
+  switch (o.fx) {
+    case 'rise': { const e = expo(p); s.transform = `translateY(${f1((1 - e) * 112)}%)`; break; }
+    case 'up': { const e = expo(p); s.opacity = clamp(p * 2); s.transform = `translateY(${f1((1 - e) * 80)}px)`; break; }
+    case 'pop': { s.opacity = clamp(p * 3); s.transform = `scale(${back(p).toFixed(4)})`; s.transformOrigin = 'center'; break; }
+    case 'clipup': { const e = expo(prog(t, o.a, .9)); s.clipPath = `inset(${f1((1 - e) * 100)}% 0 0 0 round 36px)`; break; }
+  }
+}
+
+function renderAt(T) {
+  SCENES.forEach(([id]) => { $(id).style.display = 'none'; });
+  let i = SCENES.findIndex(([, a, b]) => T >= a && T < b);
+  if (i < 0) i = SCENES.length - 1;
+  const [id, a, b, green] = SCENES[i];
+  const t = T - a, el = $(id);
+  el.style.display = 'block';
+  anim.forEach(o => { if (o.scene === id) applyFx(o, t); });
+  const next = SCENES[i + 1];
+  const ex = next && !next[3] ? io(prog(T, b - .3, .3)) : 0;
+  const c = el.firstElementChild;
+  c.style.opacity = 1 - ex;
+  c.style.transform = `translateY(${f1(-60 * ex)}px)`;
+  $('wipe').style.transform = `scale(${(green ? expo(prog(t, 0, .7)) : 0).toFixed(4)})`;
+  extra(id, t);
+}
+
+const wave = (x0, y, w, amp, ph) => {
+  let d = `M${x0},${y}`;
+  for (let x = 0; x <= w; x += 20) d += ` L${x0 + x},${f1(y + amp * Math.sin((x / 60) + ph))}`;
+  return d;
+};
+
+function extra(id, t) {
+  if (id === 's1') {
+    let g = '';
+    for (let k = 0; k < 4; k++) {
+      const y = 1400 + k * 70 - ((t * 60) % 70);
+      g += `<path d="${wave(96, y, 888, 14, t * 3 + k)}" stroke-width="${6 - k}" opacity="${f1(.55 - k * .1)}"/>`;
+    }
+    $('s1heat').innerHTML = g;
+    $('s1heat').style.opacity = io(prog(t, .9, .6));
+  }
+  if (id === 's2') $('s2img').style.transform = `scale(${(1.12 - .1 * io(prog(t, 0, 3.5))).toFixed(4)})`;
+  if (id === 's8') $('s8img').style.transform = `scale(${(1.0 + .08 * io(prog(t, 0, 3))).toFixed(4)})`;
+  if (id === 's3') {
+    // 위에서 열 파동이 내려오고, 암세포가 먼저 달아오르며 약해진다
+    const heat = io(prog(t, .7, 1.6));
+    let w = '';
+    for (let k = 0; k < 3; k++) {
+      const y = 40 + k * 34 + ((t * 70) % 34);
+      w += `<path d="${wave(40, y, 880, 10, t * 4 + k)}" stroke-width="5" opacity="${f1(heat * (.8 - k * .2))}"/>`;
+    }
+    $('s3waves').innerHTML = w;
+    $('s3cells').innerHTML = CELLS.map(({ x, y, cancer, seed }) => {
+      const wob = Math.sin(t * 2 + seed) * 3;
+      if (!cancer) return `<g transform="translate(${x},${f1(y + wob)})"><circle r="44" fill="#EDF1E8" stroke="#6F8E5C" stroke-width="4"/><circle r="14" fill="#6F8E5C" opacity=".55"/></g>`;
+      const hot = heat, sc = 1 - .35 * io(prog(t, 1.6, 1.2));
+      const glow = hot > 0 ? `<circle r="${f1(60 + 10 * Math.sin(t * 6 + seed))}" fill="#F0A04B" opacity="${f1(.35 * hot)}"/>` : '';
+      return `<g transform="translate(${x},${f1(y + wob)}) scale(${sc.toFixed(3)})" opacity="${f1(1 - .45 * io(prog(t, 1.8, 1.2)))}">${glow}
+        <path d="M-46,-6 C-50,-36 -20,-52 4,-46 C34,-50 52,-24 46,4 C52,34 22,52 -4,46 C-34,50 -44,24 -46,-6 Z" fill="#FBE0D4" stroke="#E48E6B" stroke-width="4"/>
+        <circle r="16" fill="#E48E6B"/></g>`;
+    }).join('');
+  }
+  if (id === 's4') {
+    // 위아래 전극에서 고주파가 퍼져 가운데 종양에 모인다
+    let g = '';
+    for (let k = 0; k < 4; k++) {
+      const q = ((t * .9 + k * .25) % 1);
+      const op = f1(.7 * (1 - q) * io(prog(t, .6, .4)));
+      const yTop = 114 + q * 150, yBot = 506 - q * 150, half = 240 - q * 170;
+      g += `<path d="M${f1(480 - half)},${f1(yTop)} Q480,${f1(yTop + 40)} ${f1(480 + half)},${f1(yTop)}" stroke-width="5" opacity="${op}"/>`;
+      g += `<path d="M${f1(480 - half)},${f1(yBot)} Q480,${f1(yBot - 40)} ${f1(480 + half)},${f1(yBot)}" stroke-width="5" opacity="${op}"/>`;
+    }
+    $('s4rf').innerHTML = g;
+    const h = io(prog(t, 1.0, 1.2));
+    $('s4glow').setAttribute('r', f1(40 + 120 * h + 8 * Math.sin(t * 5)));
+    $('s4glow').setAttribute('opacity', f1(h));
+    $('s4tumor').setAttribute('r', f1(38 + 3 * Math.sin(t * 6)));
+  }
+  if (id === 's5') {
+    [['s5a', .45, -1], ['s5b', .6, 0], ['s5c', .75, 1]].forEach(([eid, a0, dir]) => {
+      const p = back(prog(t, a0, .55)), e = $(eid);
+      e.style.opacity = clamp(prog(t, a0, .3));
+      const join = io(prog(t, 1.3, .5));
+      e.style.transform = `translateX(${f1(-dir * 40 * join)}px) scale(${(p * (1 - .08 * join)).toFixed(4)})`;
+    });
+    ['s5p1', 's5p2'].forEach((eid, k) => { $(eid).style.opacity = clamp(prog(t, .7 + k * .15, .3)) * (1 - io(prog(t, 1.3, .4))); });
+    $('s5bar').style.transform = `scaleX(${expo(prog(t, 1.4, .6)).toFixed(4)})`;
+  }
+  if (id === 's6') {
+    const h = io(prog(t, .6, 1.6));
+    const top = 110 + 300 * (1 - h);
+    $('s6merc').setAttribute('y', f1(top));
+    $('s6merc').setAttribute('height', f1(470 - top));
+    let f = '';
+    const vessel = $('s6vessel'), L = vessel.getTotalLength();
+    const pathPt = s => { const p = vessel.getPointAtLength(s * L); return [p.x, p.y]; };
+    for (let k = 0; k < 12; k++) {
+      const s = ((k / 12) + t * (.15 + .25 * h)) % 1;
+      const [x, y] = pathPt(s);
+      f += `<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(12 + 4 * Math.sin(k))}" opacity="${f1(.5 + .5 * h)}"/>`;
+    }
+    $('s6flow').innerHTML = f;
+  }
+  if (id === 's7') {
+    WHO.forEach((_, i) => {
+      const a0 = .45 + i * .3, p = expo(prog(t, a0, .6)), e = $('w' + i);
+      e.style.opacity = clamp(p * 2.5);
+      e.style.transform = `translateX(${f1((1 - p) * 160)}px)`;
+      $('wc' + i).setAttribute('stroke-dashoffset', (1 - io(prog(t, a0 + .25, .4))).toFixed(4));
+    });
+  }
+  if (id === 's9') {
+    const p = expo(prog(t, .25, .9)), mk = $('s9mark');
+    mk.style.clipPath = `circle(${f1(p * 75)}% at 50% 50%)`;
+    mk.style.transform = `scale(${(0.86 + .14 * p).toFixed(4)})`;
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+function fit() {
+  const k = Math.min(innerWidth / 1080, innerHeight / 1920), st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1080 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1920 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else renderAt(0);
+</script>
+</body>
+</html>
