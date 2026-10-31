@@ -2,8 +2,7 @@
 
 홈페이지(sodamhb.co.kr)에서 직접 수집한 실제 병원 사진과 문구로 만든 버전입니다.
 
-- `out/sodam-reels-v3-bgm1.mp4` : 배경음악 1번(모던 한국풍 퓨전)
-- `out/sodam-reels-v3-bgm2.mp4` : 배경음악 2번(모던 한국풍 퓨전, 셰이커 추가)
+- `out/sodam-reels-v3.mp4` : 소담 주제곡(`../reels2/audio/bgm-korean-fusion-2.mp3`)을 입힌 최종본. 음악 규칙은 저장소 루트의 `CLAUDE.md`, `MUSIC_REGISTRY.md` 참고
 
 ## 장면 구성
 | 시간 | 장면 | 사진 출처 (홈페이지) |
@@ -28,6 +27,6 @@
 ## 다시 만들기
 ```bash
 node render.cjs /tmp/frames 30
-ffmpeg -framerate 30 -i /tmp/frames/f%05d.jpg -i ../reels2/audio/bgm-korean-fusion-2.mp3 ... out/sodam-reels-v3-bgm2.mp4
+ffmpeg -framerate 30 -i /tmp/frames/f%05d.jpg -i ../reels2/audio/bgm-korean-fusion-2.mp3 ... out/sodam-reels-v3.mp4
 ```
 사진은 `assets/`에 있으며, 같은 이름으로 바꾸면 그대로 반영됩니다.

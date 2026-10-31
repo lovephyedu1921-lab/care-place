@@ -5,7 +5,7 @@
 | 병원 | 주제곡 | 파일 | 생성 정보 | 상태 |
 |---|---|---|---|---|
 | 치유메디컬 | (이 저장소에 파일 없음) | — | — | 다른 병원 사용 금지 |
-| 포항소담한방병원 | 모던 한국풍 퓨전 1번 | `sodam/reels2/audio/bgm-korean-fusion-1.mp3` (md5 `9d0970e4…`) | Hedra · ElevenLabs Music, 2026-10-30 | 주제곡 후보 · 소담 전용 |
-| 포항소담한방병원 | 모던 한국풍 퓨전 2번 | `sodam/reels2/audio/bgm-korean-fusion-2.mp3` (md5 `2ca1cfa6…`) | Hedra · ElevenLabs Music, 2026-10-30 | 주제곡 후보 · 소담 전용 |
+| 포항소담한방병원 | 모던 한국풍 퓨전 1번 | `sodam/reels2/audio/bgm-korean-fusion-1.mp3` (md5 `9d0970e4…`) | Hedra · ElevenLabs Music, 2026-10-30 | 미채택 · 소담 전용(다른 병원 사용 금지) |
+| 포항소담한방병원 | 모던 한국풍 퓨전 2번 | `sodam/reels2/audio/bgm-korean-fusion-2.mp3` (md5 `2ca1cfa6…`) | Hedra · ElevenLabs Music, 2026-10-30 | **주제곡** (2026-10-31 확정) |
 
-소담의 주제곡이 정해지면 그 곡의 상태를 "주제곡"으로 바꾸고, 다른 후보는 "미채택 · 소담 전용(다른 병원 사용 금지)"으로 바꿉니다.
+소담한방병원의 모든 영상은 주제곡(2번)만 씁니다.
