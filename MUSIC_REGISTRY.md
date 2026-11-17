@@ -16,3 +16,6 @@
 | 포항소담한방병원 | `sodam/reels3/out/sodam-reels-v3.mp4` (병원 소개 릴스) | 소담 주제곡 2번 |
 | 포항소담한방병원 | `sodam/thermo/out/sodam-thermo-explainer.mp4` (고주파온열치료 설명 릴스) | 소담 주제곡 2번 |
 | 포항소담한방병원 | `sodam/hbot/out/sodam-hbot-explainer.mp4` (고압산소치료 설명 릴스) | 소담 주제곡 2번 |
+| 포항소담한방병원 | `sodam/immuno/out/sodam-immuno-explainer.mp4` (항암면역치료 설명 릴스) | 소담 주제곡 2번 |
+| 포항소담한방병원 | `sodam/photon/out/sodam-photon-explainer.mp4` (광양자 온열돔 설명 릴스) | 소담 주제곡 2번 |
+| 포항소담한방병원 | `sodam/kakao/*-kakao.mp4` (위 영상들의 카톡 전송용 축소본) | 소담 주제곡 2번 |

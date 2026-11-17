@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 항암면역치료 설명 릴스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=block" rel="stylesheet">
+<script src="assets/mark.js"></script>
+<style>
+  :root { --bg:#FAF8F4; --sage:#6F8E5C; --sage-d:#56744A; --sage-l:#EDF1E8; --ink:#3B312F; --coral:#E48E6B; --coral-d:#C4673F; --coral-l:#FBE9E1; --gray:#857C77; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; background:var(--bg);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; letter-spacing:-1px; }
+  #wipe { position:absolute; left:540px; top:960px; width:2400px; height:2400px; margin:-1200px 0 0 -1200px; border-radius:50%; background:var(--sage); transform:scale(0); }
+  .scene { position:absolute; inset:0; display:none; overflow:hidden; }
+  .c { position:absolute; inset:0; }
+  .a { position:absolute; }
+  .m { overflow:hidden; padding:0 .04em .1em; margin:0 -.04em -.1em; }
+  .m > * { display:block; }
+  .cap { font-size:32px; font-weight:800; letter-spacing:6px; color:var(--coral-d); }
+  .h { font-size:84px; font-weight:900; line-height:1.25; letter-spacing:-3px; }
+  .d { font-size:36px; font-weight:500; color:var(--gray); line-height:1.5; }
+  .hl { color:var(--coral-d); }
+  .chip { display:inline-block; padding:16px 34px; border-radius:60px; font-size:36px; font-weight:700; white-space:nowrap; }
+  .photo { position:absolute; overflow:hidden; border-radius:36px; box-shadow:0 30px 60px rgba(40,30,20,.14); }
+  .photo > div { position:absolute; inset:0; background-size:cover; background-position:center; }
+  .card { background:#fff; border-radius:36px; box-shadow:0 14px 40px rgba(40,30,20,.07); }
+  .num { position:absolute; left:96px; top:240px; width:96px; height:96px; border-radius:28px; background:var(--coral); color:#fff;
+         font-size:46px; font-weight:900; display:flex; align-items:center; justify-content:center; }
+  .ic { position:absolute; width:110px; height:110px; border-radius:32px; display:flex; align-items:center; justify-content:center; }
+  svg.mk path { fill:currentColor; }
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="wipe"></div>
+
+<!-- 1 · 훅 -->
+<div class="scene" id="s1"><div class="c">
+  <svg class="a" style="left:0;top:0" width="1080" height="1920"><g id="s1cells"></g></svg>
+  <div class="a m" style="left:96px;top:560px"><div class="cap" data-a=".1" data-fx="rise">항암면역치료</div></div>
+  <div class="a h" style="left:90px;top:620px;font-size:112px;letter-spacing:-5px;line-height:1.2">
+    <div class="m"><div data-a=".25" data-fx="rise">암 치료 중,</div></div>
+    <div class="m"><div class="hl" data-a=".45" data-fx="rise">내 몸의 면역력도</div></div>
+    <div class="m"><div data-a=".7" data-fx="rise">챙기고 계신가요?</div></div>
+  </div>
+</div></div>
+
+<!-- 2 · 항암면역치료란? -->
+<div class="scene" id="s2"><div class="c">
+  <div class="photo" style="left:60px;top:240px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s2img" style="background-image:url(assets/doctor_care.jpg)"></div></div>
+  <div class="a m" style="left:96px;top:940px"><div class="cap" data-a=".4" data-fx="rise">항암면역치료란?</div></div>
+  <div class="a h" style="left:90px;top:992px">
+    <div class="m"><div data-a=".5" data-fx="rise">내 몸의 면역체계로</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span class="hl">암세포를 알아보고</span></div></div>
+    <div class="m"><div data-a=".74" data-fx="rise">공격하도록 돕는 치료</div></div>
+  </div>
+</div></div>
+
+<!-- 3 · 원리 -->
+<div class="scene" id="s3"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">01</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">면역세포의 힘을</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">키워 줍니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <g transform="translate(40,40)">
+        <text x="0" y="22" font-family="Noto Sans KR" font-weight="800" font-size="26" fill="#56744A">면역 기능</text>
+        <rect x="140" y="2" width="300" height="26" rx="13" fill="#EDF1E8"/>
+        <rect id="s3bar" x="140" y="2" width="60" height="26" rx="13" fill="#6F8E5C"/>
+      </g>
+      <g id="s3cells"></g>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1270px;display:flex;gap:16px" data-a=".6" data-fx="up">
+    <div class="chip" style="background:var(--sage-l);color:var(--sage-d)">● 면역세포</div>
+    <div class="chip" style="background:var(--coral-l);color:var(--coral-d)">● 암세포</div>
+  </div>
+  <div class="a m" style="left:96px;top:1380px"><div class="d" data-a="1.2" data-fx="rise">면역세포의 기능을 높이거나 면역 반응을 조절해요</div></div>
+</div></div>
+
+<!-- 4 · 표준치료와 함께, 회복까지 -->
+<div class="scene" id="s4"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">02</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">표준치료와 함께,</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">치료 후 회복까지</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:560px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="560">
+      <line x1="80" y1="190" x2="880" y2="190" stroke="#E7E1D7" stroke-width="10" stroke-linecap="round"/>
+      <line id="s4line" x1="80" y1="190" x2="80" y2="190" stroke="#3B312F" stroke-width="10" stroke-linecap="round"/>
+      <g id="s4nodes"></g>
+      <rect id="s4band" x="80" y="330" width="0" height="110" rx="55" fill="#6F8E5C"/>
+      <text id="s4btxt" x="480" y="398" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="42" fill="#fff" opacity="0">항암면역치료</text>
+    </svg>
+  </div>
+  <div class="a m" style="left:96px;top:1220px"><div class="d" data-a="1.8" data-fx="rise">수술 · 항암 · 방사선 치료와 병행하며<br>치료 이후의 회복까지 함께 살핍니다</div></div>
+</div></div>
+
+<!-- 5 · 맞춤 조합 -->
+<div class="scene" id="s5"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">03</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">주사 · 한약 · 침을</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">나에게 맞게 조합</span></div></div>
+  </div>
+  <div id="s5grid"></div>
+</div></div>
+
+<!-- 6 · 검사로 확인 -->
+<div class="scene" id="s6"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">04</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">면역 상태를</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">검사로 확인합니다</span></div></div>
+  </div>
+  <div id="s6list"></div>
+  <div class="a m" style="left:96px;top:1300px"><div class="d" style="font-size:32px" data-a="1.6" data-fx="rise">검사 결과는 다른 검사와 함께 종합적으로 판단합니다</div></div>
+</div></div>
+
+<!-- 7 · 생활 관리 -->
+<div class="scene" id="s7"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">05</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">식사 · 수면 · 운동까지</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">생활 관리도 함께</span></div></div>
+  </div>
+  <div id="s7row"></div>
+  <div class="a" style="left:0;width:1080px;top:1110px;display:flex;justify-content:center" data-a="1.4" data-fx="pop">
+    <div class="chip" style="background:var(--coral);color:#fff">치료 단계에 맞춘 항암 식단 제공</div>
+  </div>
+</div></div>
+
+<!-- 8 · 개인별 설계 -->
+<div class="scene" id="s8"><div class="c">
+  <div class="photo" style="left:60px;top:260px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s8img" style="background-image:url(assets/consult.jpg)"></div></div>
+  <div class="a" style="left:60px;top:260px;padding:14px 26px;border-radius:36px 0 28px 0;background:var(--coral);color:#fff;font-size:30px;font-weight:800" data-a=".4" data-fx="pop">소담 상담실</div>
+  <div class="a h" style="left:90px;top:960px">
+    <div class="m"><div data-a=".5" data-fx="rise">적용 방법과 주기는</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span class="hl">개인별로 설계합니다</span></div></div>
+  </div>
+  <div class="a m" style="left:96px;top:1200px"><div class="d" style="font-size:32px" data-a="1.0" data-fx="rise">상태와 치료 이력에 따라 정하며, 표준치료를 대신하지 않습니다</div></div>
+</div></div>
+
+<!-- 9 · 엔딩 -->
+<div class="scene" id="s9"><div class="c" style="color:#fff">
+  <svg class="a mk" id="s9mark" style="left:450px;top:360px;color:#fff" width="180" height="253" viewBox="0 0 912 1280"><path id="s9path"/></svg>
+  <div class="a" style="left:0;width:1080px;top:660px;text-align:center;font-size:96px;letter-spacing:-3px">
+    <div class="m" style="display:inline-block"><div data-a=".6" data-fx="rise"><span style="font-weight:900">소담</span><span style="font-weight:400">한방병원</span></div></div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:820px;text-align:center"><div style="font-size:38px;font-weight:500;color:#E3EDD9" data-a=".8" data-fx="rise">통합암치료센터 · 항암면역치료</div></div>
+  <div class="a m" style="left:0;width:1080px;top:930px;text-align:center"><div style="font-size:34px;font-weight:700;letter-spacing:6px;color:#DDE8D3" data-a=".95" data-fx="rise">상담 문의</div></div>
+  <div class="a m" style="left:0;width:1080px;top:980px;text-align:center"><div style="font-size:120px;font-weight:900;letter-spacing:-3px" data-a="1.05" data-fx="rise">054) 727.2550</div></div>
+  <div class="a" style="left:0;width:1080px;top:1190px;display:flex;justify-content:center" data-a="1.4" data-fx="pop">
+    <div class="chip" style="background:var(--coral);font-size:40px;padding:22px 52px">프로필 링크에서 자세히 보기</div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:1340px;text-align:center"><div style="font-size:38px;font-weight:700;opacity:.9;letter-spacing:0" data-a="1.7" data-fx="rise">@sodamhb</div></div>
+</div></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, d) => clamp((t - a) / d);
+const expo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.6; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const f1 = v => (+v).toFixed(1);
+const rnd = s => { const x = Math.sin(s * 127.1) * 43758.5453; return x - Math.floor(x); };
+
+$('s9path').setAttribute('d', window.MARK_D);
+
+// 면역세포(초록, 돌기 있음)와 암세포(코랄, 울퉁불퉁)
+const immune = (x, y, r, glow) => {
+  let spikes = '';
+  for (let k = 0; k < 10; k++) {
+    const a = k * Math.PI / 5;
+    spikes += `<line x1="${f1(Math.cos(a) * r)}" y1="${f1(Math.sin(a) * r)}" x2="${f1(Math.cos(a) * (r + 12))}" y2="${f1(Math.sin(a) * (r + 12))}" stroke="#6F8E5C" stroke-width="5" stroke-linecap="round"/>`;
+  }
+  return `<g transform="translate(${f1(x)},${f1(y)})">${glow > 0 ? `<circle r="${f1(r + 26)}" fill="#6F8E5C" opacity="${f1(.18 * glow)}"/>` : ''}${spikes}
+    <circle r="${r}" fill="#EDF1E8" stroke="#6F8E5C" stroke-width="5"/><circle r="${f1(r * .4)}" fill="#6F8E5C" opacity=".7"/></g>`;
+};
+const cancer = (x, y, s, op) => `<g transform="translate(${f1(x)},${f1(y)}) scale(${s.toFixed(3)})" opacity="${f1(op)}">
+  <path d="M-46,-6 C-50,-36 -20,-52 4,-46 C34,-50 52,-24 46,4 C52,34 22,52 -4,46 C-34,50 -44,24 -46,-6 Z" fill="#FBE0D4" stroke="#E48E6B" stroke-width="5"/>
+  <circle r="16" fill="#E48E6B"/></g>`;
+
+// 맞춤 조합 (홈페이지 '주사·한약·침 등 맞춤 조합', 암 보조 프로그램)
+const COMBO = [
+  ['면역 주사', '<rect x="24" y="8" width="16" height="36" rx="4" fill="#E48E6B"/><rect x="18" y="4" width="28" height="8" rx="3" fill="#C4673F"/><path d="M32,44 L32,58" stroke="#C4673F" stroke-width="4" stroke-linecap="round"/>'],
+  ['한약', '<path d="M8,26 L56,26 C56,44 46,54 32,54 C18,54 8,44 8,26 Z" fill="#C4673F"/><path d="M22,20 C22,12 28,12 28,6 M36,20 C36,12 42,12 42,6" stroke="#E48E6B" stroke-width="4" fill="none" stroke-linecap="round"/>'],
+  ['침', '<path d="M32,6 L32,46" stroke="#857C77" stroke-width="3"/><rect x="27" y="40" width="10" height="16" rx="2" fill="#C4673F"/><circle cx="32" cy="8" r="3" fill="#E48E6B"/>'],
+  ['고주파 온열', '<path d="M12,40 C20,30 12,22 20,12 M28,44 C36,34 28,26 36,16 M44,40 C52,30 44,22 52,12" stroke="#E48E6B" stroke-width="5" fill="none" stroke-linecap="round"/>'],
+];
+$('s5grid').innerHTML = COMBO.map(([label, icon], i) => {
+  const x = 60 + (i % 2) * 492, y = 640 + Math.floor(i / 2) * 330;
+  return `<div class="a card" id="p${i}" style="left:${x}px;top:${y}px;width:468px;height:300px">
+    <div class="ic" style="left:40px;top:40px;background:#FBE9E1"><svg width="64" height="64" viewBox="0 0 64 64">${icon}</svg></div>
+    <div class="a" style="left:40px;top:186px;font-size:44px;font-weight:900;letter-spacing:-1.5px">${label}</div></div>`;
+}).join('');
+
+// 검사 (홈페이지 '면역치료 검사프로그램')
+const TESTS = [['NK활성도 검사', '면역세포(NK)의 활성 정도를 확인'], ['암표지자 검사', '추적 관찰과 치료 반응 평가에 참고'], ['혈액 현장검사', '치료 전후 기본 컨디션 확인']];
+$('s6list').innerHTML = TESTS.map(([n, d], i) => `
+  <div class="a card" id="t${i}" style="left:60px;top:${640 + i * 200}px;width:960px;height:176px">
+    <div class="a" style="left:44px;top:34px;font-size:46px;font-weight:900;letter-spacing:-1.5px">${n}</div>
+    <div class="a" style="left:46px;top:104px;font-size:30px;font-weight:500;color:#857C77">${d}</div>
+    <div class="a" style="right:44px;top:66px;width:220px;height:22px;border-radius:11px;background:#F1ECE4;overflow:hidden">
+      <div id="tb${i}" style="width:0;height:100%;border-radius:11px;background:${i === 0 ? '#6F8E5C' : '#E48E6B'}"></div></div>
+  </div>`).join('');
+
+// 생활 관리 (홈페이지 '식사·수면·운동 생활관리')
+const LIFE = [
+  ['식사', '<path d="M10,30 L54,30 C54,46 44,54 32,54 C20,54 10,46 10,30 Z" fill="#6F8E5C"/><path d="M20,24 C24,14 40,14 44,24" stroke="#E48E6B" stroke-width="5" fill="none" stroke-linecap="round"/>'],
+  ['수면', '<path d="M40,8 A24,24 0 1 0 56,40 A18,18 0 1 1 40,8 Z" fill="#6F8E5C"/>'],
+  ['운동', '<circle cx="36" cy="10" r="6" fill="#6F8E5C"/><path d="M34,18 L26,34 L36,40 L30,56 M26,34 L14,30 M32,24 L46,30 M36,40 L48,48" stroke="#6F8E5C" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'],
+];
+$('s7row').innerHTML = LIFE.map(([n, icon], i) => `
+  <div class="a card" id="l${i}" style="left:${60 + i * 328}px;top:660px;width:304px;height:380px">
+    <div class="ic" style="left:82px;top:70px;width:140px;height:140px;border-radius:40px;background:#EDF1E8"><svg width="80" height="80" viewBox="0 0 64 64">${icon}</svg></div>
+    <div class="a" style="left:0;width:304px;top:250px;text-align:center;font-size:52px;font-weight:900">${n}</div></div>`).join('');
+
+// 원리 장면: 면역세포·암세포 배치
+const IMM = [[150, 230], [330, 420], [520, 200], [700, 430], [820, 220], [260, 520], [610, 540]];
+const CAN = [[260, 270], [600, 330], [760, 330]];
+
+// 장면 경계는 소담 주제곡(120BPM, 32초)과 맞춤
+const SCENES = [
+  ['s1', 0, 3.5], ['s2', 3.5, 7], ['s3', 7, 10.5], ['s4', 10.5, 14], ['s5', 14, 17.5], ['s6', 17.5, 21],
+  ['s7', 21, 24.5], ['s8', 24.5, 27.5], ['s9', 27.5, 32, 1],
+];
+const DURATION = 32;
+window.SIZE = [1080, 1920];
+
+const anim = [...document.querySelectorAll('[data-fx]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.a, d: +(el.dataset.d || (el.dataset.fx === 'pop' ? .5 : .75)), fx: el.dataset.fx,
+}));
+
+function applyFx(o, t) {
+  const p = prog(t, o.a, o.d), s = o.el.style;
+  switch (o.fx) {
+    case 'rise': { const e = expo(p); s.transform = `translateY(${f1((1 - e) * 112)}%)`; break; }
+    case 'up': { const e = expo(p); s.opacity = clamp(p * 2); s.transform = `translateY(${f1((1 - e) * 80)}px)`; break; }
+    case 'pop': { s.opacity = clamp(p * 3); s.transform = `scale(${back(p).toFixed(4)})`; s.transformOrigin = 'center'; break; }
+    case 'clipup': { const e = expo(prog(t, o.a, .9)); s.clipPath = `inset(${f1((1 - e) * 100)}% 0 0 0 round 36px)`; break; }
+  }
+}
+
+function renderAt(T) {
+  SCENES.forEach(([id]) => { $(id).style.display = 'none'; });
+  let i = SCENES.findIndex(([, a, b]) => T >= a && T < b);
+  if (i < 0) i = SCENES.length - 1;
+  const [id, a, b, green] = SCENES[i];
+  const t = T - a, el = $(id);
+  el.style.display = 'block';
+  anim.forEach(o => { if (o.scene === id) applyFx(o, t); });
+  const next = SCENES[i + 1];
+  const ex = next && !next[3] ? io(prog(T, b - .3, .3)) : 0;
+  const c = el.firstElementChild;
+  c.style.opacity = 1 - ex;
+  c.style.transform = `translateY(${f1(-60 * ex)}px)`;
+  $('wipe').style.transform = `scale(${(green ? expo(prog(t, 0, .7)) : 0).toFixed(4)})`;
+  extra(id, t);
+}
+
+const slideIn = (eid, a0, dx = 160) => {
+  const p = expo(prog(window.__t, a0, .6)), e = $(eid);
+  e.style.opacity = clamp(p * 2.5);
+  e.style.transform = `translateX(${f1((1 - p) * dx)}px)`;
+};
+
+function extra(id, t) {
+  window.__t = t;
+  if (id === 's1') {
+    let g = '';
+    for (let k = 0; k < 9; k++) {
+      const x = 120 + rnd(k) * 840 + 20 * Math.sin(t * 1.5 + k), y = 1250 + rnd(k + 4) * 500 + 18 * Math.cos(t * 1.2 + k);
+      g += immune(x, y, 20 + rnd(k + 8) * 12, .5);
+    }
+    $('s1cells').innerHTML = g;
+    $('s1cells').style.opacity = io(prog(t, .7, .8)) * .8;
+  }
+  if (id === 's2') $('s2img').style.transform = `scale(${(1.12 - .1 * io(prog(t, 0, 3.5))).toFixed(4)})`;
+  if (id === 's8') $('s8img').style.transform = `scale(${(1.0 + .08 * io(prog(t, 0, 3))).toFixed(4)})`;
+  if (id === 's3') {
+    // 면역 기능이 오르면 면역세포가 커지고 암세포 쪽으로 모이며, 암세포가 작아진다
+    const p = io(prog(t, .7, 1.4)), q = io(prog(t, 1.4, 1.6));
+    $('s3bar').setAttribute('width', f1(60 + 240 * p));
+    let g = CAN.map(([x, y], k) => cancer(x, y, 1 - .4 * q, 1 - .45 * q)).join('');
+    g += IMM.map(([x, y], k) => {
+      let best = CAN[0], bd = 1e9;
+      CAN.forEach(c => { const d = (c[0] - x) ** 2 + (c[1] - y) ** 2; if (d < bd) { bd = d; best = c; } });
+      const ang = Math.atan2(y - best[1], x - best[0]), tx = best[0] + Math.cos(ang) * 80, ty = best[1] + Math.sin(ang) * 80;
+      const nx = x + (tx - x) * q + 6 * Math.sin(t * 3 + k), ny = y + (ty - y) * q + 6 * Math.cos(t * 2.6 + k);
+      return immune(nx, ny, 26 + 8 * p, p);
+    }).join('');
+    $('s3cells').innerHTML = g;
+  }
+  if (id === 's4') {
+    const steps = [['수술', 200], ['항암', 400], ['방사선', 600], ['회복', 800]];
+    const lp = io(prog(t, .5, 1.2));
+    $('s4line').setAttribute('x2', f1(80 + 800 * lp));
+    $('s4nodes').innerHTML = steps.map(([n, x], k) => {
+      const on = 80 + 800 * lp >= x, last = k === 3;
+      return `<circle cx="${x}" cy="190" r="${on ? 22 : 14}" fill="${on ? (last ? '#6F8E5C' : '#3B312F') : '#E7E1D7'}"/>
+        <text x="${x}" y="130" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="34" fill="${on ? (last ? '#56744A' : '#3B312F') : '#B8B0A4'}">${n}</text>`;
+    }).join('');
+    const bp = expo(prog(t, 1.2, 1.0));
+    $('s4band').setAttribute('width', f1(800 * bp));
+    $('s4btxt').setAttribute('opacity', f1(prog(t, 1.7, .4)));
+  }
+  if (id === 's5') COMBO.forEach((_, i) => {
+    const a0 = .45 + i * .18, p = back(prog(t, a0, .55)), e = $('p' + i);
+    e.style.opacity = clamp(prog(t, a0, .3));
+    e.style.transform = `scale(${(.8 + .2 * p).toFixed(4)})`;
+  });
+  if (id === 's6') TESTS.forEach((_, i) => {
+    slideIn('t' + i, .45 + i * .25);
+    $('tb' + i).style.width = f1(100 * io(prog(t, .8 + i * .25, 1.0)) * [.8, .6, .7][i]) + '%';
+  });
+  if (id === 's7') LIFE.forEach((_, i) => {
+    const a0 = .45 + i * .2, p = back(prog(t, a0, .55)), e = $('l' + i);
+    e.style.opacity = clamp(prog(t, a0, .3));
+    e.style.transform = `translateY(${f1((1 - Math.min(p, 1)) * 60)}px) scale(${(.85 + .15 * p).toFixed(4)})`;
+  });
+  if (id === 's9') {
+    const p = expo(prog(t, .25, .9)), mk = $('s9mark');
+    mk.style.clipPath = `circle(${f1(p * 75)}% at 50% 50%)`;
+    mk.style.transform = `scale(${(0.86 + .14 * p).toFixed(4)})`;
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+function fit() {
+  const k = Math.min(innerWidth / 1080, innerHeight / 1920), st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1080 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1920 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else renderAt(0);
+</script>
+</body>
+</html>
