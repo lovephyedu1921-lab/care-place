@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 고압산소치료 설명 릴스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=block" rel="stylesheet">
+<script src="assets/mark.js"></script>
+<style>
+  :root { --bg:#FAF8F4; --sage:#6F8E5C; --sage-d:#56744A; --sage-l:#EDF1E8; --ink:#3B312F; --coral:#E48E6B; --coral-d:#C4673F;
+          --o2:#5E9CCB; --o2-l:#E6F0F8; --gray:#857C77; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; background:var(--bg);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; letter-spacing:-1px; }
+  #wipe { position:absolute; left:540px; top:960px; width:2400px; height:2400px; margin:-1200px 0 0 -1200px; border-radius:50%; background:var(--sage); transform:scale(0); }
+  .scene { position:absolute; inset:0; display:none; overflow:hidden; }
+  .c { position:absolute; inset:0; }
+  .a { position:absolute; }
+  .m { overflow:hidden; padding:0 .04em .1em; margin:0 -.04em -.1em; }
+  .m > * { display:block; }
+  .cap { font-size:32px; font-weight:800; letter-spacing:6px; }
+  .h { font-size:84px; font-weight:900; line-height:1.25; letter-spacing:-3px; }
+  .d { font-size:36px; font-weight:500; color:var(--gray); line-height:1.5; }
+  .hl { color:var(--sage-d); }
+  .chip { display:inline-block; padding:16px 34px; border-radius:60px; font-size:36px; font-weight:700; white-space:nowrap; }
+  .photo { position:absolute; overflow:hidden; border-radius:36px; box-shadow:0 30px 60px rgba(40,30,20,.14); }
+  .photo > div { position:absolute; inset:0; background-size:cover; background-position:center; }
+  .card { background:#fff; border-radius:36px; box-shadow:0 14px 40px rgba(40,30,20,.07); }
+  .num { position:absolute; left:96px; top:240px; width:96px; height:96px; border-radius:28px; background:var(--sage); color:#fff;
+         font-size:46px; font-weight:900; display:flex; align-items:center; justify-content:center; }
+  svg.mk path { fill:currentColor; }
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="wipe"></div>
+
+<!-- 1 · 훅 -->
+<div class="scene" id="s1"><div class="c">
+  <svg class="a" style="left:0;top:0" width="1080" height="1920"><g id="s1bub"></g></svg>
+  <div class="a m" style="left:96px;top:560px"><div class="cap hl" data-a=".1" data-fx="rise">고압산소치료</div></div>
+  <div class="a h" style="left:90px;top:620px;font-size:112px;letter-spacing:-5px;line-height:1.2">
+    <div class="m"><div data-a=".25" data-fx="rise">쉬어도</div></div>
+    <div class="m"><div class="hl" data-a=".45" data-fx="rise">피로가 풀리지</div></div>
+    <div class="m"><div data-a=".7" data-fx="rise">않나요?</div></div>
+  </div>
+</div></div>
+
+<!-- 2 · 고압산소치료란? -->
+<div class="scene" id="s2"><div class="c">
+  <div class="photo" style="left:60px;top:240px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s2img" style="background-image:url(assets/hbot_outside.jpg)"></div></div>
+  <div class="a m" style="left:96px;top:940px"><div class="cap hl" data-a=".4" data-fx="rise">고압산소치료(HBOT)란?</div></div>
+  <div class="a h" style="left:90px;top:992px">
+    <div class="m"><div data-a=".5" data-fx="rise">대기압보다 높은 압력에서</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span class="hl">고농도 산소</span>를</div></div>
+    <div class="m"><div data-a=".74" data-fx="rise">들이마시는 치료입니다</div></div>
+  </div>
+</div></div>
+
+<!-- 3 · 원리 1: 혈액 속 산소 증가 -->
+<div class="scene" id="s3"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">01</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">혈액에 녹아드는</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">산소가 늘어납니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <!-- 압력 게이지 -->
+      <g transform="translate(150,190)">
+        <circle r="100" fill="#F4F1EB"/>
+        <path d="M-78,40 A86,86 0 1 1 78,40" fill="none" stroke="#E2DCD2" stroke-width="16" stroke-linecap="round"/>
+        <path id="s3arc" d="M-78,40 A86,86 0 1 1 78,40" fill="none" stroke="#6F8E5C" stroke-width="16" stroke-linecap="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/>
+        <line id="s3needle" x1="0" y1="0" x2="0" y2="-70" stroke="#3B312F" stroke-width="8" stroke-linecap="round"/>
+        <circle r="12" fill="#3B312F"/>
+        <text y="76" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="26" fill="#56744A">압력</text>
+      </g>
+      <!-- 혈관 -->
+      <rect x="40" y="380" width="880" height="170" rx="85" fill="#F8D9D2"/>
+      <rect x="40" y="380" width="880" height="170" rx="85" fill="none" stroke="#E8A898" stroke-width="10"/>
+      <g id="s3rbc"></g>
+      <g id="s3o2"></g>
+      <text x="480" y="345" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="30" fill="#3B312F">혈관</text>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1270px;display:flex;gap:16px" data-a=".6" data-fx="up">
+    <div class="chip" style="background:#FBE9E1;color:var(--coral-d)">● 적혈구</div>
+    <div class="chip" style="background:var(--o2-l);color:#3F7AA8">● 산소</div>
+  </div>
+  <div class="a m" style="left:96px;top:1380px"><div class="d" data-a="1.2" data-fx="rise">혈장에 녹아 운반되는 산소량이 증가해요</div></div>
+</div></div>
+
+<!-- 4 · 원리 2: 부족한 조직까지 -->
+<div class="scene" id="s4"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">02</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">산소가 부족한 조직까지</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">충분히 전달됩니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <rect id="s4tissue" x="0" y="0" width="960" height="620" fill="#D9CFE0"/>
+      <g id="s4cells"></g>
+      <path d="M0,240 C240,240 360,270 480,270 C600,270 720,240 960,240 L960,380 C720,380 600,350 480,350 C360,350 240,380 0,380 Z" fill="#F8D9D2" stroke="#E8A898" stroke-width="10"/>
+      <g id="s4rbc"></g>
+      <g id="s4o2"></g>
+      <text id="s4lab" x="480" y="560" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="30" fill="#3B312F">손상되어 산소가 부족한 조직</text>
+    </svg>
+  </div>
+  <div class="a m" style="left:96px;top:1290px"><div class="d" data-a="1.4" data-fx="rise">손상 부위 회복과 신생혈관 형성에<br>유리한 환경을 만듭니다</div></div>
+</div></div>
+
+<!-- 5 · 핵심 포인트 -->
+<div class="scene" id="s5"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">03</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">몸의 회복을</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">이렇게 돕습니다</span></div></div>
+  </div>
+  <div id="s5grid"></div>
+</div></div>
+
+<!-- 6 · 암 치료 중에도 -->
+<div class="scene" id="s6"><div class="c">
+  <div class="num" style="background:var(--coral)" data-a=".1" data-fx="pop">04</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">암 치료 중이라면</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span style="color:var(--coral-d)">회복을 함께 돕습니다</span></div></div>
+  </div>
+  <div class="a card" id="s6c1" style="left:60px;top:660px;width:960px;height:220px">
+    <div class="a" style="left:48px;top:50px;width:120px;height:120px;border-radius:36px;background:#FBE9E1;display:flex;align-items:center;justify-content:center">
+      <svg width="64" height="64" viewBox="0 0 64 64"><rect x="10" y="22" width="44" height="20" rx="10" fill="#E48E6B"/><rect x="32" y="22" width="22" height="20" rx="10" fill="#C4673F"/></svg></div>
+    <div class="a" style="left:200px;top:52px;font-size:52px;font-weight:900">항암치료 보조</div>
+    <div class="a" style="left:202px;top:126px;font-size:32px;font-weight:500;color:var(--gray)">치료 중 떨어진 체력·컨디션 관리</div>
+  </div>
+  <div class="a card" id="s6c2" style="left:60px;top:910px;width:960px;height:220px">
+    <div class="a" style="left:48px;top:50px;width:120px;height:120px;border-radius:36px;background:#FBE9E1;display:flex;align-items:center;justify-content:center">
+      <svg width="64" height="64" viewBox="0 0 64 64"><circle cx="32" cy="32" r="8" fill="#C4673F"/><g fill="#E48E6B"><path d="M32,24 L22,6 A30,30 0 0 1 42,6 Z"/><path d="M38,36 L58,36 A30,30 0 0 1 48,54 Z"/><path d="M26,36 L16,54 A30,30 0 0 1 6,36 Z"/></g></svg></div>
+    <div class="a" style="left:200px;top:52px;font-size:52px;font-weight:900">방사선치료 후유증 완화</div>
+    <div class="a" style="left:202px;top:126px;font-size:32px;font-weight:500;color:var(--gray)">손상 조직의 회복 환경 개선</div>
+  </div>
+  <div class="a m" style="left:96px;top:1180px"><div class="d" data-a="1.4" data-fx="rise">통합암치료센터의 치료와 함께 진행합니다</div></div>
+</div></div>
+
+<!-- 7 · 이런 분께 -->
+<div class="scene" id="s7"><div class="c">
+  <div class="a m" style="left:96px;top:300px"><div class="cap hl" data-a=".05" data-fx="rise">CHECK</div></div>
+  <div class="a h" style="left:90px;top:350px">
+    <div class="m"><div data-a=".12" data-fx="rise">이런 분께</div></div>
+    <div class="m"><div data-a=".24" data-fx="rise"><span class="hl">권해 드려요</span></div></div>
+  </div>
+  <div id="s7list"></div>
+</div></div>
+
+<!-- 8 · 프라이빗 1인 챔버 -->
+<div class="scene" id="s8"><div class="c">
+  <div class="photo" style="left:60px;top:260px;width:960px;height:640px" data-a="0" data-fx="clipup"><div id="s8img" style="background-image:url(assets/hbot_inside.jpg)"></div></div>
+  <div class="a" style="left:60px;top:260px;padding:14px 26px;border-radius:36px 0 28px 0;background:var(--sage);color:#fff;font-size:30px;font-weight:800" data-a=".4" data-fx="pop">프라이빗 1인 전용 챔버</div>
+  <div class="a h" style="left:90px;top:960px">
+    <div class="m"><div data-a=".5" data-fx="rise">누워서 편안하게,</div></div>
+    <div class="m"><div data-a=".62" data-fx="rise"><span class="hl">나에게 맞춘</span> 관리</div></div>
+  </div>
+  <div class="a m" style="left:96px;top:1200px"><div class="d" style="font-size:32px" data-a="1.0" data-fx="rise">귀·폐 질환 등 주의 사항을 의료진이 먼저 확인합니다</div></div>
+</div></div>
+
+<!-- 9 · 엔딩 -->
+<div class="scene" id="s9"><div class="c" style="color:#fff">
+  <svg class="a mk" id="s9mark" style="left:450px;top:360px;color:#fff" width="180" height="253" viewBox="0 0 912 1280"><path id="s9path"/></svg>
+  <div class="a" style="left:0;width:1080px;top:660px;text-align:center;font-size:96px;letter-spacing:-3px">
+    <div class="m" style="display:inline-block"><div data-a=".6" data-fx="rise"><span style="font-weight:900">소담</span><span style="font-weight:400">한방병원</span></div></div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:820px;text-align:center"><div style="font-size:38px;font-weight:500;color:#E3EDD9" data-a=".8" data-fx="rise">항노화통합면역센터 · 고압산소치료</div></div>
+  <div class="a m" style="left:0;width:1080px;top:930px;text-align:center"><div style="font-size:34px;font-weight:700;letter-spacing:6px;color:#DDE8D3" data-a=".95" data-fx="rise">상담 문의</div></div>
+  <div class="a m" style="left:0;width:1080px;top:980px;text-align:center"><div style="font-size:120px;font-weight:900;letter-spacing:-3px" data-a="1.05" data-fx="rise">054) 727.2550</div></div>
+  <div class="a" style="left:0;width:1080px;top:1190px;display:flex;justify-content:center" data-a="1.4" data-fx="pop">
+    <div class="chip" style="background:var(--coral);font-size:40px;padding:22px 52px">프로필 링크에서 자세히 보기</div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:1340px;text-align:center"><div style="font-size:38px;font-weight:700;opacity:.9;letter-spacing:0" data-a="1.7" data-fx="rise">@sodamhb</div></div>
+</div></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, d) => clamp((t - a) / d);
+const expo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.6; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const f1 = v => (+v).toFixed(1);
+const rnd = s => { const x = Math.sin(s * 127.1) * 43758.5453; return x - Math.floor(x); };
+
+$('s9path').setAttribute('d', window.MARK_D);
+
+// 핵심 포인트 (홈페이지 '고압산소치료 핵심 포인트')
+const POINTS = [
+  ['조직 재생 · 회복 지원', '<path d="M32,8 C44,20 52,30 52,40 A20,20 0 0 1 12,40 C12,30 20,20 32,8 Z" fill="#6F8E5C"/><path d="M24,40 L30,46 L42,34" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'],
+  ['염증 · 부종 완화', '<circle cx="32" cy="32" r="22" fill="#E48E6B" opacity=".35"/><circle cx="32" cy="32" r="12" fill="#E48E6B"/><path d="M14,50 L50,14" stroke="#56744A" stroke-width="6" stroke-linecap="round"/>'],
+  ['면역 기능 지원', '<path d="M32,6 L54,14 L54,32 C54,46 44,54 32,58 C20,54 10,46 10,32 L10,14 Z" fill="#6F8E5C"/><path d="M32,20 L32,44 M20,32 L44,32" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'],
+  ['피로 · 컨디션 관리', '<rect x="8" y="18" width="42" height="28" rx="6" fill="none" stroke="#6F8E5C" stroke-width="5"/><rect x="50" y="26" width="6" height="12" rx="2" fill="#6F8E5C"/><rect id="bat" x="13" y="23" width="32" height="18" rx="3" fill="#6F8E5C"/>'],
+];
+$('s5grid').innerHTML = POINTS.map(([label, icon], i) => {
+  const x = 60 + (i % 2) * 492, y = 640 + Math.floor(i / 2) * 330;
+  return `<div class="a card" id="p${i}" style="left:${x}px;top:${y}px;width:468px;height:300px">
+    <div class="a" style="left:40px;top:40px;width:110px;height:110px;border-radius:32px;background:#EDF1E8;display:flex;align-items:center;justify-content:center">
+      <svg width="64" height="64" viewBox="0 0 64 64">${icon}</svg></div>
+    <div class="a" style="left:40px;top:186px;font-size:40px;font-weight:900;letter-spacing:-1.5px">${label}</div></div>`;
+}).join('');
+
+// 이런 분께 (홈페이지 '치료 대상' 문구)
+const WHO = ['만성 피로에 컨디션 회복이 필요한 분', '잦은 스트레스와 과로로 회복이 더딘 분', '운동 후 빠른 피로 회복이 필요한 분', '면역력 강화가 필요한 분'];
+$('s7list').innerHTML = WHO.map((s, i) => `
+  <div class="a card" id="w${i}" style="left:60px;top:${640 + i * 176}px;width:960px;height:148px">
+    <svg class="a" style="left:40px;top:38px" width="72" height="72" viewBox="0 0 72 72">
+      <circle cx="36" cy="36" r="36" fill="#EDF1E8"/>
+      <path id="wc${i}" d="M21,37 L32,48 L52,26" fill="none" stroke="#56744A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/>
+    </svg>
+    <div class="a" style="left:140px;top:44px;font-size:42px;font-weight:800;letter-spacing:-1.5px">${s}</div>
+  </div>`).join('');
+
+// 장면 경계는 소담 주제곡(120BPM, 32초)과 맞춤
+const SCENES = [
+  ['s1', 0, 3.5], ['s2', 3.5, 7], ['s3', 7, 10.5], ['s4', 10.5, 14], ['s5', 14, 17.5], ['s6', 17.5, 21],
+  ['s7', 21, 24.5], ['s8', 24.5, 27.5], ['s9', 27.5, 32, 1],
+];
+const DURATION = 32;
+window.SIZE = [1080, 1920];
+
+const anim = [...document.querySelectorAll('[data-fx]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.a, d: +(el.dataset.d || (el.dataset.fx === 'pop' ? .5 : .75)), fx: el.dataset.fx,
+}));
+
+function applyFx(o, t) {
+  const p = prog(t, o.a, o.d), s = o.el.style;
+  switch (o.fx) {
+    case 'rise': { const e = expo(p); s.transform = `translateY(${f1((1 - e) * 112)}%)`; break; }
+    case 'up': { const e = expo(p); s.opacity = clamp(p * 2); s.transform = `translateY(${f1((1 - e) * 80)}px)`; break; }
+    case 'pop': { s.opacity = clamp(p * 3); s.transform = `scale(${back(p).toFixed(4)})`; s.transformOrigin = 'center'; break; }
+    case 'clipup': { const e = expo(prog(t, o.a, .9)); s.clipPath = `inset(${f1((1 - e) * 100)}% 0 0 0 round 36px)`; break; }
+  }
+}
+
+function renderAt(T) {
+  SCENES.forEach(([id]) => { $(id).style.display = 'none'; });
+  let i = SCENES.findIndex(([, a, b]) => T >= a && T < b);
+  if (i < 0) i = SCENES.length - 1;
+  const [id, a, b, green] = SCENES[i];
+  const t = T - a, el = $(id);
+  el.style.display = 'block';
+  anim.forEach(o => { if (o.scene === id) applyFx(o, t); });
+  const next = SCENES[i + 1];
+  const ex = next && !next[3] ? io(prog(T, b - .3, .3)) : 0;
+  const c = el.firstElementChild;
+  c.style.opacity = 1 - ex;
+  c.style.transform = `translateY(${f1(-60 * ex)}px)`;
+  $('wipe').style.transform = `scale(${(green ? expo(prog(t, 0, .7)) : 0).toFixed(4)})`;
+  extra(id, t);
+}
+
+const rbc = (x, y, r, rot) => `<g transform="translate(${f1(x)},${f1(y)}) rotate(${f1(rot)})"><ellipse rx="${r}" ry="${f1(r * .62)}" fill="#D9534F"/><ellipse rx="${f1(r * .45)}" ry="${f1(r * .25)}" fill="#B83E3A" opacity=".6"/></g>`;
+const o2 = (x, y, r, op) => `<g transform="translate(${f1(x)},${f1(y)})" opacity="${f1(op)}"><circle r="${r}" fill="#fff" stroke="#5E9CCB" stroke-width="4"/><circle r="${f1(r * .45)}" fill="#5E9CCB"/></g>`;
+
+function extra(id, t) {
+  if (id === 's1') {
+    // 아래에서 떠오르는 산소 방울
+    let g = '';
+    for (let k = 0; k < 16; k++) {
+      const sp = 60 + rnd(k) * 80, x = 80 + rnd(k + 9) * 920, y = 1900 - ((t * sp + rnd(k + 3) * 900) % 900);
+      g += o2(x + 12 * Math.sin(t * 2 + k), y, 10 + rnd(k + 5) * 14, .35 + .4 * rnd(k + 7));
+    }
+    $('s1bub').innerHTML = g;
+    $('s1bub').style.opacity = io(prog(t, .6, .8));
+  }
+  if (id === 's2') $('s2img').style.transform = `scale(${(1.12 - .1 * io(prog(t, 0, 3.5))).toFixed(4)})`;
+  if (id === 's8') $('s8img').style.transform = `scale(${(1.0 + .08 * io(prog(t, 0, 3))).toFixed(4)})`;
+  if (id === 's3') {
+    // 압력이 오르면 혈관 속 산소 입자가 늘어난다
+    const p = io(prog(t, .7, 1.8));
+    $('s3arc').setAttribute('stroke-dashoffset', (1 - p).toFixed(4));
+    $('s3needle').setAttribute('transform', `rotate(${f1(-125 + 250 * p)})`);
+    let r = '';
+    for (let k = 0; k < 9; k++) {
+      const x = 80 + ((k * 104 + t * 120) % 860), y = 440 + 50 * rnd(k + 1);
+      r += rbc(x, y, 26, k * 37 + t * 40);
+    }
+    $('s3rbc').innerHTML = r;
+    let o = '';
+    const n = Math.round(4 + 22 * p);
+    for (let k = 0; k < 26; k++) {
+      if (k >= n) break;
+      const x = 70 + ((k * 61 + t * 150 + rnd(k) * 300) % 830), y = 405 + 120 * rnd(k + 11);
+      o += o2(x, y, 9, k >= 4 ? clamp((26 * p - k + 4) / 2) : 1);
+    }
+    $('s3o2').innerHTML = o;
+  }
+  if (id === 's4') {
+    // 좁아진 혈관에서 산소가 혈관 밖 조직으로 퍼지고, 조직 색이 건강해진다
+    const p = io(prog(t, .8, 2.0));
+    const mix = (a, b) => a.map((v, i) => Math.round(v + (b[i] - v) * p));
+    const [r, g, b] = mix([217, 207, 224], [246, 226, 220]);
+    $('s4tissue').setAttribute('fill', `rgb(${r},${g},${b})`);
+    let cells = '';
+    for (let k = 0; k < 18; k++) {
+      const x = 60 + (k % 9) * 105, y = k < 9 ? 110 : 500, rr = 34 + 6 * rnd(k);
+      const [cr, cg, cb] = mix([190, 176, 202], [240, 196, 184]);
+      cells += `<circle cx="${x}" cy="${y + 10 * Math.sin(k)}" r="${f1(rr)}" fill="rgb(${cr},${cg},${cb})" opacity=".85"/>`;
+    }
+    $('s4cells').innerHTML = cells;
+    let rb = '';
+    for (let k = 0; k < 8; k++) rb += rbc(60 + ((k * 120 + t * 110) % 860), 310 + 18 * Math.sin(k), 22, k * 50 + t * 40);
+    $('s4rbc').innerHTML = rb;
+    let o = '';
+    for (let k = 0; k < 22; k++) {
+      const x = 60 + rnd(k + 2) * 840;
+      const out = clamp((p * 22 - k) / 3);
+      const dir = k % 2 ? -1 : 1;
+      const y = 310 + dir * out * (60 + 140 * rnd(k + 4)) + 8 * Math.sin(t * 3 + k);
+      o += o2(x + ((t * 60) % 40) * (1 - out), y, 9, .9);
+    }
+    $('s4o2').innerHTML = o;
+    $('s4lab').textContent = p > .6 ? '산소가 전달되어 회복 환경 개선' : '손상되어 산소가 부족한 조직';
+  }
+  if (id === 's5') {
+    POINTS.forEach((_, i) => {
+      const a0 = .45 + i * .18, p = back(prog(t, a0, .55)), e = $('p' + i);
+      e.style.opacity = clamp(prog(t, a0, .3));
+      e.style.transform = `scale(${(.8 + .2 * p).toFixed(4)})`;
+    });
+    const bat = document.getElementById('bat');
+    if (bat) bat.setAttribute('width', f1(8 + 24 * io(prog(t, 1.2, 1.4))));
+  }
+  if (id === 's6') {
+    [['s6c1', .45], ['s6c2', .7]].forEach(([eid, a0]) => {
+      const p = expo(prog(t, a0, .6)), e = $(eid);
+      e.style.opacity = clamp(p * 2.5);
+      e.style.transform = `translateX(${f1((1 - p) * 160)}px)`;
+    });
+  }
+  if (id === 's7') {
+    WHO.forEach((_, i) => {
+      const a0 = .45 + i * .3, p = expo(prog(t, a0, .6)), e = $('w' + i);
+      e.style.opacity = clamp(p * 2.5);
+      e.style.transform = `translateX(${f1((1 - p) * 160)}px)`;
+      $('wc' + i).setAttribute('stroke-dashoffset', (1 - io(prog(t, a0 + .25, .4))).toFixed(4));
+    });
+  }
+  if (id === 's9') {
+    const p = expo(prog(t, .25, .9)), mk = $('s9mark');
+    mk.style.clipPath = `circle(${f1(p * 75)}% at 50% 50%)`;
+    mk.style.transform = `scale(${(0.86 + .14 * p).toFixed(4)})`;
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+function fit() {
+  const k = Math.min(innerWidth / 1080, innerHeight / 1920), st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1080 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1920 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else renderAt(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 릴스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@900&display=block" rel="stylesheet">
+<style>
+  :root { --bg:#F7F5F0; --g:#2D5016; --o:#C8943A; --mint:#E6ECDD; --ink:#1E2419; --gray:#6B6F64; --cream:#DCE8C8; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; background:var(--bg);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; letter-spacing:-.5px; }
+  #wipe { position:absolute; left:540px; top:960px; width:2400px; height:2400px; margin:-1200px 0 0 -1200px;
+          border-radius:50%; background:var(--g); transform:scale(0); }
+  .scene { position:absolute; inset:0; display:none; }
+  .c { position:absolute; inset:0; }
+  .a { position:absolute; }
+  .m { overflow:hidden; padding-bottom:.08em; margin-bottom:-.08em; }
+  .m > * { display:block; }
+  .cap { font-size:34px; font-weight:800; letter-spacing:4px; color:var(--o); }
+  .h { font-size:104px; font-weight:900; line-height:1.2; letter-spacing:-3px; }
+  .d { font-size:40px; font-weight:500; color:var(--gray); line-height:1.5; }
+  .g { color:var(--g); } .o { color:var(--o); }
+  .card { background:#fff; border-radius:40px; box-shadow:0 14px 40px rgba(30,40,20,.07); }
+  .serif { font-family:'Noto Serif KR', serif; font-weight:900; letter-spacing:-1px; }
+  #tag { position:absolute; left:96px; top:236px; display:flex; align-items:center; gap:14px; font-size:30px; font-weight:800; color:var(--g); opacity:0; }
+</style>
+</head>
+<body>
+<div id="stage">
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="mark" viewBox="-100 -100 200 200">
+      <circle r="88" fill="none" stroke="currentColor" stroke-width="10"/>
+      <path d="M-58,8 Q0,82 58,8 Z" fill="#C8943A"/>
+      <path d="M0,10 L0,-30" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-2,-22 C-14,-56 -50,-60 -58,-44 C-48,-22 -22,-14 -2,-22 Z" fill="currentColor"/>
+      <path d="M2,-32 C16,-66 52,-68 60,-52 C50,-30 24,-24 2,-32 Z" fill="currentColor" opacity=".75"/>
+    </symbol>
+  </defs>
+</svg>
+<div id="wipe"></div>
+
+<!-- 1 훅 -->
+<div class="scene" id="k1"><div class="c">
+  <div class="a m" style="left:96px;top:560px"><div class="cap" data-a=".05" data-fx="rise">포항 장성동 한방병원</div></div>
+  <div class="a h" style="left:90px;top:640px">
+    <div class="m"><div data-a=".15" data-fx="rise">몸이 보내는</div></div>
+    <div class="m"><div data-a=".3" data-fx="rise"><span class="g">신호,</span></div></div>
+    <div class="m"><div data-a=".55" data-fx="rise">그냥 넘기지</div></div>
+    <div class="m"><div data-a=".7" data-fx="rise">마세요</div></div>
+  </div>
+  <svg class="a" style="left:0;top:0" width="1080" height="1920">
+    <path d="M96,1320 H470 L505,1250 L555,1400 L590,1320 H984" pathLength="1" fill="none" stroke="#2D5016" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round" data-a=".9" data-d="1.1" data-fx="draw"/>
+    <g id="k1rip" fill="none" stroke="#C8943A"></g>
+  </svg>
+</div></div>
+
+<!-- 2 체크리스트 -->
+<div class="scene" id="k2"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".05" data-fx="rise">CHECK</div></div>
+  <div class="a h" style="left:90px;top:450px;font-size:96px">
+    <div class="m"><div data-a=".12" data-fx="rise">이런 증상,</div></div>
+    <div class="m"><div data-a=".25" data-fx="rise">있으신가요?</div></div>
+  </div>
+  <div id="k2list"></div>
+</div></div>
+
+<!-- 3 브랜드 -->
+<div class="scene" id="k3"><div class="c" style="color:#fff">
+  <svg class="a" style="left:430px;top:560px;color:#F7F5F0" width="220" height="220" viewBox="-100 -100 200 200">
+    <circle r="88" fill="none" stroke="#F7F5F0" stroke-width="10" pathLength="1" transform="rotate(-90)" data-a=".35" data-d=".9" data-fx="draw"/>
+    <g data-a=".9" data-fx="pop">
+      <path d="M-58,8 Q0,82 58,8 Z" fill="#C8943A"/>
+      <path d="M0,10 L0,-30" stroke="#F7F5F0" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-2,-22 C-14,-56 -50,-60 -58,-44 C-48,-22 -22,-14 -2,-22 Z" fill="#F7F5F0"/>
+      <path d="M2,-32 C16,-66 52,-68 60,-52 C50,-30 24,-24 2,-32 Z" fill="#DCE8C8"/>
+    </g>
+  </svg>
+  <div class="a m" style="left:0;width:1080px;top:850px;text-align:center"><div class="serif" style="font-size:96px" data-a="1.1" data-fx="rise">포항소담한방병원</div></div>
+  <div class="a" style="left:0;width:1080px;top:1000px;text-align:center;font-size:42px;font-weight:500;color:var(--cream);line-height:1.5">
+    <div class="m"><div data-a="1.45" data-fx="rise">한방과 양방이 함께 진료하는</div></div>
+    <div class="m"><div data-a="1.6" data-fx="rise">협진 한방병원</div></div>
+  </div>
+</div></div>
+
+<!-- 4 협진 -->
+<div class="scene" id="k4"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".25" data-fx="rise">한방 + 양방</div></div>
+  <div class="a h" style="left:90px;top:450px">
+    <div class="m"><div data-a=".35" data-fx="rise">함께</div></div>
+    <div class="m"><div data-a=".48" data-fx="rise"><span class="g">진료합니다</span></div></div>
+  </div>
+  <svg class="a" style="left:0;top:0" width="1080" height="1920">
+    <g id="k4a" data-a=".5" data-fx="fade">
+      <circle cx="0" cy="1010" r="230" fill="#2D5016" fill-opacity=".1" stroke="#2D5016" stroke-width="5"/>
+      <text x="-90" y="1028" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="54" fill="#2D5016">한방</text>
+    </g>
+    <g id="k4b" data-a=".6" data-fx="fade">
+      <circle cx="0" cy="1010" r="230" fill="#C8943A" fill-opacity=".14" stroke="#C8943A" stroke-width="5"/>
+      <text x="90" y="1028" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="54" fill="#A87822">양방</text>
+    </g>
+    <g data-a="1.75" data-fx="pop" style="transform-origin:540px 1010px">
+      <rect x="440" y="966" width="200" height="88" rx="44" fill="#2D5016"/>
+      <text x="540" y="1027" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="46" fill="#fff">협진</text>
+    </g>
+  </svg>
+  <div class="a d" style="left:0;width:1080px;text-align:center;top:1300px">
+    <div class="m"><div data-a="2.0" data-fx="rise">한의학과 현대의학의 장점을</div></div>
+    <div class="m"><div data-a="2.12" data-fx="rise">한 곳에서</div></div>
+  </div>
+</div></div>
+
+<!-- 5 진료센터 -->
+<div class="scene" id="k5"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".05" data-fx="rise">CENTER</div></div>
+  <div class="a h" style="left:90px;top:450px">
+    <div class="m"><div data-a=".12" data-fx="rise"><span class="g">3개</span> 진료센터</div></div>
+  </div>
+  <div id="k5list"></div>
+</div></div>
+
+<!-- 6 의료진 -->
+<div class="scene" id="k6"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".05" data-fx="rise">TEAM</div></div>
+  <div class="a h" style="left:90px;top:450px;font-size:96px">
+    <div class="m"><div data-a=".12" data-fx="rise">여러 전문가가</div></div>
+    <div class="m"><div data-a=".25" data-fx="rise"><span class="g">함께 돌봅니다</span></div></div>
+  </div>
+  <div class="a" style="left:96px;top:740px;width:340px;text-align:center" data-a=".5" data-fx="up">
+    <div id="k6n1" class="g" style="font-size:280px;font-weight:900;line-height:1">0</div>
+    <div style="font-size:44px;font-weight:800;margin-top:6px">의료인</div>
+  </div>
+  <div class="a" style="left:470px;top:820px;font-size:120px;font-weight:500;color:#b9b5aa" data-a=".7" data-fx="fade">+</div>
+  <div class="a" style="left:644px;top:740px;width:340px;text-align:center" data-a=".8" data-fx="up">
+    <div id="k6n2" class="o" style="font-size:280px;font-weight:900;line-height:1">0</div>
+    <div style="font-size:44px;font-weight:800;margin-top:6px">물리치료사</div>
+  </div>
+  <svg class="a" style="left:0;top:0" width="1080" height="1920" id="k6dots"></svg>
+</div></div>
+
+<!-- 7 진료시간 -->
+<div class="scene" id="k7"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".05" data-fx="rise">HOURS</div></div>
+  <div class="a h" style="left:90px;top:450px">
+    <div class="m"><div data-a=".12" data-fx="rise">퇴근 후에도,</div></div>
+    <div class="m"><div data-a=".25" data-fx="rise"><span class="g">주말에도</span></div></div>
+  </div>
+  <div id="k7chart"></div>
+  <div class="a" style="left:96px;top:1440px;font-size:30px;color:var(--gray)" data-a="1.6" data-fx="up">공휴일 09:00–13:00 · 점심시간은 요일별로 다릅니다</div>
+</div></div>
+
+<!-- 8 위치 -->
+<div class="scene" id="k8"><div class="c">
+  <div class="a m" style="left:96px;top:390px"><div class="cap" data-a=".05" data-fx="rise">LOCATION</div></div>
+  <div class="a h" style="left:90px;top:450px">
+    <div class="m"><div data-a=".12" data-fx="rise">찾아오시는 길</div></div>
+  </div>
+  <div class="a" style="left:96px;top:640px;width:888px;height:520px;border-radius:40px;background:var(--mint);overflow:hidden" data-a=".2" data-fx="up">
+    <svg width="888" height="520" id="k8map">
+      <g fill="#dbe3cf"><rect x="40" y="40" width="250" height="150" rx="16"/><rect x="340" y="40" width="200" height="150" rx="16"/><rect x="600" y="40" width="250" height="150" rx="16"/>
+        <rect x="40" y="320" width="250" height="160" rx="16"/><rect x="600" y="320" width="250" height="160" rx="16"/></g>
+      <g fill="none" stroke="#fff" stroke-linecap="round">
+        <path d="M-20,255 H908" stroke-width="44" pathLength="1" data-a=".5" data-d=".9" data-fx="draw"/>
+        <path d="M315,-20 V540" stroke-width="26" pathLength="1" data-a=".65" data-d=".8" data-fx="draw"/>
+        <path d="M570,-20 V540" stroke-width="26" pathLength="1" data-a=".75" data-d=".8" data-fx="draw"/>
+      </g>
+      <text x="160" y="236" text-anchor="middle" font-family="Noto Sans KR" font-weight="700" font-size="22" fill="#9aa48d">삼흥로</text>
+      <g id="k8rip" fill="none" stroke="#2D5016"></g>
+      <g id="k8pin">
+        <rect x="350" y="320" width="190" height="160" rx="16" fill="#2D5016"/>
+        <text x="445" y="410" text-anchor="middle" font-family="Noto Sans KR" font-weight="800" font-size="26" fill="#fff">S메디타워</text>
+      </g>
+      <g id="k8drop">
+        <path d="M0,-74 C-40,-74 -62,-44 -62,-14 C-62,26 0,74 0,74 C0,74 62,26 62,-14 C62,-44 40,-74 0,-74 Z" fill="#C8943A"/>
+        <circle cx="0" cy="-14" r="24" fill="#fff"/>
+      </g>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1210px">
+    <div class="m"><div style="font-size:48px;font-weight:900" data-a="1.2" data-fx="rise">포항시 북구 삼흥로32번길 18</div></div>
+    <div class="m"><div class="d" style="margin-top:6px" data-a="1.35" data-fx="rise">S메디타워 2~7층 · 장성동</div></div>
+  </div>
+  <div class="a" style="left:96px;top:1380px;padding:14px 30px;border-radius:40px;background:var(--g);color:#fff;font-size:32px;font-weight:800" data-a="1.6" data-fx="pop">P &nbsp;병원 전용 타워주차 30대</div>
+</div></div>
+
+<!-- 9 연락처 -->
+<div class="scene" id="k9"><div class="c" style="color:#fff">
+  <svg class="a" style="left:470px;top:420px" width="140" height="140" viewBox="-100 -100 200 200">
+    <circle r="88" fill="none" stroke="#F7F5F0" stroke-width="10" pathLength="1" transform="rotate(-90)" data-a=".3" data-d=".8" data-fx="draw"/>
+    <g data-a=".75" data-fx="pop">
+      <path d="M-58,8 Q0,82 58,8 Z" fill="#C8943A"/>
+      <path d="M0,10 L0,-30" stroke="#F7F5F0" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-2,-22 C-14,-56 -50,-60 -58,-44 C-48,-22 -22,-14 -2,-22 Z" fill="#F7F5F0"/>
+      <path d="M2,-32 C16,-66 52,-68 60,-52 C50,-30 24,-24 2,-32 Z" fill="#DCE8C8"/>
+    </g>
+  </svg>
+  <div class="a m" style="left:0;width:1080px;top:600px;text-align:center"><div class="serif" style="font-size:80px" data-a=".9" data-fx="rise">포항소담한방병원</div></div>
+  <div class="a" style="left:340px;top:760px;width:400px;height:3px;background:rgba(255,255,255,.3);transform-origin:center" data-a="1.1" data-fx="grow"></div>
+  <div class="a m" style="left:0;width:1080px;top:830px;text-align:center"><div style="font-size:36px;font-weight:700;letter-spacing:6px;color:var(--o)" data-a="1.2" data-fx="rise">대표전화</div></div>
+  <div class="a m" style="left:0;width:1080px;top:885px;text-align:center"><div style="font-size:124px;font-weight:900;letter-spacing:-2px" data-a="1.3" data-fx="rise">054-727-2550</div></div>
+  <div class="a m" style="left:0;width:1080px;top:1050px;text-align:center"><div style="font-size:42px;font-weight:500;color:var(--cream)" data-a="1.5" data-fx="rise">상담전화 010-2206-2551</div></div>
+  <div class="a" style="left:0;width:1080px;top:1250px;display:flex;justify-content:center" data-a="2.0" data-fx="pop">
+    <div style="border:3px solid rgba(255,255,255,.85);border-radius:60px;padding:22px 48px;font-size:38px;font-weight:800">저장해두고, 필요할 때 연락하세요</div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:1390px;text-align:center"><div style="font-size:36px;font-weight:700;color:var(--cream);letter-spacing:1px" data-a="2.3" data-fx="rise">Instagram @sodamhb</div></div>
+</div></div>
+
+<div id="tag"><svg width="46" height="46" style="color:#2D5016"><use href="#mark" width="46" height="46"/></svg>포항소담한방병원</div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, d) => clamp((t - a) / d);
+const expo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.7; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const f1 = v => (+v).toFixed(1);
+
+// [id, 시작, 끝, 배경이 초록인가]
+const SCENES = [
+  ['k1', 0, 3.5], ['k2', 3.5, 7.5], ['k3', 7.5, 11, 1], ['k4', 11, 15.5], ['k5', 15.5, 21.5],
+  ['k6', 21.5, 25.5], ['k7', 25.5, 30.5], ['k8', 30.5, 34.5], ['k9', 34.5, 40, 1],
+];
+const DURATION = 40;
+window.SIZE = [1080, 1920];
+// 효과음·박자 타이밍을 음악 스크립트와 공유하기 위해 기록
+window.CUES = { whoosh: SCENES.slice(1).map(s => s[1]), tick: [] };
+
+(function build() {
+  const items = ['교통사고 후 계속되는 통증', '목 · 허리 · 어깨 결림', '무릎 · 관절 통증', '떨어진 면역과 체력'];
+  $('k2list').innerHTML = items.map((s, i) => `
+    <div class="a card" style="left:96px;top:${760 + i * 178}px;width:888px;height:146px" data-a="${.55 + i * .32}" data-fx="slide">
+      <svg class="a" style="left:40px;top:37px" width="72" height="72" viewBox="0 0 72 72">
+        <circle cx="36" cy="36" r="36" fill="#E6ECDD"/>
+        <path d="M21,37 L32,48 L52,26" fill="none" stroke="#2D5016" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-a="${.8 + i * .32}" data-d=".45" data-fx="draw"/>
+      </svg>
+      <div class="a" style="left:144px;top:42px;font-size:44px;font-weight:800">${s}</div>
+    </div>`).join('');
+  items.forEach((_, i) => CUES.tick.push(3.5 + .55 + i * .32));
+
+  const centers = [['통증치료센터', '교통사고 후유증 · 척추 · 관절'], ['통합암치료센터', '암 재활 · 면역 관리'], ['항노화통합면역센터', '면역 · 체력 · 다이어트']];
+  $('k5list').innerHTML = centers.map(([n, d], i) => `
+    <div class="a card" style="left:96px;top:${700 + i * 250}px;width:888px;height:210px;overflow:hidden" data-a="${.45 + i * .35}" data-fx="slide">
+      <div class="a" style="left:0;top:0;width:12px;height:210px;background:${i === 1 ? '#C8943A' : '#2D5016'}"></div>
+      <div class="a" style="left:56px;top:40px;font-size:32px;font-weight:900;color:#C8943A;letter-spacing:2px">0${i + 1}</div>
+      <div class="a" style="left:130px;top:28px;font-size:56px;font-weight:900">${n}</div>
+      <div class="a" style="left:132px;top:112px;font-size:36px;font-weight:500;color:#6B6F64">${d}</div>
+    </div>`).join('');
+  centers.forEach((_, i) => CUES.tick.push(15.5 + .45 + i * .35));
+
+  let dots = '';
+  for (let i = 0; i < 9; i++) {
+    const x = 540 + (i - 4) * 96;
+    dots += `<circle cx="${x}" cy="1300" r="34" fill="${i < 6 ? '#2D5016' : '#C8943A'}" data-a="${1.2 + i * .09}" data-fx="pop" style="transform-origin:${x}px 1300px"/>`;
+  }
+  $('k6dots').innerHTML = dots;
+
+  // 진료시간 차트: 9시 → x=220, 20시 → x=984
+  const X = h => 220 + (h - 9) * (764 / 11);
+  const days = [['월', 20, 1], ['화', 18, 0], ['수', 20, 1], ['목', 18, 0], ['금', 18, 0], ['토', 15.5, 2], ['일', 13, 2]];
+  const lab = h => `${String(Math.floor(h)).padStart(2, '0')}:${h % 1 ? '30' : '00'}`;
+  let ch = [9, 12, 15, 18, 20].map(h => `<div class="a" style="left:${X(h) - 40}px;width:80px;text-align:center;top:700px;font-size:26px;font-weight:700;color:#a3a69b" data-a=".4" data-fx="fade">${h}시</div>`).join('');
+  ch += `<div class="a" style="left:${X(9)}px;top:746px;width:764px;height:2px;background:#e3e0d7" data-a=".4" data-fx="fade"></div>`;
+  days.forEach(([d, end, kind], i) => {
+    const y = 780 + i * 90, col = kind === 1 ? '#2D5016' : kind === 2 ? '#C8943A' : '#C9D3BC';
+    const txt = kind === 0 ? '#2D5016' : '#fff';
+    ch += `<div class="a" style="left:96px;top:${y + 2}px;font-size:40px;font-weight:900;color:${kind ? col : '#1E2419'}" data-a="${.5 + i * .12}" data-fx="fade">${d}</div>`;
+    ch += `<div class="a" style="left:${X(9)}px;top:${y}px;width:${X(end) - X(9)}px;height:58px;border-radius:29px;background:${col};transform-origin:left center" data-a="${.55 + i * .12}" data-d=".7" data-fx="grow">
+      <div class="a" style="right:22px;top:8px;font-size:30px;font-weight:800;color:${txt}">~ ${lab(end)}</div></div>`;
+  });
+  ch += `<div class="a" style="left:560px;top:612px;padding:10px 26px;border-radius:30px;background:#2D5016;color:#fff;font-size:32px;font-weight:800" data-a="1.5" data-fx="pop">월·수 야간진료</div>`;
+  $('k7chart').innerHTML = ch;
+})();
+
+const anim = [...document.querySelectorAll('[data-fx]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.a, d: +(el.dataset.d || (el.dataset.fx === 'pop' ? .5 : .7)), fx: el.dataset.fx,
+  svg: el instanceof SVGElement,
+}));
+
+function applyFx(o, t) {
+  const p = prog(t, o.a, o.d), s = o.el.style;
+  switch (o.fx) {
+    case 'rise': { const e = expo(p); s.transform = `translateY(${f1((1 - e) * 110)}%)`; break; }
+    case 'fade': s.opacity = io(p); break;
+    case 'up': { const e = expo(p); s.opacity = clamp(p * 2); s.transform = `translateY(${f1((1 - e) * 60)}px)`; break; }
+    case 'slide': { const e = expo(p); s.opacity = clamp(p * 2.5); s.transform = `translateX(${f1((1 - e) * 160)}px)`; break; }
+    case 'pop': { const e = back(p); s.opacity = clamp(p * 3); s.transform = `scale(${e.toFixed(4)})`;
+                  if (!s.transformOrigin) { if (o.svg) s.transformBox = 'fill-box'; s.transformOrigin = 'center'; } break; }
+    case 'draw': o.el.setAttribute('stroke-dasharray', '1 1'); o.el.setAttribute('stroke-dashoffset', (1 - io(p)).toFixed(4)); o.el.style.opacity = p > 0 ? 1 : 0; break;
+    case 'grow': { const e = expo(p); s.transform = `scaleX(${e.toFixed(3)})`; break; }
+  }
+}
+
+function renderAt(T) {
+  let cur = SCENES.findIndex(([, a, b]) => T >= a && T < b);
+  if (cur < 0) cur = SCENES.length - 1;
+  SCENES.forEach(([id], i) => { $(id).style.display = i === cur ? 'block' : 'none'; });
+  const [id, a, b, green] = SCENES[cur];
+  const t = T - a;
+
+  // 장면 퇴장: 마지막 0.3초 동안 위로 사라짐 (초록 배경으로 넘어갈 때는 와이프가 덮음)
+  const last = cur === SCENES.length - 1;
+  const ex = last ? 0 : io(prog(T, b - .3, .3));
+  const c = $(id).firstElementChild;
+  c.style.opacity = 1 - ex;
+  c.style.transform = `translateY(${f1(-50 * ex)}px)`;
+
+  anim.forEach(o => { if (o.scene === id) applyFx(o, t); });
+
+  // 원형 와이프: 초록 장면 진입 시 커지고, 다음 장면 시작 시 작아짐
+  let w = 0;
+  if (green) w = expo(prog(t, 0, .6));
+  else if (cur > 0 && SCENES[cur - 1][3]) w = 1 - io(prog(t, 0, .5));
+  $('wipe').style.transform = `scale(${w.toFixed(4)})`;
+
+  // 상단 병원 태그 (브랜드 소개 이후 흰 배경 장면에서만)
+  const tagOn = cur >= 3 && cur <= 7;
+  $('tag').style.opacity = tagOn ? Math.min(cur === 3 ? io(prog(t, .3, .4)) : 1, cur === 7 ? 1 - ex : 1) : 0;
+
+  // 장면별 추가 모션
+  if (id === 'k1') {
+    let r = '';
+    for (let j = 0; j < 2; j++) {
+      const q = clamp((t - 1.45 - j * .35) / 1.1);
+      if (q > 0 && q < 1) r += `<circle cx="505" cy="1250" r="${f1(10 + q * 90)}" stroke-width="${f1(6 * (1 - q))}" opacity="${f1(1 - q)}"/>`;
+    }
+    $('k1rip').innerHTML = r + (t > 1.4 ? `<circle cx="505" cy="1250" r="${f1(12 * back(prog(t, 1.4, .4)))}" fill="#C8943A" stroke="none"/>` : '');
+  }
+  if (id === 'k4') {
+    const m = io(prog(t, .7, 1.0));
+    const ax = 300 + 130 * m, bx = 780 - 130 * m;
+    $('k4a').setAttribute('transform', `translate(${f1(ax)},0)`);
+    $('k4b').setAttribute('transform', `translate(${f1(bx)},0)`);
+  }
+  if (id === 'k6') {
+    $('k6n1').textContent = Math.round(6 * io(prog(t, .55, .9)));
+    $('k6n2').textContent = Math.round(3 * io(prog(t, .85, .7)));
+  }
+  if (id === 'k8') {
+    const q = prog(t, .9, .6), y = 300 - 340 * (1 - (q < 1 ? 1 - Math.pow(1 - q, 2) : 1)) - 18 * Math.sin(clamp((t - 1.5) / .35) * Math.PI);
+    $('k8drop').setAttribute('transform', `translate(445,${f1(y)})`);
+    $('k8drop').style.opacity = q > 0 ? 1 : 0;
+    $('k8pin').style.opacity = io(prog(t, .7, .4));
+    let r = '';
+    for (let j = 0; j < 3; j++) {
+      const k = ((t - 1.5) * .7 - j * .33);
+      const kk = ((k % 1) + 1) % 1;
+      if (t > 1.5 + j * .47) r += `<ellipse cx="445" cy="376" rx="${f1(30 + kk * 160)}" ry="${f1(10 + kk * 54)}" stroke-width="${f1(5 * (1 - kk))}" opacity="${f1(.6 * (1 - kk))}"/>`;
+    }
+    $('k8rip').innerHTML = r;
+  }
+  if (id === 'k9') {
+    const br = 1 + .012 * Math.sin(Math.max(0, t - 2.5) * 2.2);
+    c.style.transform = `scale(${br.toFixed(4)})`;
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+function fit() {
+  const k = Math.min(innerWidth / 1080, innerHeight / 1920), st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1080 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1920 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else renderAt(0);
+</script>
+</body>
+</html>
