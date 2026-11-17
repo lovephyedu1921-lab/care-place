@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>소담한방병원 광양자 치료(UBI) 설명 릴스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=block" rel="stylesheet">
+<script src="assets/mark.js"></script>
+<style>
+  :root { --bg:#FAF8F4; --sage:#6F8E5C; --sage-d:#56744A; --sage-l:#EDF1E8; --ink:#3B312F; --coral:#E48E6B; --coral-d:#C4673F; --coral-l:#FBE9E1;
+          --uv:#7A6CD8; --uv-l:#EEEBFB; --o2:#5E9CCB; --o2-l:#E6F0F8; --blood:#D9534F; --gray:#857C77; }
+  html, body { margin:0; background:#111; overflow:hidden; }
+  #stage { position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden; background:var(--bg);
+           font-family:'Noto Sans KR', sans-serif; color:var(--ink); transform-origin:0 0; letter-spacing:-1px; }
+  #wipe { position:absolute; left:540px; top:960px; width:2400px; height:2400px; margin:-1200px 0 0 -1200px; border-radius:50%; background:var(--sage); transform:scale(0); }
+  .scene { position:absolute; inset:0; display:none; overflow:hidden; }
+  .c { position:absolute; inset:0; }
+  .a { position:absolute; }
+  .m { overflow:hidden; padding:0 .04em .1em; margin:0 -.04em -.1em; }
+  .m > * { display:block; }
+  .cap { font-size:32px; font-weight:800; letter-spacing:6px; color:var(--uv); }
+  .h { font-size:84px; font-weight:900; line-height:1.25; letter-spacing:-3px; }
+  .d { font-size:36px; font-weight:500; color:var(--gray); line-height:1.5; }
+  .hl { color:var(--uv); }
+  .chip { display:inline-block; padding:16px 34px; border-radius:60px; font-size:36px; font-weight:700; white-space:nowrap; }
+  .card { background:#fff; border-radius:36px; box-shadow:0 14px 40px rgba(40,30,20,.07); }
+  .num { position:absolute; left:96px; top:240px; width:96px; height:96px; border-radius:28px; background:var(--uv); color:#fff;
+         font-size:46px; font-weight:900; display:flex; align-items:center; justify-content:center; }
+  .ic { position:absolute; width:110px; height:110px; border-radius:32px; display:flex; align-items:center; justify-content:center; }
+  svg.mk path { fill:currentColor; }
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="wipe"></div>
+
+<!-- 1 · 훅 -->
+<div class="scene" id="s1"><div class="c">
+  <svg class="a" style="left:0;top:0" width="1080" height="1920">
+    <defs><radialGradient id="uvg"><stop offset="0" stop-color="#7A6CD8" stop-opacity=".35"/><stop offset="1" stop-color="#7A6CD8" stop-opacity="0"/></radialGradient></defs>
+    <circle id="s1glow" cx="800" cy="1480" r="420" fill="url(#uvg)"/>
+    <g id="s1drops"></g>
+  </svg>
+  <div class="a m" style="left:96px;top:560px"><div class="cap" data-a=".1" data-fx="rise">광양자 치료 · UBI</div></div>
+  <div class="a h" style="left:90px;top:620px;font-size:112px;letter-spacing:-5px;line-height:1.2">
+    <div class="m"><div data-a=".25" data-fx="rise">내 혈액에</div></div>
+    <div class="m"><div class="hl" data-a=".45" data-fx="rise">빛과 산소를</div></div>
+    <div class="m"><div data-a=".7" data-fx="rise">더하는 치료</div></div>
+  </div>
+</div></div>
+
+<!-- 2 · 광양자 치료란? -->
+<div class="scene" id="s2"><div class="c">
+  <div class="a m" style="left:96px;top:300px"><div class="cap" data-a=".1" data-fx="rise">광양자 치료(포톤 테라피)란?</div></div>
+  <div class="a h" style="left:90px;top:352px">
+    <div class="m"><div data-a=".2" data-fx="rise">채혈한 혈액에</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">자외선과 산소</span>를 처리해</div></div>
+    <div class="m"><div data-a=".44" data-fx="rise">다시 주입하는 요법</div></div>
+  </div>
+  <div class="a" style="left:60px;top:800px;width:960px;height:520px">
+    <div class="a" id="s2a" style="left:0;top:60px;width:280px;height:280px;border-radius:50%;background:#FBE4E3;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <svg width="100" height="100" viewBox="0 0 64 64"><path d="M32,4 C40,18 50,28 50,40 A18,18 0 0 1 14,40 C14,28 24,18 32,4 Z" fill="#D9534F"/></svg>
+      <div style="font-size:44px;font-weight:900;margin-top:8px">혈액</div></div>
+    <div class="a" id="s2p1" style="left:280px;top:150px;width:60px;text-align:center;font-size:80px;font-weight:300;color:#b9b2a6;line-height:1">+</div>
+    <div class="a" id="s2b" style="left:340px;top:60px;width:280px;height:280px;border-radius:50%;background:var(--uv-l);display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <svg width="100" height="100" viewBox="0 0 64 64"><circle cx="32" cy="32" r="12" fill="#7A6CD8"/><g stroke="#7A6CD8" stroke-width="5" stroke-linecap="round"><path d="M32,4 L32,12 M32,52 L32,60 M4,32 L12,32 M52,32 L60,32 M12,12 L18,18 M46,46 L52,52 M12,52 L18,46 M46,18 L52,12"/></g></svg>
+      <div style="font-size:44px;font-weight:900;margin-top:8px">자외선</div></div>
+    <div class="a" id="s2p2" style="left:620px;top:150px;width:60px;text-align:center;font-size:80px;font-weight:300;color:#b9b2a6;line-height:1">+</div>
+    <div class="a" id="s2c" style="left:680px;top:60px;width:280px;height:280px;border-radius:50%;background:var(--o2-l);display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <svg width="100" height="100" viewBox="0 0 64 64"><circle cx="24" cy="36" r="16" fill="#fff" stroke="#5E9CCB" stroke-width="5"/><circle cx="44" cy="22" r="10" fill="#fff" stroke="#5E9CCB" stroke-width="5"/></svg>
+      <div style="font-size:44px;font-weight:900;margin-top:8px">산소</div></div>
+    <div class="a m" style="left:0;width:960px;top:400px;text-align:center"><div class="d" data-a="1.5" data-fx="rise">혈액 디톡스 요법으로도 알려져 있습니다</div></div>
+  </div>
+</div></div>
+
+<!-- 3 · 원리: 순환 루프 -->
+<div class="scene" id="s3"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">01</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">몸 밖에서 처리하고</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">다시 몸 안으로</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:700px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="700">
+      <path id="s3loop" d="M240,560 C120,560 110,420 110,350 C110,170 230,110 480,110 C730,110 850,170 850,350 C850,420 840,560 720,560 Z" fill="none" stroke="#F3D3D0" stroke-width="34" stroke-linecap="round"/>
+      <g id="s3flow" fill="#D9534F"></g>
+      <!-- 팔(몸) -->
+      <rect x="250" y="520" width="460" height="90" rx="45" fill="#F1E2D3"/>
+      <text x="480" y="577" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="34" fill="#8A6A55">몸 (정맥)</text>
+      <!-- 처리 장치 -->
+      <rect x="350" y="70" width="260" height="90" rx="28" fill="#2F2A4A"/>
+      <rect id="s3lamp" x="370" y="88" width="220" height="54" rx="18" fill="#7A6CD8"/>
+      <text x="480" y="124" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="28" fill="#fff">UV-C · 산소</text>
+      <!-- 단계 라벨 -->
+      <g font-family="Noto Sans KR" font-weight="800" font-size="30">
+        <g id="lb1"><rect x="40" y="300" width="150" height="56" rx="28" fill="#FBE4E3"/><text x="115" y="338" text-anchor="middle" fill="#B83E3A">① 채혈</text></g>
+        <g id="lb2"><rect x="380" y="190" width="200" height="56" rx="28" fill="#EEEBFB"/><text x="480" y="228" text-anchor="middle" fill="#5B4FC0">② 빛 · 산소</text></g>
+        <g id="lb3"><rect x="770" y="300" width="160" height="56" rx="28" fill="#EDF1E8"/><text x="850" y="338" text-anchor="middle" fill="#56744A">③ 재주입</text></g>
+      </g>
+    </svg>
+  </div>
+</div></div>
+
+<!-- 4 · UV-C 254nm + 의료용 산소 -->
+<div class="scene" id="s4"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">02</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">특수 자외선 UV-C와</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">의료용 산소</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:620px;width:960px;height:620px;overflow:hidden" data-a=".3" data-fx="up">
+    <svg width="960" height="620">
+      <defs><linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A6CD8" stop-opacity=".55"/><stop offset="1" stop-color="#7A6CD8" stop-opacity=".05"/></linearGradient></defs>
+      <rect x="0" y="330" width="960" height="150" fill="#FBE4E3"/>
+      <rect x="0" y="330" width="960" height="150" fill="none" stroke="#EBB8B2" stroke-width="8"/>
+      <rect x="360" y="40" width="240" height="70" rx="24" fill="#2F2A4A"/>
+      <text x="480" y="86" text-anchor="middle" font-family="Noto Sans KR" font-weight="900" font-size="30" fill="#fff">UV-C 254nm</text>
+      <polygon id="s4beam" points="380,110 580,110 680,480 280,480" fill="url(#beam)"/>
+      <g id="s4cells"></g>
+      <g id="s4o2"></g>
+    </svg>
+  </div>
+  <div class="a" style="left:96px;top:1280px;display:flex;gap:16px;flex-wrap:wrap;width:900px">
+    <div class="chip" style="background:var(--uv-l);color:#5B4FC0" data-a="1.2" data-fx="pop">● UV-C 자외선</div>
+    <div class="chip" style="background:var(--o2-l);color:#3F7AA8" data-a="1.35" data-fx="pop">● 의료용 산소</div>
+  </div>
+</div></div>
+
+<!-- 5 · 진행 과정 -->
+<div class="scene" id="s5"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">03</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">1회 약 1시간,</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">이렇게 진행됩니다</span></div></div>
+  </div>
+  <div id="s5list"></div>
+</div></div>
+
+<!-- 6 · 활용 -->
+<div class="scene" id="s6"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">04</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">이런 관리에</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">활용됩니다</span></div></div>
+  </div>
+  <div id="s6grid"></div>
+</div></div>
+
+<!-- 7 · 치료 주기 -->
+<div class="scene" id="s7"><div class="c">
+  <div class="num" data-a=".1" data-fx="pop">05</div>
+  <div class="a h" style="left:90px;top:360px">
+    <div class="m"><div data-a=".2" data-fx="rise">보통 주 1회,</div></div>
+    <div class="m"><div data-a=".32" data-fx="rise"><span class="hl">5~10회 진행합니다</span></div></div>
+  </div>
+  <div class="a card" style="left:60px;top:640px;width:960px;height:520px" data-a=".3" data-fx="up">
+    <div id="s7weeks"></div>
+  </div>
+  <div class="a m" style="left:96px;top:1200px"><div class="d" style="font-size:32px" data-a="1.6" data-fx="rise">횟수와 간격은 상태에 따라 의료진이 정합니다</div></div>
+</div></div>
+
+<!-- 8 · 꼭 알아두세요 -->
+<div class="scene" id="s8"><div class="c">
+  <div class="a m" style="left:96px;top:300px"><div class="cap" style="color:var(--coral-d)" data-a=".05" data-fx="rise">꼭 알아두세요</div></div>
+  <div class="a h" style="left:90px;top:350px">
+    <div class="m"><div data-a=".12" data-fx="rise">전문의와 충분히</div></div>
+    <div class="m"><div data-a=".24" data-fx="rise"><span style="color:var(--coral-d)">상담 후 결정하세요</span></div></div>
+  </div>
+  <div id="s8list"></div>
+</div></div>
+
+<!-- 9 · 엔딩 -->
+<div class="scene" id="s9"><div class="c" style="color:#fff">
+  <svg class="a mk" id="s9mark" style="left:450px;top:360px;color:#fff" width="180" height="253" viewBox="0 0 912 1280"><path id="s9path"/></svg>
+  <div class="a" style="left:0;width:1080px;top:660px;text-align:center;font-size:96px;letter-spacing:-3px">
+    <div class="m" style="display:inline-block"><div data-a=".6" data-fx="rise"><span style="font-weight:900">소담</span><span style="font-weight:400">한방병원</span></div></div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:820px;text-align:center"><div style="font-size:38px;font-weight:500;color:#E3EDD9" data-a=".8" data-fx="rise">광양자 치료 (UBI)</div></div>
+  <div class="a m" style="left:0;width:1080px;top:930px;text-align:center"><div style="font-size:34px;font-weight:700;letter-spacing:6px;color:#DDE8D3" data-a=".95" data-fx="rise">상담 문의</div></div>
+  <div class="a m" style="left:0;width:1080px;top:980px;text-align:center"><div style="font-size:120px;font-weight:900;letter-spacing:-3px" data-a="1.05" data-fx="rise">054) 727.2550</div></div>
+  <div class="a" style="left:0;width:1080px;top:1190px;display:flex;justify-content:center" data-a="1.4" data-fx="pop">
+    <div class="chip" style="background:var(--coral);font-size:40px;padding:22px 52px">프로필 링크에서 자세히 보기</div>
+  </div>
+  <div class="a m" style="left:0;width:1080px;top:1340px;text-align:center"><div style="font-size:38px;font-weight:700;opacity:.9;letter-spacing:0" data-a="1.7" data-fx="rise">@sodamhb</div></div>
+</div></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, a, d) => clamp((t - a) / d);
+const expo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const io = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.6; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const f1 = v => (+v).toFixed(1);
+const rnd = s => { const x = Math.sin(s * 127.1) * 43758.5453; return x - Math.floor(x); };
+
+$('s9path').setAttribute('d', window.MARK_D);
+
+const rbc = (x, y, r, rot, glow) => `<g transform="translate(${f1(x)},${f1(y)}) rotate(${f1(rot)})">${glow > 0 ? `<ellipse rx="${f1(r + 12)}" ry="${f1(r * .62 + 10)}" fill="#7A6CD8" opacity="${f1(.3 * glow)}"/>` : ''}<ellipse rx="${r}" ry="${f1(r * .62)}" fill="#D9534F"/><ellipse rx="${f1(r * .45)}" ry="${f1(r * .25)}" fill="#B83E3A" opacity=".6"/></g>`;
+const o2 = (x, y, r, op) => `<g transform="translate(${f1(x)},${f1(y)})" opacity="${f1(op)}"><circle r="${r}" fill="#fff" stroke="#5E9CCB" stroke-width="4"/><circle r="${f1(r * .45)}" fill="#5E9CCB"/></g>`;
+
+// 진행 과정
+const STEPS = [['01', '채혈', '혈액을 일정량(약 80~120cc) 채취'], ['02', '자외선 · 산소 처리', 'UV-C 자외선과 의료용 산소를 조사'], ['03', '정맥 재주입', '처리한 혈액을 다시 정맥으로 주입']];
+$('s5list').innerHTML = STEPS.map(([n, t, d], i) => `
+  <div class="a card" id="w${i}" style="left:60px;top:${640 + i * 220}px;width:960px;height:190px">
+    <div class="a" style="left:44px;top:47px;width:96px;height:96px;border-radius:28px;background:${i === 1 ? '#7A6CD8' : '#EEEBFB'};color:${i === 1 ? '#fff' : '#5B4FC0'};font-size:42px;font-weight:900;display:flex;align-items:center;justify-content:center">${n}</div>
+    <div class="a" style="left:176px;top:40px;font-size:50px;font-weight:900;letter-spacing:-1.5px">${t}</div>
+    <div class="a" style="left:178px;top:112px;font-size:30px;font-weight:500;color:#857C77">${d}</div>
+  </div>`).join('');
+
+// 활용 분야
+const USES = [
+  ['혈액순환 · 대사', '<path d="M8,32 C16,16 24,48 32,32 S48,16 56,32" stroke="#D9534F" stroke-width="6" fill="none" stroke-linecap="round"/>'],
+  ['면역 · 항산화', '<path d="M32,6 L54,14 L54,32 C54,46 44,54 32,58 C20,54 10,46 10,32 L10,14 Z" fill="#6F8E5C"/><path d="M32,20 L32,44 M20,32 L44,32" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'],
+  ['만성 피로 회복', '<rect x="8" y="18" width="42" height="28" rx="6" fill="none" stroke="#7A6CD8" stroke-width="5"/><rect x="50" y="26" width="6" height="12" rx="2" fill="#7A6CD8"/><rect id="bat" x="13" y="23" width="32" height="18" rx="3" fill="#7A6CD8"/>'],
+  ['암 회복기 보조', '<path d="M32,54 C14,40 8,30 8,22 A12,12 0 0 1 32,16 A12,12 0 0 1 56,22 C56,30 50,40 32,54 Z" fill="#E48E6B"/>'],
+];
+$('s6grid').innerHTML = USES.map(([label, icon], i) => {
+  const x = 60 + (i % 2) * 492, y = 640 + Math.floor(i / 2) * 330;
+  return `<div class="a card" id="p${i}" style="left:${x}px;top:${y}px;width:468px;height:300px">
+    <div class="ic" style="left:40px;top:40px;background:#F4F1FB"><svg width="64" height="64" viewBox="0 0 64 64">${icon}</svg></div>
+    <div class="a" style="left:40px;top:186px;font-size:42px;font-weight:900;letter-spacing:-1.5px">${label}</div></div>`;
+}).join('');
+
+// 주기: 10주 달력 점
+$('s7weeks').innerHTML = Array.from({ length: 10 }, (_, i) => {
+  const x = 70 + (i % 5) * 170, y = 70 + Math.floor(i / 5) * 210;
+  return `<div class="a" id="wk${i}" style="left:${x}px;top:${y}px;width:140px;height:170px;border-radius:28px;background:#F4F1FB;text-align:center">
+    <div style="font-size:26px;font-weight:700;color:#857C77;margin-top:22px">${i + 1}주</div>
+    <div id="wd${i}" style="width:62px;height:62px;border-radius:50%;margin:16px auto 0;background:#E3DEF6"></div></div>`;
+}).join('');
+
+// 주의사항
+const NOTE = [['드물게 감염 · 출혈 · 혈관 손상 등', '채혈과 주입 과정의 합병증 가능성'], ['표준치료를 대신하지 않습니다', '암·만성질환의 정식 치료와 함께'], ['전문의 상담 후 결정', '기저질환과 현재 상태를 먼저 확인']];
+$('s8list').innerHTML = NOTE.map(([t, d], i) => `
+  <div class="a card" id="n${i}" style="left:60px;top:${640 + i * 210}px;width:960px;height:180px">
+    <div class="a" style="left:44px;top:46px;width:88px;height:88px;border-radius:26px;background:#FBE9E1;display:flex;align-items:center;justify-content:center">
+      <svg width="52" height="52" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="#C4673F" stroke-width="6"/><path d="M32,18 L32,36" stroke="#C4673F" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="46" r="4.5" fill="#C4673F"/></svg></div>
+    <div class="a" style="left:164px;top:38px;font-size:44px;font-weight:900;letter-spacing:-1.5px">${t}</div>
+    <div class="a" style="left:166px;top:106px;font-size:30px;font-weight:500;color:#857C77">${d}</div>
+  </div>`).join('');
+
+// 장면 경계는 소담 주제곡(120BPM, 32초)과 맞춤
+const SCENES = [
+  ['s1', 0, 3.5], ['s2', 3.5, 7], ['s3', 7, 10.5], ['s4', 10.5, 14], ['s5', 14, 17.5], ['s6', 17.5, 21],
+  ['s7', 21, 24.5], ['s8', 24.5, 27.5], ['s9', 27.5, 32, 1],
+];
+const DURATION = 32;
+window.SIZE = [1080, 1920];
+
+const anim = [...document.querySelectorAll('[data-fx]')].map(el => ({
+  el, scene: el.closest('.scene').id, a: +el.dataset.a, d: +(el.dataset.d || (el.dataset.fx === 'pop' ? .5 : .75)), fx: el.dataset.fx,
+}));
+
+function applyFx(o, t) {
+  const p = prog(t, o.a, o.d), s = o.el.style;
+  switch (o.fx) {
+    case 'rise': { const e = expo(p); s.transform = `translateY(${f1((1 - e) * 112)}%)`; break; }
+    case 'up': { const e = expo(p); s.opacity = clamp(p * 2); s.transform = `translateY(${f1((1 - e) * 80)}px)`; break; }
+    case 'pop': { s.opacity = clamp(p * 3); s.transform = `scale(${back(p).toFixed(4)})`; s.transformOrigin = 'center'; break; }
+  }
+}
+
+function renderAt(T) {
+  SCENES.forEach(([id]) => { $(id).style.display = 'none'; });
+  let i = SCENES.findIndex(([, a, b]) => T >= a && T < b);
+  if (i < 0) i = SCENES.length - 1;
+  const [id, a, b, green] = SCENES[i];
+  const t = T - a, el = $(id);
+  el.style.display = 'block';
+  anim.forEach(o => { if (o.scene === id) applyFx(o, t); });
+  const next = SCENES[i + 1];
+  const ex = next && !next[3] ? io(prog(T, b - .3, .3)) : 0;
+  const c = el.firstElementChild;
+  c.style.opacity = 1 - ex;
+  c.style.transform = `translateY(${f1(-60 * ex)}px)`;
+  $('wipe').style.transform = `scale(${(green ? expo(prog(t, 0, .7)) : 0).toFixed(4)})`;
+  extra(id, t);
+}
+
+const slideIn = (eid, t, a0) => {
+  const p = expo(prog(t, a0, .6)), e = $(eid);
+  e.style.opacity = clamp(p * 2.5);
+  e.style.transform = `translateX(${f1((1 - p) * 160)}px)`;
+};
+const popIn = (eid, t, a0) => {
+  const p = back(prog(t, a0, .55)), e = $(eid);
+  e.style.opacity = clamp(prog(t, a0, .3));
+  e.style.transform = `scale(${(.8 + .2 * p).toFixed(4)})`;
+};
+
+function extra(id, t) {
+  if (id === 's1') {
+    $('s1glow').setAttribute('r', f1(380 + 50 * Math.sin(t * 1.6)));
+    $('s1glow').style.opacity = io(prog(t, .5, 1));
+    let g = '';
+    for (let k = 0; k < 7; k++) {
+      const x = 560 + rnd(k) * 420, y = 1250 + rnd(k + 3) * 450 + 14 * Math.sin(t * 1.4 + k);
+      g += rbc(x, y, 22 + rnd(k + 7) * 10, k * 40 + t * 20, .6 + .4 * Math.sin(t * 2 + k));
+    }
+    $('s1drops').innerHTML = g;
+    $('s1drops').style.opacity = io(prog(t, .7, .8));
+  }
+  if (id === 's2') {
+    [['s2a', .6], ['s2b', .8], ['s2c', 1.0]].forEach(([e, a0]) => popIn(e, t, a0));
+    ['s2p1', 's2p2'].forEach((e, k) => { $(e).style.opacity = clamp(prog(t, .85 + k * .2, .3)); });
+  }
+  if (id === 's3') {
+    // 혈액이 몸 → 처리 장치 → 몸으로 순환
+    const L = $('s3loop').getTotalLength();
+    const show = io(prog(t, .5, .5));
+    let f = '';
+    for (let k = 0; k < 14; k++) {
+      const s = ((k / 14) + t * .18) % 1, pt = $('s3loop').getPointAtLength(s * L);
+      const lit = s > .3 && s < .7;
+      f += `<g opacity="${f1(show)}">${lit ? `<circle cx="${f1(pt.x)}" cy="${f1(pt.y)}" r="22" fill="#7A6CD8" opacity=".3"/>` : ''}<circle cx="${f1(pt.x)}" cy="${f1(pt.y)}" r="12"/></g>`;
+    }
+    $('s3flow').innerHTML = f;
+    $('s3lamp').setAttribute('opacity', f1(.75 + .25 * Math.sin(t * 8)));
+    ['lb1', 'lb2', 'lb3'].forEach((e, k) => {
+      const p = back(prog(t, .8 + k * .35, .5));
+      $(e).setAttribute('opacity', f1(clamp(prog(t, .8 + k * .35, .3))));
+      $(e).style.transformBox = 'fill-box'; $(e).style.transformOrigin = 'center';
+      $(e).style.transform = `scale(${p.toFixed(4)})`;
+    });
+  }
+  if (id === 's4') {
+    // 적혈구가 자외선 빛 아래를 지나며 빛을 받고, 산소 방울이 합류
+    const on = io(prog(t, .6, .5));
+    $('s4beam').setAttribute('opacity', f1(on * (.85 + .15 * Math.sin(t * 9))));
+    let c = '';
+    for (let k = 0; k < 9; k++) {
+      const x = ((k * 118 + t * 130) % 1080) - 60, y = 405 + 30 * Math.sin(k * 1.7);
+      const lit = x > 300 && x < 660 ? 1 : (x >= 660 ? .5 : 0);
+      c += rbc(x, y, 26, k * 40 + t * 30, lit * on);
+    }
+    $('s4cells').innerHTML = c;
+    let o = '';
+    for (let k = 0; k < 12; k++) {
+      const q = ((t * .5 + k / 12) % 1);
+      const x = 120 + rnd(k) * 720, y = 160 + q * 290;
+      o += o2(x, y, 9 + rnd(k + 3) * 5, on * Math.sin(q * Math.PI));
+    }
+    $('s4o2').innerHTML = o;
+  }
+  if (id === 's5') STEPS.forEach((_, i) => slideIn('w' + i, t, .45 + i * .35));
+  if (id === 's6') {
+    USES.forEach((_, i) => popIn('p' + i, t, .45 + i * .18));
+    const bat = document.getElementById('bat');
+    if (bat) bat.setAttribute('width', f1(8 + 24 * io(prog(t, 1.4, 1.2))));
+  }
+  if (id === 's7') for (let i = 0; i < 10; i++) {
+    const a0 = .6 + i * .14, p = back(prog(t, a0, .4));
+    const d = $('wd' + i);
+    d.style.background = p > 0 ? (i < 5 ? '#7A6CD8' : '#B5ACEB') : '#E3DEF6';
+    d.style.transform = `scale(${(p > 0 ? .7 + .3 * p : 1).toFixed(4)})`;
+  }
+  if (id === 's8') NOTE.forEach((_, i) => slideIn('n' + i, t, .4 + i * .3));
+  if (id === 's9') {
+    const p = expo(prog(t, .25, .9)), mk = $('s9mark');
+    mk.style.clipPath = `circle(${f1(p * 75)}% at 50% 50%)`;
+    mk.style.transform = `scale(${(0.86 + .14 * p).toFixed(4)})`;
+  }
+}
+
+window.renderAt = renderAt;
+window.DURATION = DURATION;
+
+function fit() {
+  const k = Math.min(innerWidth / 1080, innerHeight / 1920), st = $('stage');
+  st.style.transform = `scale(${k})`;
+  st.style.left = (innerWidth - 1080 * k) / 2 + 'px';
+  st.style.top = (innerHeight - 1920 * k) / 2 + 'px';
+}
+if (!location.search.includes('render')) {
+  addEventListener('resize', fit); fit();
+  const t0 = performance.now();
+  const loop = () => { renderAt(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+  document.fonts.ready.then(loop);
+} else renderAt(0);
+</script>
+</body>
+</html>
