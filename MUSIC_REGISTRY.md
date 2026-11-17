@@ -15,3 +15,4 @@
 |---|---|---|
 | 포항소담한방병원 | `sodam/reels3/out/sodam-reels-v3.mp4` (병원 소개 릴스) | 소담 주제곡 2번 |
 | 포항소담한방병원 | `sodam/thermo/out/sodam-thermo-explainer.mp4` (고주파온열치료 설명 릴스) | 소담 주제곡 2번 |
+| 포항소담한방병원 | `sodam/hbot/out/sodam-hbot-explainer.mp4` (고압산소치료 설명 릴스) | 소담 주제곡 2번 |
